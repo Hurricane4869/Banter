@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6wjhchpq4cfj"]
+
+[ext_resource type="PackedScene" uid="uid://uldbvot73hv" path="res://scenes/dummy/DummyTopDown.tscn" id="1_5eks4"]
+
+[node name="TestingMovement" type="Node2D"]
+
+[node name="DummyTopDown" parent="." instance=ExtResource("1_5eks4")]
