@@ -46,12 +46,15 @@ animations = [{
 size = Vector2(30, 21)
 
 [node name="DummyTopDown" type="CharacterBody2D"]
+position = Vector2(594, 316)
 script = ExtResource("1_ng14c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 4
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_vy2hp")
 animation = &"driving"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_v4g86")
