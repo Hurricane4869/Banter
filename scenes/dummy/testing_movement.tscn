@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6wjhchpq4cfj"]
+[gd_scene load_steps=3 format=3 uid="uid://c6wjhchpq4cfj"]
 
 [ext_resource type="PackedScene" uid="uid://uldbvot73hv" path="res://scenes/dummy/DummyTopDown.tscn" id="1_5eks4"]
+[ext_resource type="PackedScene" uid="uid://030id6yh4njw" path="res://scenes/dummy/dummy_gutter.tscn" id="2_6ktom"]
 
 [node name="TestingMovement" type="Node2D"]
 
 [node name="DummyTopDown" parent="." instance=ExtResource("1_5eks4")]
+position = Vector2(547, 312)
+
+[node name="DummyGutter" parent="." instance=ExtResource("2_6ktom")]
+position = Vector2(579, 118)
+
+[node name="DummyGutter2" parent="." instance=ExtResource("2_6ktom")]
+position = Vector2(573, 513)

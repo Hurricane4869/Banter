@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://030id6yh4njw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xlnni"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvxpy"]
+size = Vector2(1146, 56.5)
+
+[node name="DummyGutter" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_xlnni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nvxpy")

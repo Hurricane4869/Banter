@@ -9,7 +9,7 @@ var _velocity := Vector2.ZERO
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta) :
 	# Memanggil fungsi "Input.get_action_strength()" untuk dukungan controller
 	var direction := Vector2(
 		# Menghitung arah sumbu X
