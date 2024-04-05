@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InteractionManager="*res://scenes/dummy/InteractionManager.tscn"
+InteractionManager="*res://scenes/dummy/manager/InteractionManager.tscn"
 
 [editor]
 
@@ -82,4 +82,5 @@ interact={
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
