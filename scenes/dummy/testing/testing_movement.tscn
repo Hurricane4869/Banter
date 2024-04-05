@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6wjhchpq4cfj"]
+
+[ext_resource type="PackedScene" uid="uid://uldbvot73hv" path="res://scenes/dummy/object/DummyTopDown.tscn" id="1_noy7j"]
+[ext_resource type="PackedScene" uid="uid://030id6yh4njw" path="res://scenes/dummy/object/DummyGutter.tscn" id="2_42d0m"]
+
+[node name="TestingMovement" type="Node2D"]
+
+[node name="DummyTopDown" parent="." instance=ExtResource("1_noy7j")]
+position = Vector2(547, 312)
+
+[node name="DummyGutter" parent="." instance=ExtResource("2_42d0m")]
+position = Vector2(576, 32)
+
+[node name="DummyGutter2" parent="." instance=ExtResource("2_42d0m")]
+position = Vector2(574, 611)

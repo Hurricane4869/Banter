@@ -11,6 +11,8 @@ var color = ["blue", "orange"]
 func _ready():
 	randomize()
 	texture.modulate = white
+
+func _process(delta):
 	interaction_area.interact = Callable(self, "_change_color")
 	
 func _change_color(): 
