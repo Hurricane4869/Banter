@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://37bmnf8hwe7x"]
+
+[ext_resource type="Script" path="res://scenes/dummy/QuestTimer.gd" id="1_u7u6y"]
+
+[node name="QuestTimer" type="Timer"]
+script = ExtResource("1_u7u6y")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
