@@ -1,5 +1,4 @@
 extends CharacterBody2D
-
 # Kecepatan gerakan dalam pixels per second
 @export var speed := 500
 
@@ -8,7 +7,7 @@ var _sprites := {Vector2.RIGHT: 1, Vector2.LEFT: 0, Vector2.UP: 2, Vector2.DOWN:
 var _velocity := Vector2.ZERO
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-
+		
 func _physics_process(_delta) :
 	# Memanggil fungsi "Input.get_action_strength()" untuk dukungan controller
 	var direction := Vector2(
@@ -36,3 +35,6 @@ func _unhandled_input(event):
 
 func _update_sprite(direction: Vector2) -> void:
 	animated_sprite.frame = _sprites[direction]
+
+	
+	
