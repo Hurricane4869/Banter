@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://2jmkstysi5ps"]
+
+[ext_resource type="Texture2D" uid="uid://db8aooy61tka5" path="res://assets/Main Menu/final menu.png" id="1_b0mr4"]
+[ext_resource type="Script" path="res://scenes/main menu/main_menu.gd" id="1_w2iy8"]
+[ext_resource type="Texture2D" uid="uid://ccjuq74676e0w" path="res://assets/Main Menu/tombol main.png" id="2_28a4t"]
+[ext_resource type="Texture2D" uid="uid://bgf160svjaye2" path="res://assets/Main Menu/tombol pengaturan.png" id="3_ikc1x"]
+[ext_resource type="Texture2D" uid="uid://76vkrklcbk8n" path="res://assets/Main Menu/tombol kredit.png" id="4_6syxv"]
+[ext_resource type="Texture2D" uid="uid://c7lhk8eioqm2c" path="res://assets/Main Menu/tombol keluar.png" id="5_34kw1"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchor_right = 1.457
+anchor_bottom = 1.316
+offset_right = -526.464
+offset_bottom = -204.768
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.997446, 1)
+script = ExtResource("1_w2iy8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1050.0
+offset_bottom = 423.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.525, 0.602922)
+texture = ExtResource("1_b0mr4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 32.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.975307, 0.89)
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.227451, 0.721569, 1)
+theme_override_colors/font_shadow_color = Color(0.490196, 0.913725, 0.65098, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 24
+theme_override_font_sizes/font_size = 32
+text = "BANTER
+Bismillah Anter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 168.43
+offset_top = 131.0
+offset_right = 468.43
+offset_bottom = 835.0
+scale = Vector2(0.578734, 0.603234)
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Seperator" type="Control" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_28a4t")
+
+[node name="Pengaturan" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_ikc1x")
+
+[node name="Kredit" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_6syxv")
+
+[node name="Keluar" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_34kw1")
