@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 InteractionManager="*res://scenes/dummy/manager/InteractionManager.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
