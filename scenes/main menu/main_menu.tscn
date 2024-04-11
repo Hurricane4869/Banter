@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://2jmkstysi5ps"]
+[gd_scene load_steps=13 format=3 uid="uid://2jmkstysi5ps"]
 
 [ext_resource type="Texture2D" uid="uid://db8aooy61tka5" path="res://assets/Main Menu/final menu.png" id="1_b0mr4"]
 [ext_resource type="Script" path="res://scenes/main menu/main_menu.gd" id="1_w2iy8"]
@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://bgf160svjaye2" path="res://assets/Main Menu/tombol pengaturan.png" id="3_ikc1x"]
 [ext_resource type="Texture2D" uid="uid://76vkrklcbk8n" path="res://assets/Main Menu/tombol kredit.png" id="4_6syxv"]
 [ext_resource type="Texture2D" uid="uid://c7lhk8eioqm2c" path="res://assets/Main Menu/tombol keluar.png" id="5_34kw1"]
+[ext_resource type="Texture2D" uid="uid://bgm2ka2kdfr7s" path="res://assets/Main Menu/panel kredit.png" id="7_7rxfg"]
+[ext_resource type="Texture2D" uid="uid://x8ont0pclq7d" path="res://assets/Main Menu/tombol x.png" id="8_ejebu"]
+[ext_resource type="Texture2D" uid="uid://ds4hp5q2pwodq" path="res://assets/Main Menu/game designer.png" id="9_654vu"]
+[ext_resource type="Texture2D" uid="uid://co17um3imogul" path="res://assets/Main Menu/game programmer.png" id="10_2iewv"]
+[ext_resource type="Texture2D" uid="uid://cc6jv2vhsr8ka" path="res://assets/Main Menu/project manager.png" id="11_qpcbx"]
+[ext_resource type="Texture2D" uid="uid://dgeu3xrp0conp" path="res://assets/Main Menu/game artist.png" id="12_qy6nc"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -35,10 +41,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = 5.0
-offset_right = 32.0
-offset_bottom = 82.0
+offset_left = 125.32
+offset_top = -1.0
+offset_right = -765.68
+offset_bottom = -480.668
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.975307, 0.89)
@@ -67,7 +73,7 @@ Bismillah Anter"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="menu" type="HBoxContainer" parent="."]
 layout_mode = 2
 offset_left = 168.43
 offset_top = 131.0
@@ -76,26 +82,92 @@ offset_bottom = 835.0
 scale = Vector2(0.578734, 0.603234)
 theme_override_constants/separation = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="menu"]
 layout_mode = 2
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Seperator" type="Control" parent="HBoxContainer/VBoxContainer"]
+[node name="Seperator" type="Control" parent="menu/VBoxContainer"]
 layout_mode = 2
 
-[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Play" type="Button" parent="menu/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("2_28a4t")
 
-[node name="Pengaturan" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Pengaturan" type="Button" parent="menu/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_ikc1x")
 
-[node name="Kredit" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Kredit" type="Button" parent="menu/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_6syxv")
 
-[node name="Keluar" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="Keluar" type="Button" parent="menu/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("5_34kw1")
+
+[node name="PanelKredit" type="Sprite2D" parent="."]
+position = Vector2(698.785, -475)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_7rxfg")
+
+[node name="Kredit_Panel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = -19.0486
+offset_top = 332.0
+offset_right = 20.9514
+offset_bottom = 372.0
+
+[node name="ColorRect" type="ColorRect" parent="Kredit_Panel"]
+layout_mode = 0
+offset_left = 20.0512
+offset_top = -332.0
+offset_right = 60.0512
+offset_bottom = -292.0
+scale = Vector2(28.9113, 16.12)
+color = Color(0, 0, 0, 0.458824)
+
+[node name="BackFromKredit" type="Button" parent="Kredit_Panel"]
+layout_mode = 0
+offset_left = 1089.78
+offset_top = -331.0
+offset_right = 1298.78
+offset_bottom = -139.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("8_ejebu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Kredit_Panel"]
+layout_mode = 0
+offset_left = 445.137
+offset_top = -91.0001
+offset_right = 645.137
+offset_bottom = -51.0001
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Kredit_Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="GameDesigner" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer"]
+position = Vector2(-102.261, -46)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_654vu")
+
+[node name="GameProgrammer" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer"]
+position = Vector2(-104.266, 241)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_2iewv")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Kredit_Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="ProjectManager" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer2"]
+position = Vector2(352.912, -45)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_qpcbx")
+
+[node name="GameArtist" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer2"]
+position = Vector2(354.917, 243)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_qy6nc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Kredit_Panel"]
