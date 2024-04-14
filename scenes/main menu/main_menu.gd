@@ -6,8 +6,8 @@ extends Control
 @onready var keluar = $menu/VBoxContainer/Keluar as Button
 @onready var kredit = $menu/VBoxContainer/Kredit as Button
 @onready var kredit_panel = $Kredit_Panel
-@onready var back_from_kredit = $Kredit_Panel/BackFromKredit as Button
 @onready var start_level = preload("res://scenes/dummy/testing/testing_interaction.tscn") as PackedScene
+@onready var back_from_kredit = $Kredit_Panel/BackFromKredit as Button
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
