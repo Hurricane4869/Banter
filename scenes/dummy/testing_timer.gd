@@ -1,13 +1,8 @@
 extends Node2D
 
-@onready var quest_timer = $QuestTimer
-
-func _on_quest_timer_timeout():
-	TimerManager.debug_print()
-	
-	pass # Replace with function body.
-
+@onready var timer = $QuestTimer
 
 func _on_play_button_pressed():
-	quest_timer.start()
-	pass # Replace with function body.
+	var timer_node = get_node("QuestTimer/Timer")
+	timer_node.start()
+	pass

@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 InteractionManager="*res://scenes/dummy/manager/InteractionManager.tscn"
-TimerManager="*res://scenes/dummy/TimerManager.tscn"
 
 [editor]
 
