@@ -9,9 +9,9 @@ extends Control
 @onready var start_level = preload("res://scenes/dummy/testing/testing_interaction.tscn") as PackedScene
 @onready var back_from_kredit = $Kredit_Panel/BackFromKredit as Button
 
-func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel"):
-		toggle()
+#func _process(delta):
+	#if Input.is_action_just_pressed("ui_cancel"):
+		#toggle()
 
 func toggle():
 	visible = !visible
