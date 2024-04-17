@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://2jmkstysi5ps"]
+[gd_scene load_steps=22 format=3 uid="uid://2jmkstysi5ps"]
 
 [ext_resource type="Script" path="res://scenes/main menu/main_menu.gd" id="1_w2iy8"]
 [ext_resource type="Texture2D" uid="uid://ciylpsqn4uy8h" path="res://assets/Main Menu/visual art.png" id="2_djx2t"]
 [ext_resource type="Texture2D" uid="uid://c6r228b4t8r4v" path="res://assets/Main Menu/Judul game.png" id="3_5gg7b"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Main Menu/themes/default_theme.tres" id="4_y8p3e"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="5_tqq4j"]
+[ext_resource type="Script" path="res://scenes/main menu/Play.gd" id="6_ir7b5"]
 [ext_resource type="Texture2D" uid="uid://x8ont0pclq7d" path="res://assets/Main Menu/tombol x.png" id="8_ejebu"]
 [ext_resource type="Texture2D" uid="uid://ds4hp5q2pwodq" path="res://assets/Main Menu/game designer.png" id="9_654vu"]
 [ext_resource type="Texture2D" uid="uid://co17um3imogul" path="res://assets/Main Menu/game programmer.png" id="10_2iewv"]
@@ -49,6 +50,66 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="Theme" id="Theme_hvsk8"]
 Button/styles/hover = SubResource("StyleBoxFlat_ul67i")
 Button/styles/normal = SubResource("StyleBoxFlat_0ibwc")
+
+[sub_resource type="Animation" id="Animation_edh0j"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_65n5v"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_agarw"]
+_data = {
+"fade_in": SubResource("Animation_65n5v"),
+"fade_out": SubResource("Animation_edh0j")
+}
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -131,6 +192,7 @@ theme_override_constants/outline_size = 11
 theme_override_fonts/font = SubResource("FontVariation_x2qgt")
 theme_override_font_sizes/font_size = 55
 text = "MAIN"
+script = ExtResource("6_ir7b5")
 
 [node name="Pengaturan" type="Button" parent="menu/VBoxContainer"]
 layout_mode = 2
@@ -229,3 +291,14 @@ texture = ExtResource("11_qpcbx")
 position = Vector2(1366, 800)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("12_qy6nc")
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_agarw")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
