@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv7dhjgrii4f1"]
+
+[ext_resource type="Script" path="res://scenes/dummy/QuestTimer.gd" id="1_u7u6y"]
+
+[node name="QuestTimer" type="Node2D"]
+script = ExtResource("1_u7u6y")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 130.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "00:00"
