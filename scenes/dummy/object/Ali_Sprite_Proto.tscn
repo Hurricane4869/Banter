@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://etkaqh5xuhw3"]
+
+[ext_resource type="Script" path="res://scripts/dummy/character_movement_dummy.gd" id="1_va3vg"]
+[ext_resource type="Texture2D" uid="uid://bo86e2wf7shba" path="res://assets/player/chara kiri 48x32.png" id="2_x32hq"]
+[ext_resource type="Texture2D" uid="uid://cwkjp42dnrl1s" path="res://assets/player/chara kanan 48x32.png" id="3_no320"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vy2hp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x32hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_no320")
+}],
+"loop": true,
+"name": &"driving",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4g86"]
+size = Vector2(19, 17)
+
+[node name="DummyTopDown" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
+disable_mode = 2
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_va3vg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 2
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vy2hp")
+animation = &"driving"
+frame_progress = 0.143532
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2(-1.5, 1.5)
+shape = SubResource("RectangleShape2D_v4g86")
