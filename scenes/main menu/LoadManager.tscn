@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://d12t4a7pmc60p"]
+
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="1_4omgn"]
+[ext_resource type="Script" path="res://scenes/main menu/LoadManager.gd" id="1_sw4ob"]
+
+[sub_resource type="Animation" id="Animation_ewgxr"]
+resource_name = "loadingScene"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("loading_text:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["					
+
+
+
+					BENTAR YA BOS.", "					
+
+
+
+					BENTAR YA BOS..", "					
+
+
+
+					BENTAR YA BOS..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qd71a"]
+_data = {
+"loadingScene": SubResource("Animation_ewgxr")
+}
+
+[node name="LoadManager" type="CanvasLayer"]
+script = ExtResource("1_sw4ob")
+
+[node name="bg" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="loading_text" type="TextEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/font = ExtResource("1_4omgn")
+theme_override_font_sizes/font_size = 75
+text = "					
+
+
+
+					BENTAR YA BOS."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qd71a")
+}

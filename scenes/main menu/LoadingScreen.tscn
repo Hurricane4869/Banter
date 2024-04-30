@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://csoxaletcqvax"]
+
+[ext_resource type="Script" path="res://scripts/LoadingScreen.gd" id="1_wspbt"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_pn2ia"]
+
+[sub_resource type="Gradient" id="Gradient_21og4"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j7j3l"]
+gradient = SubResource("Gradient_21og4")
+
+[sub_resource type="Animation" id="Animation_hpft1"]
+resource_name = "Init"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Loading Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["BENTAR YA BOS...", "BENTAR YA BOS..", "BENTAR YA BOS."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nq7u7"]
+_data = {
+"Init": SubResource("Animation_hpft1")
+}
+
+[node name="LoadingScreen" type="CanvasLayer"]
+script = ExtResource("1_wspbt")
+next_scene_path = "res://scenes/main menu/main_menu.tscn"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_j7j3l")
+
+[node name="Loading Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -11.5
+offset_right = 63.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_pn2ia")
+theme_override_font_sizes/font_size = 75
+text = "BENTAR YA BOS..."
+
+[node name="AnimationPlayerLoading" type="AnimationPlayer" parent="Control/Loading Label"]
+
+[node name="TipLabel" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TipText" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nq7u7")
+}
+
+[connection signal="gui_input" from="Control/TextureRect" to="." method="_on_texture_rect_gui_input"]
+[connection signal="mouse_entered" from="Control/TextureRect" to="." method="_on_texture_rect_mouse_entered"]

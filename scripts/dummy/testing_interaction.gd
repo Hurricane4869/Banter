@@ -1,5 +1,7 @@
 extends Node2D
 
+var parameters: Dictionary
+
 @onready var interaction_area: InteractionArea = $ColorTile
 @onready var texture = $ColorTile/TextureRect
 @onready var transition = $Transition
@@ -10,7 +12,6 @@ var orange = Color(255, 215, 1)
 var color = ["blue", "orange"]
 
 func _ready():
-	transition.play("fade_in")
 	randomize()
 	texture.modulate = white
 

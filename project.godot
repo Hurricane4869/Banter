@@ -11,18 +11,20 @@ config_version=5
 [application]
 
 config/name="Banter"
-run/main_scene="res://scenes/main menu/main_menu.tscn"
+run/main_scene="res://scenes/main menu/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 InteractionManager="*res://scenes/dummy/manager/InteractionManager.tscn"
+Functions="*res://scripts/Functions.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor]
