@@ -1,0 +1,304 @@
+[gd_scene load_steps=22 format=3 uid="uid://btmjnx0wiofw"]
+
+[ext_resource type="Script" path="res://scenes/main menu/main_menu_02.gd" id="1_osc6a"]
+[ext_resource type="Texture2D" uid="uid://ciylpsqn4uy8h" path="res://assets/Main Menu/visual art.png" id="2_wprm7"]
+[ext_resource type="Texture2D" uid="uid://c6r228b4t8r4v" path="res://assets/Main Menu/Judul game.png" id="3_gi3v4"]
+[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Main Menu/themes/default_theme.tres" id="4_174if"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="5_rp5rd"]
+[ext_resource type="Script" path="res://scenes/main menu/Play.gd" id="6_a03ha"]
+[ext_resource type="Texture2D" uid="uid://x8ont0pclq7d" path="res://assets/Main Menu/tombol x.png" id="7_7ti01"]
+[ext_resource type="Texture2D" uid="uid://ds4hp5q2pwodq" path="res://assets/Main Menu/game designer.png" id="8_j866d"]
+[ext_resource type="Texture2D" uid="uid://co17um3imogul" path="res://assets/Main Menu/game programmer.png" id="9_8au6s"]
+[ext_resource type="Texture2D" uid="uid://cc6jv2vhsr8ka" path="res://assets/Main Menu/project manager.png" id="10_a7uf1"]
+[ext_resource type="Texture2D" uid="uid://dgeu3xrp0conp" path="res://assets/Main Menu/game artist.png" id="11_3yjwp"]
+
+[sub_resource type="FontVariation" id="FontVariation_x2qgt"]
+base_font = ExtResource("5_rp5rd")
+
+[sub_resource type="FontVariation" id="FontVariation_tk7ru"]
+base_font = ExtResource("5_rp5rd")
+spacing_top = 20
+spacing_bottom = 20
+
+[sub_resource type="FontVariation" id="FontVariation_vvthu"]
+base_font = ExtResource("5_rp5rd")
+spacing_top = 5
+spacing_bottom = 5
+
+[sub_resource type="FontVariation" id="FontVariation_felkn"]
+base_font = ExtResource("5_rp5rd")
+spacing_top = 5
+spacing_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ul67i"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ibwc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_hvsk8"]
+Button/styles/hover = SubResource("StyleBoxFlat_ul67i")
+Button/styles/normal = SubResource("StyleBoxFlat_0ibwc")
+
+[sub_resource type="Animation" id="Animation_65n5v"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_edh0j"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_agarw"]
+_data = {
+"fade_in": SubResource("Animation_65n5v"),
+"fade_out": SubResource("Animation_edh0j")
+}
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchor_right = 1.457
+anchor_bottom = 1.316
+offset_right = -877.44
+offset_bottom = -341.28
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.997, 1)
+script = ExtResource("1_osc6a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wprm7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.913)
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 604.161
+offset_top = 309.0
+offset_right = 604.161
+offset_bottom = 911.0
+theme_override_constants/separation = 20
+
+[node name="Seperator" type="Control" parent="VBoxContainer2"]
+layout_mode = 2
+
+[node name="Judul Game" type="Sprite2D" parent="VBoxContainer2"]
+position = Vector2(-60.5301, -110)
+scale = Vector2(1.05, 0.912)
+texture = ExtResource("3_gi3v4")
+
+[node name="menu" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 436.309
+offset_top = 240.0
+offset_right = 680.309
+offset_bottom = 877.0
+scale = Vector2(0.988, 1.1)
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu"]
+layout_mode = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Seperator" type="Control" parent="menu/VBoxContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="menu/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Keluar")
+focus_neighbor_bottom = NodePath("../Pengaturan")
+focus_next = NodePath("../Pengaturan")
+focus_previous = NodePath("../Keluar")
+theme = ExtResource("4_174if")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = SubResource("FontVariation_x2qgt")
+theme_override_font_sizes/font_size = 55
+text = "MAIN"
+script = ExtResource("6_a03ha")
+
+[node name="Pengaturan" type="Button" parent="menu/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Kredit")
+focus_next = NodePath("../Kredit")
+focus_previous = NodePath(".")
+theme = ExtResource("4_174if")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = SubResource("FontVariation_tk7ru")
+theme_override_font_sizes/font_size = 30
+text = "PENGATURAN"
+
+[node name="Kredit" type="Button" parent="menu/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Pengaturan")
+focus_neighbor_bottom = NodePath("../Keluar")
+focus_next = NodePath("../Keluar")
+focus_previous = NodePath("../Pengaturan")
+theme = ExtResource("4_174if")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = SubResource("FontVariation_vvthu")
+theme_override_font_sizes/font_size = 44
+text = "KREDIT"
+
+[node name="Keluar" type="Button" parent="menu/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Kredit")
+focus_neighbor_bottom = NodePath("../Play")
+focus_next = NodePath("../Play")
+focus_previous = NodePath("../Kredit")
+theme = ExtResource("4_174if")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = SubResource("FontVariation_felkn")
+theme_override_font_sizes/font_size = 45
+text = "KELUAR"
+
+[node name="Kredit_Panel" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ColorRect" type="ColorRect" parent="Kredit_Panel"]
+layout_mode = 1
+offset_right = 1928.0
+offset_bottom = 1080.0
+scale = Vector2(1, 1.038)
+color = Color(0, 0, 0, 0.458824)
+
+[node name="BackFromKredit" type="Button" parent="Kredit_Panel"]
+layout_mode = 0
+offset_left = 1749.25
+offset_top = 67.0
+offset_right = 1958.25
+offset_bottom = 259.0
+scale = Vector2(0.55, 0.55)
+theme = SubResource("Theme_hvsk8")
+icon = ExtResource("7_7ti01")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Kredit_Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -4.0
+offset_right = 1678.0
+offset_bottom = 1076.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Kredit_Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="GameDesigner" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer"]
+position = Vector2(535, 280)
+scale = Vector2(0.725, 0.75)
+texture = ExtResource("8_j866d")
+
+[node name="GameProgrammer" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer"]
+position = Vector2(535, 800)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_8au6s")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Kredit_Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="ProjectManager" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer2"]
+position = Vector2(1366, 280)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("10_a7uf1")
+
+[node name="GameArtist" type="Sprite2D" parent="Kredit_Panel/HBoxContainer/VBoxContainer2"]
+position = Vector2(1366, 800)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("11_3yjwp")
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_agarw")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)

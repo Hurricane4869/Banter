@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfg34tqtykwcd"]
+
+[ext_resource type="Texture2D" uid="uid://cxwyq2d3vshw0" path="res://assets/environment/BUSH.png" id="1_gsvrx"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pkmi4"]
+polygon = PackedVector2Array(-144, -104, -168, -88, -176, -64, -176, -56, -192, -32, -208, -16, -240, 16, -264, 40, -248, 64, -264, 72, -256, 104, -240, 104, -216, 104, -200, 120, -176, 112, -144, 120, -136, 120, -128, 136, -112, 160, -64, 152, -40, 160, -24, 144, -8, 160, 32, 168, 64, 160, 80, 144, 96, 160, 128, 152, 160, 160, 192, 136, 192, 112, 176, 96, 192, 64, 184, 32, 152, 16, 136, -8, 104, -16, 128, -32, 176, -24, 192, -8, 208, -16, 224, -40, 200, -72, 176, -80, 168, -104, 136, -120, 112, -144, 72, -160, 32, -160, 0, -176, -40, -184, -72, -168, -88, -144, -120, -128)
+
+[node name="Sprite2D" type="Sprite2D"]
+light_mask = 4
+visibility_layer = 4
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gsvrx")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_pkmi4")
+occluder_light_mask = 2
