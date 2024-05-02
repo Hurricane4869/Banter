@@ -175,6 +175,7 @@ vertical_alignment = 1
 
 [node name="Pengaturan" type="Button" parent="menu/HBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Play")
 focus_previous = NodePath(".")
 theme = ExtResource("4_y8p3e")
@@ -184,13 +185,14 @@ theme_override_constants/outline_size = 11
 theme_override_fonts/font = SubResource("FontVariation_tk7ru")
 theme_override_font_sizes/font_size = 1
 icon = ExtResource("6_1j7gc")
+icon_alignment = 1
 
 [node name="Pengaturan_Text" type="Label" parent="menu/HBoxContainer/Pengaturan"]
 layout_mode = 0
 offset_left = -15.0
-offset_top = 375.0
+offset_top = 115.0
 offset_right = 168.0
-offset_bottom = 446.0
+offset_bottom = 186.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("5_tqq4j")
 theme_override_font_sizes/font_size = 35
