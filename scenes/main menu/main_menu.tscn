@@ -51,59 +51,11 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 Button/styles/hover = SubResource("StyleBoxFlat_ul67i")
 Button/styles/normal = SubResource("StyleBoxFlat_0ibwc")
 
-[sub_resource type="Animation" id="Animation_edh0j"]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="Animation" id="Animation_65n5v"]
 resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
+
+[sub_resource type="Animation" id="Animation_edh0j"]
+resource_name = "fade_out"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_agarw"]
 _data = {
@@ -176,7 +128,7 @@ layout_mode = 2
 theme_override_constants/separation = 80
 alignment = 1
 
-[node name="Seperator" type="Control" parent="menu/VBoxContainer"]
+[node name="Separator" type="Control" parent="menu/VBoxContainer"]
 layout_mode = 2
 
 [node name="Play" type="Button" parent="menu/VBoxContainer"]
@@ -296,9 +248,3 @@ texture = ExtResource("12_qy6nc")
 libraries = {
 "": SubResource("AnimationLibrary_agarw")
 }
-
-[node name="ColorRect" type="ColorRect" parent="Transition"]
-visible = false
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 1)
