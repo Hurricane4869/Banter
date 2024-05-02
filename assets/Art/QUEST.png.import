@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc6jv2vhsr8ka"
-path="res://.godot/imported/project manager.png-ce4a20494498f7246632807f552e039c.ctex"
+uid="uid://u2h6hixy7qap"
+path="res://.godot/imported/QUEST.png-0c22f9a7fe60317e5195ace2f26ee53c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/project manager.png"
-dest_files=["res://.godot/imported/project manager.png-ce4a20494498f7246632807f552e039c.ctex"]
+source_file="res://assets/Art/QUEST.png"
+dest_files=["res://.godot/imported/QUEST.png-0c22f9a7fe60317e5195ace2f26ee53c.ctex"]
 
 [params]
 

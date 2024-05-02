@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5x0j5hd2fvb6"
-path="res://.godot/imported/PENGATURAN.png-2a8aeba5b773c3817e4fa9544a65d84b.ctex"
+uid="uid://jtipyajfnedb"
+path="res://.godot/imported/PLAY BUTTON.png-9acb9afb3e5128ee3f3efed1756e4eff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/PENGATURAN.png"
-dest_files=["res://.godot/imported/PENGATURAN.png-2a8aeba5b773c3817e4fa9544a65d84b.ctex"]
+source_file="res://assets/Art/PLAY BUTTON.png"
+dest_files=["res://.godot/imported/PLAY BUTTON.png-9acb9afb3e5128ee3f3efed1756e4eff.ctex"]
 
 [params]
 

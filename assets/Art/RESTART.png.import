@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccjuq74676e0w"
-path="res://.godot/imported/tombol main.png-3e374f07c8b932de969da3a7354ed37a.ctex"
+uid="uid://3pjmjw3afbk6"
+path="res://.godot/imported/RESTART.png-db1c347794c4d40a1caecbe2c7053cce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/tombol main.png"
-dest_files=["res://.godot/imported/tombol main.png-3e374f07c8b932de969da3a7354ed37a.ctex"]
+source_file="res://assets/Art/RESTART.png"
+dest_files=["res://.godot/imported/RESTART.png-db1c347794c4d40a1caecbe2c7053cce.ctex"]
 
 [params]
 

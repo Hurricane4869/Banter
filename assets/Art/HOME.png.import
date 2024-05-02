@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blxde2hugio4q"
-path="res://.godot/imported/ICON KELUAR.png-f61e909d177cf7050b07a8e708dfbe67.ctex"
+uid="uid://rdiv853dnruo"
+path="res://.godot/imported/HOME.png-e9144e6c4ad0fe06f37a0f66016b3de0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/ICON KELUAR.png"
-dest_files=["res://.godot/imported/ICON KELUAR.png-f61e909d177cf7050b07a8e708dfbe67.ctex"]
+source_file="res://assets/Art/HOME.png"
+dest_files=["res://.godot/imported/HOME.png-e9144e6c4ad0fe06f37a0f66016b3de0.ctex"]
 
 [params]
 

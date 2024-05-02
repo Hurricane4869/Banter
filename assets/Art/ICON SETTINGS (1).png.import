@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7lhk8eioqm2c"
-path="res://.godot/imported/tombol keluar.png-ddb34fdc664ae889a2db1e3d9819be44.ctex"
+uid="uid://bl07lxriapvx"
+path="res://.godot/imported/ICON SETTINGS (1).png-32742ee87081d7d6152cd459176c5ff3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/tombol keluar.png"
-dest_files=["res://.godot/imported/tombol keluar.png-ddb34fdc664ae889a2db1e3d9819be44.ctex"]
+source_file="res://assets/Art/ICON SETTINGS (1).png"
+dest_files=["res://.godot/imported/ICON SETTINGS (1).png-32742ee87081d7d6152cd459176c5ff3.ctex"]
 
 [params]
 

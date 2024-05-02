@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgf160svjaye2"
-path="res://.godot/imported/tombol pengaturan.png-8bf72d77384fe6d8f1fd21511859fbc9.ctex"
+uid="uid://njgloyrvb8jf"
+path="res://.godot/imported/PAUSE.png-a29fe8ae92dff0423f63917fad21a71e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/tombol pengaturan.png"
-dest_files=["res://.godot/imported/tombol pengaturan.png-8bf72d77384fe6d8f1fd21511859fbc9.ctex"]
+source_file="res://assets/Art/PAUSE.png"
+dest_files=["res://.godot/imported/PAUSE.png-a29fe8ae92dff0423f63917fad21a71e.ctex"]
 
 [params]
 

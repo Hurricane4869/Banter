@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc2ohbi8m5kre"
-path="res://.godot/imported/ICON SETTINGS.png-756713da0be5ff50f9af52e905cf027e.ctex"
+uid="uid://bafqypnyrl54i"
+path="res://.godot/imported/UI HP tanpa tombol.png-4cae5656fe04d082f353c776cb483de5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/ICON SETTINGS.png"
-dest_files=["res://.godot/imported/ICON SETTINGS.png-756713da0be5ff50f9af52e905cf027e.ctex"]
+source_file="res://assets/Art/UI HP tanpa tombol.png"
+dest_files=["res://.godot/imported/UI HP tanpa tombol.png-4cae5656fe04d082f353c776cb483de5.ctex"]
 
 [params]
 

@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="7_pumht"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="8_74xet"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pgyu"]
+size = Vector2(25, 24)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpxy5"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -28,50 +31,10 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5w2m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pgyu"]
-size = Vector2(25, 24)
-
 [node name="TestingInteraction" type="Node2D"]
 position = Vector2(349, 525)
 scale = Vector2(2.06, 2.06)
 script = ExtResource("1_hnlx0")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_q8716")]
-offset_left = 6.0
-offset_right = 6.0
-
-[node name="Pause" type="Button" parent="CanvasLayer"]
-offset_left = 1738.44
-offset_top = 39.4799
-offset_right = 1971.44
-offset_bottom = 249.48
-scale = Vector2(0.6, 0.6)
-theme = ExtResource("6_ra6av")
-theme_override_styles/normal = SubResource("StyleBoxFlat_dpxy5")
-theme_override_styles/hover = SubResource("StyleBoxFlat_k1rpr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_blt2c")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_pjn27")
-theme_override_styles/focus = SubResource("StyleBoxFlat_s5w2m")
-icon = ExtResource("7_pumht")
-
-[node name="Pause_Text" type="Label" parent="CanvasLayer/Pause"]
-layout_mode = 0
-offset_left = 21.8747
-offset_top = 218.75
-offset_right = 204.875
-offset_bottom = 289.75
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("8_74xet")
-theme_override_font_sizes/font_size = 60
-text = "Pause
-(Esc)"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="ColorTile" parent="." instance=ExtResource("2_46k8m")]
 visibility_layer = 4
@@ -100,8 +63,41 @@ speed = 250
 position = Vector2(-45.3442, 1.43424)
 position_smoothing_enabled = true
 
-[connection signal="hidden" from="CanvasLayer/Pause" to="." method="_on_pause_hidden"]
-[connection signal="mouse_entered" from="CanvasLayer/Pause" to="." method="_on_pause_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Pause" to="." method="_on_pause_mouse_exited"]
-[connection signal="pressed" from="CanvasLayer/Pause" to="." method="_on_pause_pressed"]
-[connection signal="visibility_changed" from="CanvasLayer/Pause" to="." method="_on_pause_visibility_changed"]
+[node name="Pause" type="Button" parent="DummyTopDown/Camera2D"]
+offset_left = 85.0
+offset_top = -55.0
+offset_right = 318.0
+offset_bottom = 155.0
+scale = Vector2(0.07, 0.07)
+theme = ExtResource("6_ra6av")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpxy5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k1rpr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_blt2c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pjn27")
+theme_override_styles/focus = SubResource("StyleBoxFlat_s5w2m")
+icon = ExtResource("7_pumht")
+
+[node name="Pause_Text" type="Label" parent="DummyTopDown/Camera2D/Pause"]
+layout_mode = 0
+offset_left = 21.8747
+offset_top = 218.75
+offset_right = 204.875
+offset_bottom = 289.75
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("8_74xet")
+theme_override_font_sizes/font_size = 60
+text = "Pause
+(Esc)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_q8716")]
+
+[connection signal="mouse_entered" from="DummyTopDown/Camera2D/Pause" to="." method="_on_pause_mouse_entered"]
+[connection signal="mouse_exited" from="DummyTopDown/Camera2D/Pause" to="." method="_on_pause_mouse_exited"]
+[connection signal="pressed" from="DummyTopDown/Camera2D/Pause" to="." method="_on_pause_pressed"]
