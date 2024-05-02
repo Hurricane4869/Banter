@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfgw8mf8kcnvk"]
+
+[ext_resource type="Script" path="res://TestScene.gd" id="1_fo7r2"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_tigti"]
+[ext_resource type="Texture2D" uid="uid://ciylpsqn4uy8h" path="res://assets/Art/visual art.png" id="3_vimnw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4g76"]
+texture = ExtResource("3_vimnw")
+texture_margin_top = 750.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwmn3"]
+texture = ExtResource("3_vimnw")
+texture_margin_top = 750.0
+modulate_color = Color(0.695503, 0.695503, 0.695503, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cogs5"]
+texture = ExtResource("3_vimnw")
+texture_margin_top = 750.0
+
+[node name="TestScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fo7r2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vimnw")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tigti")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxTexture_s4g76")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wwmn3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cogs5")
+text = "Klik Untuk Memulai"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

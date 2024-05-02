@@ -1,0 +1,170 @@
+[gd_scene load_steps=14 format=3 uid="uid://eyjjp6rydhdv"]
+
+[ext_resource type="Script" path="res://PauseMenu.gd" id="1_mht3v"]
+[ext_resource type="Texture2D" uid="uid://bafqypnyrl54i" path="res://assets/Art/UI HP tanpa tombol.png" id="2_cyfdr"]
+[ext_resource type="Texture2D" uid="uid://cext3h3occmuo" path="res://assets/Art/BACK.png" id="3_bnieb"]
+[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="3_u7xel"]
+[ext_resource type="Texture2D" uid="uid://3pjmjw3afbk6" path="res://assets/Art/RESTART.png" id="4_g50ec"]
+[ext_resource type="Texture2D" uid="uid://rdiv853dnruo" path="res://assets/Art/HOME.png" id="5_qm08d"]
+[ext_resource type="Texture2D" uid="uid://u2h6hixy7qap" path="res://assets/Art/QUEST.png" id="6_4kfeq"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_4tuu8"]
+[ext_resource type="Texture2D" uid="uid://c5y8voumngya4" path="res://assets/Art/PENGATURAN (HP).png" id="7_4feq0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_df7xw"]
+
+[sub_resource type="Animation" id="Animation_s4b4f"]
+resource_name = "Handphone"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Handphone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(680, 1094), Vector2(680, 1090), Vector2(680, 50), Vector2(680, 90)]
+}
+
+[sub_resource type="Animation" id="Animation_eh7dv"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Handphone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7, 0.7001),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(680, 90), Vector2(680, 50), Vector2(680, 1094), Vector2(680, 1090)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ympw5"]
+_data = {
+"Handphone": SubResource("Animation_s4b4f"),
+"RESET": SubResource("Animation_eh7dv")
+}
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mht3v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_df7xw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.133333, 0.133333, 0.52549)
+
+[node name="Handphone" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 680.0
+offset_top = 90.0
+offset_right = 2286.0
+offset_bottom = 2882.0
+grow_horizontal = 0
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_cyfdr")
+
+[node name="Resume" type="Button" parent="Handphone"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 466.0
+offset_right = 363.0
+offset_bottom = 626.0
+theme = ExtResource("3_u7xel")
+icon = ExtResource("3_bnieb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Handphone"]
+layout_mode = 0
+offset_left = 493.75
+offset_top = 934.375
+offset_right = 1125.75
+offset_bottom = 1580.38
+theme_override_constants/separation = 150
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Handphone/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Restart" type="Button" parent="Handphone/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_u7xel")
+icon = ExtResource("4_g50ec")
+
+[node name="Restart_Text" type="Label" parent="Handphone/HBoxContainer/VBoxContainer2/Restart"]
+offset_left = 21.8747
+offset_top = 218.75
+offset_right = 204.875
+offset_bottom = 289.75
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 50
+text = "Ulangi"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quests" type="Button" parent="Handphone/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_u7xel")
+icon = ExtResource("6_4kfeq")
+
+[node name="Misi_Text" type="Label" parent="Handphone/HBoxContainer/VBoxContainer2/Quests"]
+offset_left = 21.8747
+offset_top = 218.75
+offset_right = 204.875
+offset_bottom = 289.75
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 50
+text = "Misi
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Handphone/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Settings" type="Button" parent="Handphone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_u7xel")
+icon = ExtResource("7_4feq0")
+
+[node name="Quit" type="Button" parent="Handphone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_u7xel")
+icon = ExtResource("5_qm08d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ympw5")
+}
+
+[connection signal="pressed" from="Handphone/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Handphone/HBoxContainer/VBoxContainer2/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Handphone/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

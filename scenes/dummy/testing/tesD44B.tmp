@@ -4,11 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="2_46k8m"]
 [ext_resource type="Texture2D" uid="uid://bxdpljf03tg1i" path="res://assets/dummy/ffd701.png" id="3_niht7"]
 [ext_resource type="PackedScene" uid="uid://uldbvot73hv" path="res://scenes/dummy/object/DummyTopDown.tscn" id="4_43bdp"]
-
 [ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="5_q8716"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="6_ra6av"]
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="7_pumht"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="8_74xet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pgyu"]
+size = Vector2(25, 24)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpxy5"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -29,26 +31,44 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5w2m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pgyu"]
-size = Vector2(25, 24)
-
 [node name="TestingInteraction" type="Node2D"]
 position = Vector2(349, 525)
 scale = Vector2(2.06, 2.06)
 script = ExtResource("1_hnlx0")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="ColorTile" parent="." instance=ExtResource("2_46k8m")]
+visibility_layer = 4
+y_sort_enabled = true
+position = Vector2(262.621, -4.85437)
+scale = Vector2(3.636, 3.636)
+action_name = "mengganti warna"
 
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_q8716")]
-offset_left = 6.0
-offset_right = 6.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorTile"]
+shape = SubResource("RectangleShape2D_3pgyu")
 
-[node name="Pause" type="Button" parent="CanvasLayer"]
-offset_left = 1738.44
-offset_top = 39.4799
-offset_right = 1971.44
-offset_bottom = 249.48
-scale = Vector2(0.6, 0.6)
+[node name="TextureRect" type="TextureRect" parent="ColorTile"]
+offset_left = -13.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+texture = ExtResource("3_niht7")
+expand_mode = 2
+
+[node name="DummyTopDown" parent="." instance=ExtResource("4_43bdp")]
+position = Vector2(500, 0)
+scale = Vector2(4.4, 4.4)
+speed = 250
+
+[node name="Camera2D" type="Camera2D" parent="DummyTopDown"]
+position = Vector2(-45.3442, 1.43424)
+position_smoothing_enabled = true
+
+[node name="Pause" type="Button" parent="DummyTopDown/Camera2D"]
+offset_left = 85.0
+offset_top = -55.0
+offset_right = 318.0
+offset_bottom = 155.0
+scale = Vector2(0.07, 0.07)
 theme = ExtResource("6_ra6av")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dpxy5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_k1rpr")
@@ -57,7 +77,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_pjn27")
 theme_override_styles/focus = SubResource("StyleBoxFlat_s5w2m")
 icon = ExtResource("7_pumht")
 
-[node name="Pause_Text" type="Label" parent="CanvasLayer/Pause"]
+[node name="Pause_Text" type="Label" parent="DummyTopDown/Camera2D/Pause"]
 layout_mode = 0
 offset_left = 21.8747
 offset_top = 218.75
@@ -74,39 +94,10 @@ text = "Pause
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorTile" parent="." instance=ExtResource("2_46k8m")]
-visibility_layer = 4
-y_sort_enabled = true
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-position = Vector2(262.621, -4.85437)
-scale = Vector2(3.636, 3.636)
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_q8716")]
 
-action_name = "mengganti warna"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorTile"]
-shape = SubResource("RectangleShape2D_3pgyu")
-
-[node name="TextureRect" type="TextureRect" parent="ColorTile"]
-offset_left = -13.0
-offset_top = -12.0
-offset_right = 12.0
-offset_bottom = 12.0
-texture = ExtResource("3_niht7")
-expand_mode = 2
-
-[node name="DummyTopDown" parent="." instance=ExtResource("4_43bdp")]
-
-position = Vector2(500, 0)
-scale = Vector2(4.4, 4.4)
-speed = 250
-
-[node name="Camera2D" type="Camera2D" parent="DummyTopDown"]
-position = Vector2(-45.3442, 1.43424)
-position_smoothing_enabled = true
-
-[connection signal="hidden" from="CanvasLayer/Pause" to="." method="_on_pause_hidden"]
-[connection signal="mouse_entered" from="CanvasLayer/Pause" to="." method="_on_pause_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/Pause" to="." method="_on_pause_mouse_exited"]
-[connection signal="pressed" from="CanvasLayer/Pause" to="." method="_on_pause_pressed"]
-[connection signal="visibility_changed" from="CanvasLayer/Pause" to="." method="_on_pause_visibility_changed"]
-
+[connection signal="mouse_entered" from="DummyTopDown/Camera2D/Pause" to="." method="_on_pause_mouse_entered"]
+[connection signal="mouse_exited" from="DummyTopDown/Camera2D/Pause" to="." method="_on_pause_mouse_exited"]
+[connection signal="pressed" from="DummyTopDown/Camera2D/Pause" to="." method="_on_pause_pressed"]
