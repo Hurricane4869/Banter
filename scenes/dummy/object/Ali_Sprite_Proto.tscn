@@ -1,29 +1,75 @@
-[gd_scene load_steps=6 format=3 uid="uid://etkaqh5xuhw3"]
+[gd_scene load_steps=11 format=3 uid="uid://etkaqh5xuhw3"]
 
 [ext_resource type="Script" path="res://scripts/dummy/character_movement_dummy.gd" id="1_va3vg"]
-[ext_resource type="Texture2D" uid="uid://bo86e2wf7shba" path="res://assets/player/chara kiri 48x32.png" id="2_x32hq"]
-[ext_resource type="Texture2D" uid="uid://cwkjp42dnrl1s" path="res://assets/player/chara kanan 48x32.png" id="3_no320"]
+[ext_resource type="Texture2D" uid="uid://bi1mqd30dnmcc" path="res://assets/player/chara kiri original.png" id="2_emy3x"]
+[ext_resource type="Texture2D" uid="uid://yyarn3y0s7ry" path="res://assets/player/chara kanan original.png" id="3_xw6ud"]
+[ext_resource type="Texture2D" uid="uid://6uf1nmyg2mqd" path="res://assets/player/chara atas original.png" id="4_k6ob7"]
+[ext_resource type="Texture2D" uid="uid://mk7jmlgfs4bc" path="res://assets/player/chara bawah original.png" id="5_ai1u6"]
+[ext_resource type="Texture2D" uid="uid://c0xhs4d54woab" path="res://assets/dummy/Light.png" id="7_p05ll"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vy2hp"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_x32hq")
+"texture": ExtResource("2_emy3x")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_no320")
+"texture": ExtResource("3_xw6ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k6ob7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ai1u6")
 }],
 "loop": true,
 "name": &"driving",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"up",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4g86"]
-size = Vector2(19, 17)
+size = Vector2(21.2, 8.8)
 
-[node name="DummyTopDown" type="CharacterBody2D"]
+[sub_resource type="Gradient" id="Gradient_74w74"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_c2kv8"]
+gradient = SubResource("Gradient_74w74")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.4, 1)
+metadata/_snap_enabled = true
+
+[node name="AliTopDown" type="CharacterBody2D"]
 light_mask = 2
 visibility_layer = 2
+scale = Vector2(5, 5)
 disable_mode = 2
 collision_layer = 2
 collision_mask = 2
@@ -31,12 +77,67 @@ script = ExtResource("1_va3vg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.0212879, 0.0212879)
 sprite_frames = SubResource("SpriteFrames_vy2hp")
 animation = &"driving"
-frame_progress = 0.143532
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
-position = Vector2(-1.5, 1.5)
+position = Vector2(-1.4, 4.2)
 shape = SubResource("RectangleShape2D_v4g86")
+
+[node name="Lighting" type="Node2D" parent="."]
+position = Vector2(-7.62939e-07, 0)
+
+[node name="LightBeam_Horizontal" type="PointLight2D" parent="Lighting"]
+position = Vector2(7.62939e-07, -1.77636e-15)
+scale = Vector2(0.026, 0.026)
+color = Color(0.823529, 0.823529, 0, 0.733333)
+range_item_cull_mask = 5
+shadow_enabled = true
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
+texture = ExtResource("7_p05ll")
+offset = Vector2(-700, -7.69231)
+
+[node name="LightBeam_Down" type="PointLight2D" parent="Lighting"]
+position = Vector2(7.15256e-07, 0)
+rotation = -1.5708
+scale = Vector2(0.026, 0.026)
+color = Color(1, 0.843, 0.004, 1)
+range_item_cull_mask = 7
+shadow_enabled = true
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
+texture = ExtResource("7_p05ll")
+offset = Vector2(-537.19, 0.952889)
+
+[node name="LightBeam_Up" type="PointLight2D" parent="Lighting"]
+position = Vector2(-0.4, -0.0456078)
+rotation = 1.5708
+scale = Vector2(0.026, 0.026)
+color = Color(1, 0.843, 0.004, 1)
+range_item_cull_mask = 4
+shadow_enabled = true
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
+texture = ExtResource("7_p05ll")
+offset = Vector2(-636.707, 1.52588e-05)
+
+[node name="AmbientLight" type="PointLight2D" parent="Lighting"]
+position = Vector2(7.62939e-07, -0.2)
+color = Color(0.823529, 0.823529, 0, 0.733333)
+range_item_cull_mask = 6
+shadow_enabled = true
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
+texture = SubResource("GradientTexture2D_c2kv8")
+texture_scale = 0.5
+
+[node name="AmbientLight2" type="PointLight2D" parent="Lighting"]
+position = Vector2(7.62939e-07, -0.2)
+color = Color(0.823529, 0.823529, 0, 0.733333)
+energy = 0.2
+range_item_cull_mask = 6
+shadow_item_cull_mask = 5
+texture = SubResource("GradientTexture2D_c2kv8")

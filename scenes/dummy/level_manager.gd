@@ -2,8 +2,8 @@ extends Node2D
 
 @onready var interaction_area: InteractionArea = $AntarPaket
 @onready var button = $TextureButton
-@onready var timer = $DummyTopDown/QuestTimer
-@onready var timer_node = get_node("DummyTopDown/QuestTimer/Timer")
+@onready var timer = $AliTopDown/QuestTimer
+@onready var timer_node = get_node("AliTopDown/QuestTimer/Timer")
 
 var status_paket: bool = false
 
