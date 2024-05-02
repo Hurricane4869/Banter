@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="2_46k8m"]
 [ext_resource type="Texture2D" uid="uid://bxdpljf03tg1i" path="res://assets/dummy/ffd701.png" id="3_niht7"]
 [ext_resource type="PackedScene" uid="uid://uldbvot73hv" path="res://scenes/dummy/object/DummyTopDown.tscn" id="4_43bdp"]
-
 [ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="5_q8716"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="6_ra6av"]
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="7_pumht"]
@@ -77,10 +76,8 @@ vertical_alignment = 1
 [node name="ColorTile" parent="." instance=ExtResource("2_46k8m")]
 visibility_layer = 4
 y_sort_enabled = true
-
 position = Vector2(262.621, -4.85437)
 scale = Vector2(3.636, 3.636)
-
 action_name = "mengganti warna"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ColorTile"]
@@ -95,7 +92,6 @@ texture = ExtResource("3_niht7")
 expand_mode = 2
 
 [node name="DummyTopDown" parent="." instance=ExtResource("4_43bdp")]
-
 position = Vector2(500, 0)
 scale = Vector2(4.4, 4.4)
 speed = 250
@@ -109,4 +105,3 @@ position_smoothing_enabled = true
 [connection signal="mouse_exited" from="CanvasLayer/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="visibility_changed" from="CanvasLayer/Pause" to="." method="_on_pause_visibility_changed"]
-

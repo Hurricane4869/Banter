@@ -33,7 +33,6 @@ base_font = ExtResource("5_tqq4j")
 
 [sub_resource type="Animation" id="Animation_65n5v"]
 resource_name = "fade_in"
-
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -85,7 +84,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
-
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_agarw"]
 _data = {
@@ -143,9 +141,7 @@ scale = Vector2(1, 1.113)
 theme_override_constants/separation = 0
 alignment = 1
 
-
 [node name="HBoxContainer" type="HBoxContainer" parent="menu"]
-
 layout_mode = 2
 theme_override_constants/separation = 100
 

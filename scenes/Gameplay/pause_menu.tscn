@@ -111,6 +111,7 @@ theme = ExtResource("3_u7xel")
 icon = ExtResource("4_g50ec")
 
 [node name="Restart_Text" type="Label" parent="Handphone/HBoxContainer/VBoxContainer2/Restart"]
+layout_mode = 0
 offset_left = 21.8747
 offset_top = 218.75
 offset_right = 204.875
@@ -131,6 +132,7 @@ theme = ExtResource("3_u7xel")
 icon = ExtResource("6_4kfeq")
 
 [node name="Misi_Text" type="Label" parent="Handphone/HBoxContainer/VBoxContainer2/Quests"]
+layout_mode = 0
 offset_left = 21.8747
 offset_top = 218.75
 offset_right = 204.875
