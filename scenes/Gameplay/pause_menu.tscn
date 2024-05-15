@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://eyjjp6rydhdv"]
+[gd_scene load_steps=35 format=3 uid="uid://eyjjp6rydhdv"]
 
 [ext_resource type="Script" path="res://PauseMenu.gd" id="1_mht3v"]
-[ext_resource type="Texture2D" uid="uid://bafqypnyrl54i" path="res://assets/Art/UI HP tanpa tombol.png" id="2_cyfdr"]
+[ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="2_vu3m5"]
+[ext_resource type="PackedScene" uid="uid://2jmkstysi5ps" path="res://scenes/main menu/main_menu.tscn" id="2_ypara"]
+[ext_resource type="Texture2D" uid="uid://da3r1xrm40je" path="res://assets/Art/WALLPAPER HP.png" id="3_1g6i3"]
 [ext_resource type="Texture2D" uid="uid://cext3h3occmuo" path="res://assets/Art/BACK.png" id="3_bnieb"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="3_u7xel"]
 [ext_resource type="Texture2D" uid="uid://3pjmjw3afbk6" path="res://assets/Art/RESTART.png" id="4_g50ec"]
@@ -9,8 +11,70 @@
 [ext_resource type="Texture2D" uid="uid://u2h6hixy7qap" path="res://assets/Art/QUEST.png" id="6_4kfeq"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_4tuu8"]
 [ext_resource type="Texture2D" uid="uid://c5y8voumngya4" path="res://assets/Art/PENGATURAN (HP).png" id="7_4feq0"]
+[ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://assets/Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="10_32clx"]
+[ext_resource type="Texture2D" uid="uid://b6fkqqic1gkra" path="res://assets/Art/SETTINGS POLOSAN.png" id="11_to2fa"]
+[ext_resource type="Texture2D" uid="uid://dxp743clp3u6" path="res://assets/Art/POLOSAN SETTING.png" id="12_kmauy"]
+[ext_resource type="Texture2D" uid="uid://du0omdtiflx8n" path="res://assets/Art/ICON SOUND.png" id="13_msi7h"]
+[ext_resource type="Texture2D" uid="uid://dikmlux00maag" path="res://assets/Art/ICON VIDEO.png" id="14_wyh11"]
+[ext_resource type="Texture2D" uid="uid://ojp4l1ubkajc" path="res://assets/Art/ICON KONTROL.png" id="15_838gt"]
+[ext_resource type="Texture2D" uid="uid://cwhhdlkb7hmf5" path="res://assets/Art/SUARA.png" id="16_3ni6c"]
+[ext_resource type="Texture2D" uid="uid://brw4chr80l1wj" path="res://assets/Art/VIDEO.png" id="17_qvn6a"]
+[ext_resource type="Texture2D" uid="uid://cgcsrh2purj7d" path="res://assets/Art/KONTROL.png" id="18_a68j0"]
+[ext_resource type="Texture2D" uid="uid://0hebwgv5a01a" path="res://assets/Art/Tasklevel1.png" id="19_0qdvu"]
+[ext_resource type="Texture2D" uid="uid://d4a50d5iesvih" path="res://assets/SLIDER MERAH.png" id="19_s7ns1"]
+[ext_resource type="Texture2D" uid="uid://m3431e72uwhq" path="res://assets/Art/centang polosan.png" id="20_4742u"]
+[ext_resource type="Texture2D" uid="uid://bioyfhbblvd0s" path="res://assets/Art/TOMBOL KONTROL SETTINGS.png" id="21_4ljvg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_df7xw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8tc6"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1giwv"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_tlqju"]
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_s8tc6")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_s8tc6")
+HSlider/styles/slider = SubResource("StyleBoxFlat_1giwv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13k68"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_left = 30.0
+expand_margin_top = 40.0
+expand_margin_right = 30.0
+expand_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_713qe"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_left = 30.0
+expand_margin_top = 40.0
+expand_margin_right = 30.0
+expand_margin_bottom = 40.0
+
+[sub_resource type="Theme" id="Theme_707ca"]
+CheckBox/styles/disabled = SubResource("StyleBoxFlat_13k68")
+CheckBox/styles/focus = SubResource("StyleBoxFlat_13k68")
+CheckBox/styles/hover = SubResource("StyleBoxFlat_713qe")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxFlat_713qe")
+CheckBox/styles/normal = SubResource("StyleBoxFlat_13k68")
+CheckBox/styles/pressed = SubResource("StyleBoxFlat_13k68")
 
 [sub_resource type="Animation" id="Animation_s4b4f"]
 resource_name = "Handphone"
@@ -57,15 +121,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mht3v")
+main_menu_scene = ExtResource("2_ypara")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 material = SubResource("ShaderMaterial_df7xw")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
+offset_left = 1.0
 offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -82,40 +146,64 @@ offset_right = 2286.0
 offset_bottom = 2882.0
 grow_horizontal = 0
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("2_cyfdr")
+texture = ExtResource("2_vu3m5")
 
-[node name="Resume" type="Button" parent="Handphone"]
+[node name="PausePanel" type="TextureRect" parent="Handphone"]
 layout_mode = 0
-offset_left = 203.0
-offset_top = 466.0
-offset_right = 363.0
-offset_bottom = 626.0
+offset_left = 145.0
+offset_top = 306.0
+offset_right = 1459.0
+offset_bottom = 2241.0
+texture = ExtResource("3_1g6i3")
+
+[node name="Resume" type="Button" parent="Handphone/PausePanel"]
+layout_mode = 0
+offset_left = 56.125
+offset_top = 159.75
+offset_right = 216.125
+offset_bottom = 319.75
 theme = ExtResource("3_u7xel")
 icon = ExtResource("3_bnieb")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Handphone"]
+[node name="Resume_Text" type="Label" parent="Handphone/PausePanel/Resume"]
 layout_mode = 0
-offset_left = 493.75
-offset_top = 934.375
-offset_right = 1125.75
-offset_bottom = 1580.38
+offset_left = -10.0
+offset_top = 165.0
+offset_right = 174.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 50
+text = "Kembali"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Handphone/PausePanel"]
+layout_mode = 0
+offset_left = 346.875
+offset_top = 628.125
+offset_right = 978.875
+offset_bottom = 1274.13
 theme_override_constants/separation = 150
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Handphone/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Handphone/PausePanel/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 200
 
-[node name="Restart" type="Button" parent="Handphone/HBoxContainer/VBoxContainer2"]
+[node name="Restart" type="Button" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("3_u7xel")
 icon = ExtResource("4_g50ec")
 
-[node name="Restart_Text" type="Label" parent="Handphone/HBoxContainer/VBoxContainer2/Restart"]
+[node name="Restart_Text" type="Label" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Restart"]
 layout_mode = 0
-offset_left = 21.8747
-offset_top = 218.75
-offset_right = 204.875
-offset_bottom = 289.75
+offset_left = 22.0
+offset_top = 220.0
+offset_right = 205.0
+offset_bottom = 291.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
@@ -126,17 +214,17 @@ text = "Ulangi"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Quests" type="Button" parent="Handphone/HBoxContainer/VBoxContainer2"]
+[node name="Quests" type="Button" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("3_u7xel")
 icon = ExtResource("6_4kfeq")
 
-[node name="Misi_Text" type="Label" parent="Handphone/HBoxContainer/VBoxContainer2/Quests"]
+[node name="Misi_Text" type="Label" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Quests"]
 layout_mode = 0
-offset_left = 21.8747
-offset_top = 218.75
-offset_right = 204.875
-offset_bottom = 289.75
+offset_left = 22.0
+offset_top = 220.0
+offset_right = 205.0
+offset_bottom = 291.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
@@ -148,25 +236,466 @@ text = "Misi
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Handphone/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Handphone/PausePanel/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 200
 
-[node name="Settings" type="Button" parent="Handphone/HBoxContainer/VBoxContainer"]
+[node name="Settings" type="Button" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_u7xel")
 icon = ExtResource("7_4feq0")
 
-[node name="Quit" type="Button" parent="Handphone/HBoxContainer/VBoxContainer"]
+[node name="Pengaturan_Text" type="Label" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer/Settings"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 220.0
+offset_right = 244.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 50
+text = "Pengaturan
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_u7xel")
 icon = ExtResource("5_qm08d")
+
+[node name="Keluar_Text" type="Label" parent="Handphone/PausePanel/HBoxContainer/VBoxContainer/Quit"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 220.0
+offset_right = 205.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 50
+text = "Keluar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Panel" type="TextureRect" parent="Handphone"]
+visible = false
+layout_mode = 2
+offset_left = 145.0
+offset_top = 305.0
+offset_right = 1459.0
+offset_bottom = 2240.0
+texture = ExtResource("11_to2fa")
+
+[node name="Pengaturan_Judul" type="Label" parent="Handphone/Settings_Panel"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 130.0
+offset_right = 924.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 80
+text = "PENGATURAN"
+
+[node name="Back_From_Settings" type="Button" parent="Handphone/Settings_Panel"]
+layout_mode = 2
+offset_left = 10.0
+offset_top = 101.25
+offset_right = 170.0
+offset_bottom = 261.25
+scale = Vector2(1.15, 1.15)
+theme = ExtResource("3_u7xel")
+icon = ExtResource("3_bnieb")
+
+[node name="Settings_Menu" type="TextureRect" parent="Handphone/Settings_Panel"]
+layout_mode = 0
+offset_left = 78.1253
+offset_top = 487.5
+offset_right = 1232.13
+offset_bottom = 1694.5
+texture = ExtResource("12_kmauy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Handphone/Settings_Panel/Settings_Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -404.5
+offset_top = -280.5
+offset_right = 404.5
+offset_bottom = 280.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="Settings_Icons" type="VBoxContainer" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 125
+
+[node name="Sound_Icon" type="TextureRect" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Icons"]
+layout_mode = 2
+texture = ExtResource("13_msi7h")
+
+[node name="Video_Icon" type="TextureRect" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Icons"]
+layout_mode = 2
+texture = ExtResource("14_wyh11")
+
+[node name="Kontrol_Icon" type="TextureRect" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Icons"]
+layout_mode = 2
+texture = ExtResource("15_838gt")
+
+[node name="Settings_Button" type="VBoxContainer" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 125
+
+[node name="Suara_Button" type="Button" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button"]
+layout_mode = 2
+theme = ExtResource("3_u7xel")
+icon = ExtResource("16_3ni6c")
+
+[node name="Video_Button" type="Button" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button"]
+layout_mode = 2
+theme = ExtResource("3_u7xel")
+icon = ExtResource("17_qvn6a")
+
+[node name="Kontrol_Button" type="Button" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button"]
+layout_mode = 2
+theme = ExtResource("3_u7xel")
+icon = ExtResource("18_a68j0")
+
+[node name="Sound_Panel" type="TextureRect" parent="Handphone"]
+visible = false
+layout_mode = 0
+offset_left = 148.125
+offset_top = 306.0
+offset_right = 1462.13
+offset_bottom = 2244.0
+texture = ExtResource("11_to2fa")
+
+[node name="Sound_Judul" type="Label" parent="Handphone/Sound_Panel"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 130.0
+offset_right = 773.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 80
+text = "SUARA"
+
+[node name="Sound_Menu" type="TextureRect" parent="Handphone/Sound_Panel"]
+layout_mode = 0
+offset_left = 78.1253
+offset_top = 487.5
+offset_right = 1232.13
+offset_bottom = 1694.5
+texture = ExtResource("12_kmauy")
+
+[node name="Back_From_Sound" type="Button" parent="Handphone/Sound_Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 101.25
+offset_right = 170.0
+offset_bottom = 261.25
+scale = Vector2(1.15, 1.15)
+theme = ExtResource("3_u7xel")
+icon = ExtResource("3_bnieb")
+
+[node name="Sound_Settings" type="VBoxContainer" parent="Handphone/Sound_Panel"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 267.501
+offset_top = -337.5
+offset_right = -278.499
+offset_bottom = 583.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 175
+
+[node name="Master" type="GridContainer" parent="Handphone/Sound_Panel/Sound_Settings"]
+layout_mode = 2
+theme_override_constants/v_separation = 0
+
+[node name="MasterLabel" type="Label" parent="Handphone/Sound_Panel/Sound_Settings/Master"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 75
+text = "MASTER :"
+horizontal_alignment = 1
+
+[node name="MasterSlider" type="HSlider" parent="Handphone/Sound_Panel/Sound_Settings/Master"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = SubResource("Theme_tlqju")
+theme_override_icons/grabber = ExtResource("19_s7ns1")
+theme_override_icons/grabber_highlight = ExtResource("19_s7ns1")
+theme_override_icons/grabber_disabled = ExtResource("19_s7ns1")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Musik" type="GridContainer" parent="Handphone/Sound_Panel/Sound_Settings"]
+layout_mode = 2
+theme_override_constants/v_separation = 0
+
+[node name="MusicLabel" type="Label" parent="Handphone/Sound_Panel/Sound_Settings/Musik"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 75
+text = "MUSIK :"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="Handphone/Sound_Panel/Sound_Settings/Musik"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = SubResource("Theme_tlqju")
+theme_override_icons/grabber = ExtResource("19_s7ns1")
+theme_override_icons/grabber_highlight = ExtResource("19_s7ns1")
+theme_override_icons/grabber_disabled = ExtResource("19_s7ns1")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFX" type="GridContainer" parent="Handphone/Sound_Panel/Sound_Settings"]
+layout_mode = 2
+theme_override_constants/v_separation = 0
+
+[node name="SFXLabel" type="Label" parent="Handphone/Sound_Panel/Sound_Settings/SFX"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 75
+text = "SFX :"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="Handphone/Sound_Panel/Sound_Settings/SFX"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = SubResource("Theme_tlqju")
+theme_override_icons/grabber = ExtResource("19_s7ns1")
+theme_override_icons/grabber_highlight = ExtResource("19_s7ns1")
+theme_override_icons/grabber_disabled = ExtResource("19_s7ns1")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Video_Panel" type="TextureRect" parent="Handphone"]
+visible = false
+layout_mode = 0
+offset_left = 145.0
+offset_top = 306.0
+offset_right = 1459.0
+offset_bottom = 2244.0
+texture = ExtResource("11_to2fa")
+
+[node name="Video_Judul" type="Label" parent="Handphone/Video_Panel"]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 130.0
+offset_right = 770.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 80
+text = "VIDEO
+"
+
+[node name="Video_Menu" type="TextureRect" parent="Handphone/Video_Panel"]
+layout_mode = 0
+offset_left = 78.1253
+offset_top = 487.5
+offset_right = 1232.13
+offset_bottom = 1694.5
+texture = ExtResource("12_kmauy")
+
+[node name="Back_From_Video" type="Button" parent="Handphone/Video_Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 101.25
+offset_right = 170.0
+offset_bottom = 261.25
+scale = Vector2(1.15, 1.15)
+theme = ExtResource("3_u7xel")
+icon = ExtResource("3_bnieb")
+
+[node name="Video_Settings" type="VBoxContainer" parent="Handphone/Video_Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -157.5
+offset_right = 242.0
+offset_bottom = 157.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 250
+
+[node name="Fullscreen" type="GridContainer" parent="Handphone/Video_Panel/Video_Settings"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/v_separation = 100
+
+[node name="FullScreenLabel" type="Label" parent="Handphone/Video_Panel/Video_Settings/Fullscreen"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 75
+text = "FULLSCREEN
+"
+horizontal_alignment = 1
+
+[node name="FullScreenCheckBox" type="CheckBox" parent="Handphone/Video_Panel/Video_Settings/Fullscreen"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = SubResource("Theme_707ca")
+theme_override_font_sizes/font_size = 0
+theme_override_icons/checked = ExtResource("20_4742u")
+
+[node name="Kontrol_Panel" type="TextureRect" parent="Handphone"]
+visible = false
+layout_mode = 0
+offset_left = 145.0
+offset_top = 306.0
+offset_right = 1459.0
+offset_bottom = 2244.0
+texture = ExtResource("11_to2fa")
+
+[node name="Kontrol_Judul" type="Label" parent="Handphone/Kontrol_Panel"]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 130.0
+offset_right = 848.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 80
+text = "KONTROL
+"
+
+[node name="Kontrol_Menu" type="TextureRect" parent="Handphone/Kontrol_Panel"]
+layout_mode = 0
+offset_left = 78.1253
+offset_top = 487.5
+offset_right = 1232.13
+offset_bottom = 1694.5
+texture = ExtResource("12_kmauy")
+
+[node name="Kontrol_Value" type="TextureRect" parent="Handphone/Kontrol_Panel/Kontrol_Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -513.5
+offset_top = -470.5
+offset_right = 513.5
+offset_bottom = 470.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("21_4ljvg")
+
+[node name="Back_From_Kontrol" type="Button" parent="Handphone/Kontrol_Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 101.25
+offset_right = 170.0
+offset_bottom = 261.25
+scale = Vector2(1.15, 1.15)
+theme = ExtResource("3_u7xel")
+icon = ExtResource("3_bnieb")
+
+[node name="Task_Panel" type="TextureRect" parent="Handphone"]
+visible = false
+layout_mode = 0
+offset_left = 145.0
+offset_top = 306.0
+offset_right = 1459.0
+offset_bottom = 2244.0
+texture = ExtResource("11_to2fa")
+
+[node name="Misi_Judul" type="Label" parent="Handphone/Task_Panel"]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 130.0
+offset_right = 719.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("6_4tuu8")
+theme_override_font_sizes/font_size = 80
+text = "MISI
+"
+
+[node name="Task_Level_1" type="TextureRect" parent="Handphone/Task_Panel"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 285.0
+offset_right = 1313.0
+offset_bottom = 1941.0
+texture = ExtResource("19_0qdvu")
+
+[node name="Back_From_Misi" type="Button" parent="Handphone/Task_Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 101.25
+offset_right = 170.0
+offset_bottom = 261.25
+scale = Vector2(1.15, 1.15)
+theme = ExtResource("3_u7xel")
+icon = ExtResource("3_bnieb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ympw5")
 }
 
-[connection signal="pressed" from="Handphone/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Handphone/HBoxContainer/VBoxContainer2/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="Handphone/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="open_handphone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_32clx")
+bus = &"SFX"
+
+[connection signal="mouse_entered" from="Handphone/PausePanel/Resume" to="." method="_on_resume_mouse_entered"]
+[connection signal="mouse_exited" from="Handphone/PausePanel/Resume" to="." method="_on_resume_mouse_exited"]
+[connection signal="pressed" from="Handphone/PausePanel/Resume" to="." method="_on_resume_pressed"]
+[connection signal="mouse_entered" from="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Restart" to="." method="_on_restart_mouse_entered"]
+[connection signal="mouse_exited" from="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Restart" to="." method="_on_restart_mouse_exited"]
+[connection signal="pressed" from="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Restart" to="." method="_on_restart_pressed"]
+[connection signal="mouse_entered" from="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Quests" to="." method="_on_quests_mouse_entered"]
+[connection signal="mouse_exited" from="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Quests" to="." method="_on_quests_mouse_exited"]
+[connection signal="pressed" from="Handphone/PausePanel/HBoxContainer/VBoxContainer2/Quests" to="." method="_on_quests_pressed"]
+[connection signal="mouse_entered" from="Handphone/PausePanel/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="Handphone/PausePanel/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_mouse_exited"]
+[connection signal="pressed" from="Handphone/PausePanel/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="mouse_entered" from="Handphone/PausePanel/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="Handphone/PausePanel/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="Handphone/PausePanel/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Handphone/Settings_Panel/Back_From_Settings" to="." method="_on_back_from_settings_pressed"]
+[connection signal="pressed" from="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button/Suara_Button" to="." method="_on_suara_button_pressed"]
+[connection signal="pressed" from="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button/Video_Button" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button/Kontrol_Button" to="." method="_on_kontrol_button_pressed"]
+[connection signal="pressed" from="Handphone/Sound_Panel/Back_From_Sound" to="." method="_on_back_from_sound_pressed"]
+[connection signal="toggled" from="Handphone/Sound_Panel/Back_From_Sound" to="." method="_on_back_from_sound_toggled"]
+[connection signal="value_changed" from="Handphone/Sound_Panel/Sound_Settings/Master/MasterSlider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Handphone/Sound_Panel/Sound_Settings/Musik/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Handphone/Sound_Panel/Sound_Settings/SFX/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="Handphone/Video_Panel/Back_From_Video" to="." method="_on_back_from_video_pressed"]
+[connection signal="pressed" from="Handphone/Video_Panel/Video_Settings/Fullscreen/FullScreenCheckBox" to="." method="_on_full_screen_check_box_pressed"]
+[connection signal="toggled" from="Handphone/Video_Panel/Video_Settings/Fullscreen/FullScreenCheckBox" to="." method="_on_full_screen_check_box_toggled"]
+[connection signal="pressed" from="Handphone/Kontrol_Panel/Back_From_Kontrol" to="." method="_on_back_from_kontrol_pressed"]
+[connection signal="pressed" from="Handphone/Task_Panel/Back_From_Misi" to="." method="_on_back_from_misi_pressed"]

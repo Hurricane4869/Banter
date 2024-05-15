@@ -13,7 +13,7 @@ var _velocity := Vector2.ZERO
 @onready var collision = $CollisionShape2D
 
 func _ready():
-	light_h.show()
+	#light_h.show()
 	light_up.hide()
 	light_down.hide()
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diacfcvo4a5qb"
-path="res://.godot/imported/KELUAR.png-06e960df14ed2c73f5f33f5c8f5c596c.ctex"
+uid="uid://b6fkqqic1gkra"
+path="res://.godot/imported/SETTINGS POLOSAN.png-9df7ed48acdb585e905e5c421d9dda2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/KELUAR.png"
-dest_files=["res://.godot/imported/KELUAR.png-06e960df14ed2c73f5f33f5c8f5c596c.ctex"]
+source_file="res://assets/Art/SETTINGS POLOSAN.png"
+dest_files=["res://.godot/imported/SETTINGS POLOSAN.png-9df7ed48acdb585e905e5c421d9dda2e.ctex"]
 
 [params]
 

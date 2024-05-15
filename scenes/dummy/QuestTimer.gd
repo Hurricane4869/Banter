@@ -17,5 +17,9 @@ func _time_left():
 	var second = int(time_left) % 60
 	return [minute, second]
 	
-func _process(delta):
+func _process(_delta):
 	label.text = "%02d:%02d" % _time_left()
+
+
+func _on_timer_timeout():
+	get_tree().paused = true

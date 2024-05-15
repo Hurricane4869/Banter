@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://etkaqh5xuhw3"]
+[gd_scene load_steps=11 format=3 uid="uid://cw6ka7nktnvej"]
 
 [ext_resource type="Script" path="res://scripts/dummy/character_movement_dummy.gd" id="1_va3vg"]
 [ext_resource type="Texture2D" uid="uid://bi1mqd30dnmcc" path="res://assets/player/chara kiri original.png" id="2_emy3x"]
