@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b13jnvoik4yyn"
-path="res://.godot/imported/PATH TILES.png-c0b59d689ad1a12efa0f212a5d1f85af.ctex"
+uid="uid://bafihobt6n3ul"
+path="res://.godot/imported/road_tiles_2.png-d7a5cc4d1175a6b311feb66d3fcf2432.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/PATH TILES.png"
-dest_files=["res://.godot/imported/PATH TILES.png-c0b59d689ad1a12efa0f212a5d1f85af.ctex"]
+source_file="res://assets/environment/road_tiles_2.png"
+dest_files=["res://.godot/imported/road_tiles_2.png-d7a5cc4d1175a6b311feb66d3fcf2432.ctex"]
 
 [params]
 

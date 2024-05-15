@@ -10,7 +10,7 @@ var parameters: Dictionary
 @onready var back_from_kredit = $Kredit_Panel/BackFromKredit as Button
 @onready var transition = $Transition
 @onready var pengaturan_text = $menu/HBoxContainer/Pengaturan/Pengaturan_Text
-@onready var click_sound = $menu/click_sound
+@onready var click_sound = $menu/click
 @onready var main_text = $menu/HBoxContainer/Play/Main_Text
 
 func _input (event):
@@ -34,7 +34,7 @@ func on_start_pressed() -> void:
 	await click_sound.finished
 	transition.play("fade_out")
 	await get_tree().create_timer(1).timeout
-	Functions.load_screen_to_scene("res://scenes/dummy/testing/testing_interaction.tscn", {"test": "test"})
+	Functions.load_screen_to_scene("res://scenes/dummy/level_1.tscn", {"test": "test"})
 
 func _on_pengaturan_mouse_entered():
 	pengaturan_text.visible = true

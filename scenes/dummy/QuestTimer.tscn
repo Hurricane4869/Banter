@@ -9,7 +9,13 @@ script = ExtResource("1_u7u6y")
 one_shot = true
 
 [node name="Label" type="Label" parent="."]
-offset_right = 130.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_right = 65.0
 offset_bottom = 69.0
+grow_horizontal = 2
+size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
 text = "00:00"

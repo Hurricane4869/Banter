@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blypxncl2f6j7"
-path="res://.godot/imported/PETAK HIJAU.png-eb2b300047d947ee5197e5d350a3b135.ctex"
+uid="uid://ca1dt4xdrtyyw"
+path="res://.godot/imported/RUMAH 2.png-726b5686dd24417e14f016fdf8a9522b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/PETAK HIJAU.png"
-dest_files=["res://.godot/imported/PETAK HIJAU.png-eb2b300047d947ee5197e5d350a3b135.ctex"]
+source_file="res://assets/environment/RUMAH 2.png"
+dest_files=["res://.godot/imported/RUMAH 2.png-726b5686dd24417e14f016fdf8a9522b.ctex"]
 
 [params]
 

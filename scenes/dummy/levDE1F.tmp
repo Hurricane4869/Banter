@@ -1,0 +1,143 @@
+[gd_scene load_steps=18 format=3 uid="uid://q7ko6feedexo"]
+
+[ext_resource type="Script" path="res://scenes/dummy/level_manager.gd" id="1_i6ckj"]
+[ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="1_q8yhu"]
+[ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="2_tttja"]
+[ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="5_pcfpv"]
+[ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="6_imi2m"]
+[ext_resource type="Texture2D" uid="uid://be1hn7foapenn" path="res://assets/environment/grass_tiles_2.png" id="7_j5nyo"]
+[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan.tscn" id="9_3rbt2"]
+[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah.tscn" id="10_nagog"]
+[ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="11_eciht"]
+[ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="13_tiw0i"]
+[ext_resource type="Texture2D" uid="uid://6y08qv0qhtrv" path="res://assets/dummy/play_button.png" id="14_5h37r"]
+[ext_resource type="Texture2D" uid="uid://kjftkhmys8sh" path="res://assets/dummy/play_button_pressed.png" id="15_wu4h7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p2pq"]
+texture = ExtResource("5_pcfpv")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nowb"]
+texture = ExtResource("2_tttja")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e08vm"]
+texture = ExtResource("7_j5nyo")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_2s1f3"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/1 = SubResource("TileSetAtlasSource_3nowb")
+sources/0 = SubResource("TileSetAtlasSource_5p2pq")
+sources/3 = SubResource("TileSetAtlasSource_e08vm")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4pb2"]
+size = Vector2(256, 224)
+
+[node name="LevelPrototype" type="Node2D"]
+script = ExtResource("1_i6ckj")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="QuestTimer" parent="UI" instance=ExtResource("6_imi2m")]
+position = Vector2(30, 17)
+minute = 2
+
+[node name="TextureButton" type="TextureButton" parent="UI"]
+visible = false
+offset_left = 786.0
+offset_top = 510.0
+offset_right = 1063.0
+offset_bottom = 645.0
+texture_normal = ExtResource("14_5h37r")
+texture_pressed = ExtResource("15_wu4h7")
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="WorldTilemap" type="TileMap" parent="Environment"]
+position = Vector2(0.100006, -384)
+tile_set = SubResource("TileSet_2s1f3")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 9, 0, 0, -65527, 0, 0, -131063, 0, 0, -196599, 0, 0, -262135, 3, 0, -262136, 3, 0, -262137, 3, 0, -262138, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, -327677, 0, 0, -393213, 0, 0, -458749, 0, 0, -524285, 0, 0, -327678, 0, 0, -327679, 0, 0, -327680, 0, 0, -262134, 3, 0, -262133, 0, 0, -327669, 0, 0, -393205, 0, 0, -458741, 0, 0, -524277, 0, 0, 65546, 0, 0, 65547, 0, 0, -262144, 3, 0, -262143, 3, 0, -262142, 3, 0, -196606, 3, 0, -131070, 3, 0, -65534, 3, 0, 2, 3, 0, 1, 3, 0, 0, 3, 0, -65536, 3, 0, -131072, 3, 0, -196608, 3, 0, -196607, 3, 0, -131071, 3, 0, -65535, 3, 0, -196604, 0, 0, -131068, 3, 0, -65532, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, -65528, 3, 0, -131064, 3, 0, -196600, 0, 0, -196601, 0, 0, -196602, 0, 0, -196603, 0, 0, -131067, 3, 0, -131066, 3, 0, -65530, 3, 0, -65529, 3, 0, -131065, 3, 0, -65531, 3, 0, -524288, 3, 0, -524287, 3, 0, -524286, 3, 0, -458750, 3, 0, -393214, 3, 0, -393215, 3, 0, -393216, 3, 0, -458752, 3, 0, -458751, 3, 0, -524284, 3, 0, -458748, 0, 0, -393212, 3, 0, -327676, 3, 0, -327675, 3, 0, -327674, 3, 0, -327673, 3, 0, -327672, 3, 0, -327671, 3, 0, -327670, 3, 0, -393206, 3, 0, -458742, 0, 0, -524278, 3, 0, -524279, 3, 0, -524280, 3, 0, -524281, 3, 0, -458746, 0, 0, -458747, 0, 0, -524283, 3, 0, -524282, 3, 0, -393210, 3, 0, -393211, 3, 0, -393209, 3, 0, -458745, 0, 0, -458744, 0, 0, -393208, 3, 0, -458743, 0, 0, -393207, 3, 0, -196598, 0, 0, -196597, 0, 0, -131061, 3, 0, -65525, 3, 0, 11, 3, 0, -65526, 3, 0, 10, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, -524276, 3, 0, -458740, 3, 0, -393204, 3, 0, -327668, 3, 0, -262132, 3, 0, -196596, 0, 0, -131060, 3, 0, -65524, 3, 0, 12, 3, 0, 65548, 0, 0, 131084, 3, 0, -131062, 3, 0)
+
+[node name="AntarPaket" parent="Environment" instance=ExtResource("13_tiw0i")]
+visible = false
+visibility_layer = 4
+position = Vector2(1416, -584)
+action_name = "antar paket"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/AntarPaket"]
+shape = SubResource("RectangleShape2D_j4pb2")
+
+[node name="Rumah" type="Node" parent="Environment"]
+
+[node name="RumahCyan" parent="Environment/Rumah" instance=ExtResource("9_3rbt2")]
+position = Vector2(153, -384)
+
+[node name="Pagar" parent="Environment/Rumah/RumahCyan" instance=ExtResource("11_eciht")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan" instance=ExtResource("11_eciht")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="RumahMerah" parent="Environment/Rumah" instance=ExtResource("10_nagog")]
+position = Vector2(153, -1151)
+
+[node name="Pagar" parent="Environment/Rumah/RumahMerah" instance=ExtResource("11_eciht")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahMerah" instance=ExtResource("11_eciht")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="RumahMerah2" parent="Environment/Rumah" instance=ExtResource("10_nagog")]
+position = Vector2(1176.1, -899)
+
+[node name="RumahMerah3" parent="Environment/Rumah" instance=ExtResource("10_nagog")]
+position = Vector2(834.1, -384)
+
+[node name="RumahCyan2" parent="Environment/Rumah" instance=ExtResource("9_3rbt2")]
+position = Vector2(776.1, -899)
+
+[node name="RumahCyan3" parent="Environment/Rumah" instance=ExtResource("9_3rbt2")]
+position = Vector2(1494.1, -384)
+
+[node name="Pagar" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("11_eciht")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("11_eciht")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="AliTopDown" parent="." instance=ExtResource("1_q8yhu")]
+position = Vector2(97, -960)
+collision_mask = 1
+speed = 230
+
+[node name="Camera2D" type="Camera2D" parent="AliTopDown"]
+zoom = Vector2(1.2, 1.2)
+limit_left = 32
+limit_top = -1152
+limit_right = 1696
+limit_bottom = 256
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.137255, 0.188235, 0.247059, 1)
+
+[connection signal="pressed" from="UI/TextureButton" to="." method="_on_texture_button_pressed"]

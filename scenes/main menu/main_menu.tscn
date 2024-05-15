@@ -202,7 +202,6 @@ vertical_alignment = 1
 
 [node name="click" type="AudioStreamPlayer" parent="menu"]
 stream = ExtResource("11_cvu6i")
-bus = &"SFX"
 
 [node name="Judul Game" type="Sprite2D" parent="menu"]
 position = Vector2(320.963, 110.512)
@@ -247,8 +246,8 @@ icon = ExtResource("8_ejebu")
 [connection signal="mouse_entered" from="menu/HBoxContainer/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="menu/HBoxContainer/Play" to="." method="_on_play_mouse_exited"]
 [connection signal="mouse_entered" from="menu/HBoxContainer/Play/Main_Text" to="." method="_on_main_text_mouse_entered"]
-[connection signal="mouse_exited" from="menu/HBoxContainer/Play/Main_Text" to="." method="_on_main_text_mouse_exited"]
 [connection signal="mouse_exited" from="menu/HBoxContainer/Play/Main_Text" to="." method="_on_pengaturan_text_mouse_exited"]
+[connection signal="mouse_exited" from="menu/HBoxContainer/Play/Main_Text" to="." method="_on_main_text_mouse_exited"]
 [connection signal="mouse_entered" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_mouse_entered"]
 [connection signal="mouse_exited" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_mouse_exited"]
 [connection signal="mouse_exited" from="menu/HBoxContainer/Pengaturan/Pengaturan_Text" to="." method="_on_pengaturan_text_mouse_exited"]
