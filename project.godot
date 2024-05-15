@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Banter"
+config/tags=PackedStringArray("proyek_wpg")
 run/main_scene="res://scenes/main menu/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"

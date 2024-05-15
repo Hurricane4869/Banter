@@ -5,11 +5,15 @@ extends Node2D
 @onready var timer = $UI/QuestTimer
 @onready var timer_node = get_node("UI/QuestTimer/Timer")
 @onready var pause_button = $UI/Pause
-@onready var pause_text = get_node("UI/Pause/Pause_Text")
+@onready var pause_text = $UI/Pause/Pause_Text
 @onready var pause_menu = $UI/PauseMenu
 @onready var black_overlay = get_node("UI/PauseMenu/ColorRect")
 @onready var rating_dummy = get_node("UI/RatingSystem/RatingDummy")
 @onready var rating_system = $UI/RatingSystem
+@onready var handphone = $UI/PlayQuest/Handphone
+@onready var play_quest = $UI/PlayQuest
+@onready var play_text = $UI/PlayQuest/PlayButton/Play_Text
+@onready var open_handphone_sound = $open_handphone
 
 #rating
 @onready var perfect_time = 60
@@ -28,7 +32,13 @@ var status_paket: bool = false
 
 func _ready():
 	rating_dummy.visible = false
-	#transition.play("fade_in")
+	pause_text.visible = false
+	play_text.visible = false
+	timer_node.start()
+	get_tree().paused = true
+	handphone.play("Quest_Appear");
+	open_handphone_sound.play()
+	await open_handphone_sound.finished
 	
 func _process(delta):
 	interaction_area.interact = Callable(self, "_antar_paket")
@@ -48,10 +58,6 @@ func _antar_paket():
 	
 	#print("waktu tersisa: " + str(time_left))
 
-func _on_play_dummy_pressed():
-	timer_node.start()
-	play_button.hide()
-	
 func _on_pause_pressed():
 	pause_menu.pause()
 
@@ -60,3 +66,15 @@ func _on_pause_mouse_entered():
 
 func _on_pause_mouse_exited():
 	pause_text.visible = false
+
+func _on_play_button_pressed():
+	handphone.play_backwards("Start_Quest")
+	get_tree().paused = false
+	open_handphone_sound.play()
+	await open_handphone_sound.finished
+
+func _on_play_button_mouse_entered():
+	play_text.visible = true	
+
+func _on_play_button_mouse_exited():
+	play_text.visible = false
