@@ -1,16 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2ssw1m7dsqcn"]
+[gd_scene load_steps=2 format=3 uid="uid://b2ssw1m7dsqcn"]
 
 [ext_resource type="Texture2D" uid="uid://dy4kkxw3ddnvd" path="res://assets/environment/POHON.png" id="1_yrbss"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2q8im"]
-polygon = PackedVector2Array(96, 336, 16, 232, -8, 184, -16, 136, -8, 80, 24, 16, 40, 0, 72, 16, 136, 16, 160, 16, 184, 32, 216, 16, 248, 16, 288, -8, 312, -40, 360, -40, 392, -48, 416, -80, 408, -96, 424, -128, 408, -144, 376, -144, 384, -176, 368, -208, 328, -216, 296, -256, 248, -272, 176, -264, 144, -312, 96, -336, 48, -328, -16, -360, -80, -360, -128, -320, -136, -312, -192, -328, -224, -336, -288, -320, -320, -280, -328, -256, -376, -240, -400, -200, -392, -160, -376, -128, -408, -136, -432, -128, -440, -96, -424, -56, -384, -48, -376, -48, -360, -32, -336, -16, -312, -8, -256, 0, -216, 0, -184, -16, -168, -24, -144, -16, -120, 0, -112, 48, -112, 120, -128, 192, -152, 240, -192, 288, -232, 336, -56, 336)
 
 [node name="Pohon" type="Sprite2D"]
 light_mask = 4
 visibility_layer = 4
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_yrbss")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_2q8im")
-occluder_light_mask = 2

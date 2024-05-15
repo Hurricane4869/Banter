@@ -1,32 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://y7yp1wupwg3o"]
+[gd_scene load_steps=8 format=3 uid="uid://y7yp1wupwg3o"]
 
 [ext_resource type="Script" path="res://scripts/dummy/testing_interaction.gd" id="1_hnlx0"]
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="2_46k8m"]
 [ext_resource type="Texture2D" uid="uid://bxdpljf03tg1i" path="res://assets/dummy/ffd701.png" id="3_niht7"]
-[ext_resource type="PackedScene" uid="uid://uldbvot73hv" path="res://scenes/dummy/object/DummyTopDown.tscn" id="4_43bdp"]
+[ext_resource type="PackedScene" uid="uid://cc4jweiquqoam" path="res://scenes/pause_button.tscn" id="3_rwpsp"]
 [ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="5_q8716"]
-[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="6_ra6av"]
-[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="7_pumht"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="8_74xet"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpxy5"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1rpr"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blt2c"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjn27"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5w2m"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="8_g56yw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3pgyu"]
 size = Vector2(25, 24)
@@ -42,36 +21,7 @@ script = ExtResource("1_hnlx0")
 offset_left = 6.0
 offset_right = 6.0
 
-[node name="Pause" type="Button" parent="CanvasLayer"]
-offset_left = 1738.44
-offset_top = 39.4799
-offset_right = 1971.44
-offset_bottom = 249.48
-scale = Vector2(0.6, 0.6)
-theme = ExtResource("6_ra6av")
-theme_override_styles/normal = SubResource("StyleBoxFlat_dpxy5")
-theme_override_styles/hover = SubResource("StyleBoxFlat_k1rpr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_blt2c")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_pjn27")
-theme_override_styles/focus = SubResource("StyleBoxFlat_s5w2m")
-icon = ExtResource("7_pumht")
-
-[node name="Pause_Text" type="Label" parent="CanvasLayer/Pause"]
-layout_mode = 0
-offset_left = 21.8747
-offset_top = 218.75
-offset_right = 204.875
-offset_bottom = 289.75
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("8_74xet")
-theme_override_font_sizes/font_size = 60
-text = "Pause
-(Esc)"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("3_rwpsp")]
 
 [node name="ColorTile" parent="." instance=ExtResource("2_46k8m")]
 visibility_layer = 4
@@ -91,17 +41,10 @@ offset_bottom = 12.0
 texture = ExtResource("3_niht7")
 expand_mode = 2
 
-[node name="DummyTopDown" parent="." instance=ExtResource("4_43bdp")]
-position = Vector2(500, 0)
-scale = Vector2(4.4, 4.4)
-speed = 250
+[node name="AliTopDown" parent="." instance=ExtResource("8_g56yw")]
 
-[node name="Camera2D" type="Camera2D" parent="DummyTopDown"]
-position = Vector2(-45.3442, 1.43424)
-position_smoothing_enabled = true
-
-[connection signal="hidden" from="CanvasLayer/Pause" to="." method="_on_pause_hidden"]
 [connection signal="mouse_entered" from="CanvasLayer/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Pause" to="." method="_on_pause_pressed"]
-[connection signal="visibility_changed" from="CanvasLayer/Pause" to="." method="_on_pause_visibility_changed"]
+
+[editable path="CanvasLayer/Pause"]

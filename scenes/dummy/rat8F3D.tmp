@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0sg1qqarvea4"]
+
+[ext_resource type="Script" path="res://RatingSystem.gd" id="1_1ady7"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_8pahb"]
+
+[node name="RatingSystem" type="Node2D"]
+script = ExtResource("1_1ady7")
+
+[node name="Send" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("2_8pahb")
+text = "Send "
+
+[connection signal="pressed" from="Send" to="." method="_on_send_pressed"]

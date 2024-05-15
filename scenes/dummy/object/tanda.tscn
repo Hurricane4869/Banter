@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://7abu64wc30ni"]
+
+[ext_resource type="Texture2D" uid="uid://cmu16oevqkqsv" path="res://assets/environment/SIGN.png" id="1_a8l06"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7tbdf"]
+polygon = PackedVector2Array(-25, -180, -25, -145, -20, -145, -20, -180)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1q6d5"]
+polygon = PackedVector2Array(-25, -185, -25, -180, 25, -180, 25, -185)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u8sqa"]
+polygon = PackedVector2Array(-150, -140, -20, -140, -20, -145, -150, -145)
+
+[node name="Tanda" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_a8l06")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_7tbdf")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+position = Vector2(45, 0)
+occluder = SubResource("OccluderPolygon2D_7tbdf")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_1q6d5")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_u8sqa")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
+position = Vector2(170, 0)
+occluder = SubResource("OccluderPolygon2D_u8sqa")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cefns815uphh3"]
+
+[ext_resource type="Texture2D" uid="uid://dfjlbididu5m" path="res://assets/environment/PAGAR.png" id="1_4yjth"]
+
+[node name="Pagar" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_4yjth")

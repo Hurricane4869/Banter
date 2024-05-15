@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1r8xk85gjq8q"]
+
+[ext_resource type="Texture2D" uid="uid://bk3hvkhhqnbc4" path="res://assets/dummy/scifiEnvironment_11.png" id="1_utpoy"]
+
+[node name="BatuDummy" type="Sprite2D"]
+texture_filter = 4
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_utpoy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(2.38419e-07, 6)
+scale = Vector2(3.8, 3.8)
+polygon = PackedVector2Array(-6.8421, -0.526316, -4.73684, -6.31579, -2.63158, -7.36842, -2.10526, -8.94736, 1.05263, -10.5263, 2.10526, -10.5263, 5.26316, -8.94736, 5.26316, -7.89473, 7.36842, -6.31579, 10, 0.526315, 5.26316, 5.78947, -1.05263, 5.78947, -3.15789, 7.89473, -7.36842, 7.89473, -10, 5.26316, -8.94736, 1.05263)

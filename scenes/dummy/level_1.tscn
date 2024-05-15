@@ -1,0 +1,191 @@
+[gd_scene load_steps=22 format=3 uid="uid://q7ko6feedexo"]
+
+[ext_resource type="Script" path="res://scenes/dummy/level_manager.gd" id="1_8780c"]
+[ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_hc8hl"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_wpfud"]
+[ext_resource type="PackedScene" uid="uid://cc4jweiquqoam" path="res://scenes/pause_button.tscn" id="4_sqpc6"]
+[ext_resource type="PackedScene" uid="uid://b0sg1qqarvea4" path="res://scenes/dummy/rating_system.tscn" id="5_f2x4h"]
+[ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="6_dp0oq"]
+[ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="7_1bxoj"]
+[ext_resource type="Texture2D" uid="uid://be1hn7foapenn" path="res://assets/environment/grass_tiles_2.png" id="8_8vgq0"]
+[ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="9_vo8fy"]
+[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan.tscn" id="10_0e2tt"]
+[ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="11_ca0ab"]
+[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah.tscn" id="12_qbamp"]
+[ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="13_1cl43"]
+[ext_resource type="PackedScene" uid="uid://d1r8xk85gjq8q" path="res://scenes/dummy/object/batu_dummy.tscn" id="14_np011"]
+[ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="15_i74i5"]
+[ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="16_c8g0r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p2pq"]
+texture = ExtResource("6_dp0oq")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nowb"]
+texture = ExtResource("7_1bxoj")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e08vm"]
+texture = ExtResource("8_8vgq0")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
+
+[sub_resource type="TileSet" id="TileSet_2s1f3"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/1 = SubResource("TileSetAtlasSource_3nowb")
+sources/0 = SubResource("TileSetAtlasSource_5p2pq")
+sources/3 = SubResource("TileSetAtlasSource_e08vm")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4pb2"]
+size = Vector2(104, 49)
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_8780c")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="QuestTimer" parent="UI" instance=ExtResource("2_hc8hl")]
+position = Vector2(960, 20)
+minute = 2
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_wpfud")]
+
+[node name="Pause" parent="UI" instance=ExtResource("4_sqpc6")]
+
+[node name="RatingSystem" parent="UI" instance=ExtResource("5_f2x4h")]
+position = Vector2(0, 6)
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="WorldTilemap" type="TileMap" parent="Environment"]
+position = Vector2(0.100006, -384)
+tile_set = SubResource("TileSet_2s1f3")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 9, 0, 0, -65527, 0, 0, -131063, 0, 0, -196599, 0, 0, -262135, 3, 0, -262136, 3, 0, -262137, 3, 0, -262138, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, -327677, 0, 0, -393213, 0, 0, -458749, 0, 0, -524285, 0, 0, -327678, 0, 0, -327679, 0, 0, -327680, 0, 0, -262134, 3, 0, -262133, 0, 0, -327669, 0, 0, -393205, 0, 0, -458741, 0, 0, -524277, 0, 0, 65546, 0, 0, 65547, 0, 0, -262144, 3, 0, -262143, 3, 0, -262142, 3, 0, -196606, 3, 0, -131070, 3, 0, -65534, 3, 0, 2, 3, 0, 1, 3, 0, 0, 3, 0, -65536, 3, 0, -131072, 3, 0, -196608, 3, 0, -196607, 3, 0, -131071, 3, 0, -65535, 3, 0, -196604, 0, 0, -131068, 3, 0, -65532, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, -65528, 3, 0, -131064, 3, 0, -196600, 0, 0, -196601, 0, 0, -196602, 0, 0, -196603, 0, 0, -131067, 3, 0, -131066, 3, 0, -65530, 3, 0, -65529, 3, 0, -131065, 3, 0, -65531, 3, 0, -524288, 3, 0, -524287, 3, 0, -524286, 3, 0, -458750, 3, 0, -393214, 3, 0, -393215, 3, 0, -393216, 3, 0, -458752, 3, 0, -458751, 3, 0, -524284, 3, 0, -458748, 0, 0, -393212, 3, 0, -327676, 3, 0, -327675, 3, 0, -327674, 3, 0, -327673, 3, 0, -327672, 3, 0, -327671, 3, 0, -327670, 3, 0, -393206, 3, 0, -458742, 0, 0, -524278, 3, 0, -524279, 3, 0, -524280, 3, 0, -524281, 3, 0, -458746, 0, 0, -458747, 0, 0, -524283, 3, 0, -524282, 3, 0, -393210, 3, 0, -393211, 3, 0, -393209, 3, 0, -458745, 0, 0, -458744, 0, 0, -393208, 3, 0, -458743, 0, 0, -393207, 3, 0, -196598, 0, 0, -196597, 0, 0, -131061, 3, 0, -65525, 3, 0, 11, 3, 0, -65526, 3, 0, 10, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, -524276, 3, 0, -458740, 3, 0, -393204, 3, 0, -327668, 3, 0, -262132, 3, 0, -196596, 0, 0, -131060, 3, 0, -65524, 3, 0, 12, 3, 0, 65548, 0, 0, 131084, 3, 0, -131062, 3, 0)
+
+[node name="AntarPaket" parent="Environment" instance=ExtResource("9_vo8fy")]
+visibility_layer = 4
+position = Vector2(1155, -797)
+action_name = "antar paket"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/AntarPaket"]
+position = Vector2(0, 52.5)
+shape = SubResource("RectangleShape2D_j4pb2")
+
+[node name="Rumah" type="Node" parent="Environment"]
+
+[node name="RumahCyan" parent="Environment/Rumah" instance=ExtResource("10_0e2tt")]
+position = Vector2(153, -384)
+
+[node name="Pagar" parent="Environment/Rumah/RumahCyan" instance=ExtResource("11_ca0ab")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan" instance=ExtResource("11_ca0ab")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="RumahMerah" parent="Environment/Rumah" instance=ExtResource("12_qbamp")]
+position = Vector2(153, -1151)
+
+[node name="Pagar" parent="Environment/Rumah/RumahMerah" instance=ExtResource("11_ca0ab")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahMerah" instance=ExtResource("11_ca0ab")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="RumahMerah2" parent="Environment/Rumah" instance=ExtResource("12_qbamp")]
+position = Vector2(1176.1, -896)
+
+[node name="Pagar" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("11_ca0ab")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("11_ca0ab")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="Tanda" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("13_1cl43")]
+position = Vector2(-105, 455)
+scale = Vector2(1, 1)
+
+[node name="RumahMerah3" parent="Environment/Rumah" instance=ExtResource("12_qbamp")]
+position = Vector2(807.1, -384)
+
+[node name="Pagar" parent="Environment/Rumah/RumahMerah3" instance=ExtResource("11_ca0ab")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahMerah3" instance=ExtResource("11_ca0ab")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="RumahCyan2" parent="Environment/Rumah" instance=ExtResource("10_0e2tt")]
+position = Vector2(710.1, -896)
+
+[node name="Pagar" parent="Environment/Rumah/RumahCyan2" instance=ExtResource("11_ca0ab")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan2" instance=ExtResource("11_ca0ab")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="RumahCyan3" parent="Environment/Rumah" instance=ExtResource("10_0e2tt")]
+position = Vector2(1494.1, -384)
+
+[node name="Pagar" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("11_ca0ab")]
+position = Vector2(-390, 540)
+scale = Vector2(1, 1)
+
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("11_ca0ab")]
+position = Vector2(840, 540)
+scale = Vector2(1, 1)
+
+[node name="BatuDummy" parent="Environment" instance=ExtResource("14_np011")]
+position = Vector2(1196, -288)
+
+[node name="BatuDummy2" parent="Environment" instance=ExtResource("14_np011")]
+position = Vector2(1242, -276)
+
+[node name="BatuDummy3" parent="Environment" instance=ExtResource("14_np011")]
+position = Vector2(892, -736)
+
+[node name="BatuDummy4" parent="Environment" instance=ExtResource("14_np011")]
+position = Vector2(898, -684)
+
+[node name="Pohon" parent="Environment" instance=ExtResource("15_i74i5")]
+position = Vector2(600, -328)
+
+[node name="AliTopDown" parent="." instance=ExtResource("16_c8g0r")]
+position = Vector2(1600, -200)
+collision_mask = 1
+speed = 230
+
+[node name="Camera2D" type="Camera2D" parent="AliTopDown"]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = -1408
+limit_right = 1664
+limit_bottom = 0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(-56, -8)
+color = Color(0.0251327, 0.0607366, 0.118205, 1)
+
+[connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
+[connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
+[connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
