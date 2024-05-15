@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dnphv7esbmo4w"]
 
-[ext_resource type="Script" path="res://scenes/dummy/QuestTimer.gd" id="1_u7u6y"]
+[ext_resource type="Script" path="res://scripts/QuestTimer.gd" id="1_u7u6y"]
 
 [node name="QuestTimer" type="Node2D"]
 script = ExtResource("1_u7u6y")

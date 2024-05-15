@@ -1,33 +1,33 @@
 [gd_scene load_steps=41 format=3 uid="uid://2jmkstysi5ps"]
 
-[ext_resource type="Script" path="res://scripts/main_menu_yudha.gd" id="1_oy6hx"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w2iy8"]
 [ext_resource type="Texture2D" uid="uid://dgkl53ihodge6" path="res://assets/Art/MAIN MENU (BLUR KIRI).png" id="2_r30i0"]
 [ext_resource type="Texture2D" uid="uid://c6r228b4t8r4v" path="res://assets/Art/Judul game.png" id="3_5gg7b"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_y8p3e"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="5_tqq4j"]
 [ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="5_vb44h"]
 [ext_resource type="Texture2D" uid="uid://bl07lxriapvx" path="res://assets/Art/ICON SETTINGS (1).png" id="6_1j7gc"]
+[ext_resource type="Texture2D" uid="uid://cext3h3occmuo" path="res://assets/Art/BACK.png" id="8_8aoe7"]
 [ext_resource type="Texture2D" uid="uid://x8ont0pclq7d" path="res://assets/Art/tombol x.png" id="8_ejebu"]
 [ext_resource type="Texture2D" uid="uid://cvsphvvus8128" path="res://assets/Art/ICON LOGO.png" id="9_13bst"]
-[ext_resource type="Texture2D" uid="uid://ebcxcwajn8fj" path="res://assets/Art/R U SURE WANT TO QUIT_.png" id="10_nrg1b"]
-[ext_resource type="AudioStream" uid="uid://634r867kpsfb" path="res://Audio/SFX/Click.mp3" id="11_cvu6i"]
-[ext_resource type="Texture2D" uid="uid://b0mxbgacld254" path="res://assets/Art/CENTANG.png" id="11_qkyes"]
-[ext_resource type="AudioStream" uid="uid://bqfo1hay0cx0w" path="res://Audio/Music/main menu.mp3" id="13_4u0xh"]
-[ext_resource type="Texture2D" uid="uid://dxp743clp3u6" path="res://assets/Art/POLOSAN SETTING.png" id="14_oyolq"]
-[ext_resource type="Texture2D" uid="uid://cext3h3occmuo" path="res://assets/Art/BACK.png" id="15_23jrv"]
-[ext_resource type="Texture2D" uid="uid://du0omdtiflx8n" path="res://assets/Art/ICON SOUND.png" id="16_uieii"]
-[ext_resource type="Texture2D" uid="uid://dikmlux00maag" path="res://assets/Art/ICON VIDEO.png" id="17_6ismh"]
-[ext_resource type="Texture2D" uid="uid://ojp4l1ubkajc" path="res://assets/Art/ICON KONTROL.png" id="18_fy4n2"]
-[ext_resource type="Texture2D" uid="uid://cwhhdlkb7hmf5" path="res://assets/Art/SUARA.png" id="19_lsn8x"]
-[ext_resource type="Texture2D" uid="uid://brw4chr80l1wj" path="res://assets/Art/VIDEO.png" id="20_tqeic"]
-[ext_resource type="Texture2D" uid="uid://cgcsrh2purj7d" path="res://assets/Art/KONTROL.png" id="21_4lryd"]
-[ext_resource type="Texture2D" uid="uid://bu5oct1jlua3t" path="res://assets/SLIDER MERAH.png" id="22_bqpvs"]
-[ext_resource type="Texture2D" uid="uid://m3431e72uwhq" path="res://assets/Art/centang polosan.png" id="23_b66wh"]
-[ext_resource type="Texture2D" uid="uid://bioyfhbblvd0s" path="res://assets/Art/TOMBOL KONTROL SETTINGS.png" id="24_e63g2"]
-[ext_resource type="Texture2D" uid="uid://bceh1sk8q28xj" path="res://assets/Art/bg blur.png" id="25_67l86"]
-[ext_resource type="Texture2D" uid="uid://ddtl314xyiww6" path="res://assets/Art/LEVEL 1.png" id="26_eh20r"]
-[ext_resource type="Texture2D" uid="uid://cn2rqiu877cfy" path="res://assets/Art/LOCKED LEVEL.png" id="27_ehl2s"]
-[ext_resource type="Texture2D" uid="uid://bswn7crqjteyb" path="res://assets/Art/LEVEL.png" id="28_k5278"]
+[ext_resource type="Texture2D" uid="uid://dxp743clp3u6" path="res://assets/Art/POLOSAN SETTING.png" id="9_sot8h"]
+[ext_resource type="Texture2D" uid="uid://du0omdtiflx8n" path="res://assets/Art/ICON SOUND.png" id="10_67w3x"]
+[ext_resource type="Texture2D" uid="uid://ebcxcwajn8fj" path="res://assets/Art/R U SURE WANT TO QUIT_.png" id="10_xgcwm"]
+[ext_resource type="AudioStream" uid="uid://634r867kpsfb" path="res://assets/Audio/SFX/Click.mp3" id="11_cvu6i"]
+[ext_resource type="Texture2D" uid="uid://b0mxbgacld254" path="res://assets/Art/CENTANG.png" id="11_h6anp"]
+[ext_resource type="Texture2D" uid="uid://dikmlux00maag" path="res://assets/Art/ICON VIDEO.png" id="11_t84is"]
+[ext_resource type="Texture2D" uid="uid://ojp4l1ubkajc" path="res://assets/Art/ICON KONTROL.png" id="12_buyqg"]
+[ext_resource type="AudioStream" uid="uid://bqfo1hay0cx0w" path="res://assets/Audio/Music/main menu.mp3" id="13_etomk"]
+[ext_resource type="Texture2D" uid="uid://cwhhdlkb7hmf5" path="res://assets/Art/SUARA.png" id="13_w2iiu"]
+[ext_resource type="Texture2D" uid="uid://brw4chr80l1wj" path="res://assets/Art/VIDEO.png" id="14_scge4"]
+[ext_resource type="Texture2D" uid="uid://cgcsrh2purj7d" path="res://assets/Art/KONTROL.png" id="15_pnvqp"]
+[ext_resource type="Texture2D" uid="uid://d4a50d5iesvih" path="res://assets/SLIDER MERAH.png" id="16_aocl1"]
+[ext_resource type="Texture2D" uid="uid://m3431e72uwhq" path="res://assets/Art/centang polosan.png" id="17_fmpok"]
+[ext_resource type="Texture2D" uid="uid://bioyfhbblvd0s" path="res://assets/Art/TOMBOL KONTROL SETTINGS.png" id="25_2cy50"]
+[ext_resource type="Texture2D" uid="uid://bceh1sk8q28xj" path="res://assets/Art/bg blur.png" id="25_o21mc"]
+[ext_resource type="Texture2D" uid="uid://ddtl314xyiww6" path="res://assets/Art/LEVEL 1.png" id="26_hwcji"]
+[ext_resource type="Texture2D" uid="uid://cn2rqiu877cfy" path="res://assets/Art/LOCKED LEVEL.png" id="27_cqltl"]
+[ext_resource type="Texture2D" uid="uid://bswn7crqjteyb" path="res://assets/Art/LEVEL.png" id="28_rcnr5"]
 
 [sub_resource type="FontVariation" id="FontVariation_x2qgt"]
 base_font = ExtResource("5_tqq4j")
@@ -166,7 +166,7 @@ offset_right = 5.75989
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.997, 1)
-script = ExtResource("1_oy6hx")
+script = ExtResource("1_w2iy8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -289,7 +289,7 @@ offset_bottom = 254.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("10_nrg1b")
+texture = ExtResource("10_xgcwm")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Quit_Panel/Quit_Menu"]
 layout_mode = 1
@@ -309,7 +309,7 @@ theme_override_constants/separation = 200
 [node name="Quit temenan" type="Button" parent="Quit_Panel/Quit_Menu/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("11_qkyes")
+icon = ExtResource("11_h6anp")
 
 [node name="BackFromQuit" type="Button" parent="Quit_Panel/Quit_Menu/HBoxContainer"]
 layout_mode = 2
@@ -317,7 +317,7 @@ theme = ExtResource("4_y8p3e")
 icon = ExtResource("8_ejebu")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_4u0xh")
+stream = ExtResource("13_etomk")
 volume_db = -10.0
 bus = &"Music"
 
@@ -336,7 +336,7 @@ offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("14_oyolq")
+texture = ExtResource("9_sot8h")
 
 [node name="Back_From_Settings" type="Button" parent="Settings_Panel"]
 layout_mode = 2
@@ -346,7 +346,7 @@ offset_right = 60.0
 offset_bottom = 60.0
 scale = Vector2(1.7, 1.7)
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("15_23jrv")
+icon = ExtResource("8_8aoe7")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Settings_Panel"]
 layout_mode = 1
@@ -370,15 +370,15 @@ theme_override_constants/separation = 125
 
 [node name="Sound_Icon" type="TextureRect" parent="Settings_Panel/HBoxContainer/Settings_Icons"]
 layout_mode = 2
-texture = ExtResource("16_uieii")
+texture = ExtResource("10_67w3x")
 
 [node name="Video_Icon" type="TextureRect" parent="Settings_Panel/HBoxContainer/Settings_Icons"]
 layout_mode = 2
-texture = ExtResource("17_6ismh")
+texture = ExtResource("11_t84is")
 
 [node name="Kontrol_Icon" type="TextureRect" parent="Settings_Panel/HBoxContainer/Settings_Icons"]
 layout_mode = 2
-texture = ExtResource("18_fy4n2")
+texture = ExtResource("12_buyqg")
 
 [node name="Settings_Button" type="VBoxContainer" parent="Settings_Panel/HBoxContainer"]
 layout_mode = 2
@@ -387,17 +387,17 @@ theme_override_constants/separation = 125
 [node name="Suara_Button" type="Button" parent="Settings_Panel/HBoxContainer/Settings_Button"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("19_lsn8x")
+icon = ExtResource("13_w2iiu")
 
 [node name="Video_Button" type="Button" parent="Settings_Panel/HBoxContainer/Settings_Button"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("20_tqeic")
+icon = ExtResource("14_scge4")
 
 [node name="Kontrol_Button" type="Button" parent="Settings_Panel/HBoxContainer/Settings_Button"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("21_4lryd")
+icon = ExtResource("15_pnvqp")
 
 [node name="Sound_Panel" type="TextureRect" parent="."]
 process_mode = 3
@@ -408,7 +408,7 @@ offset_top = 200.0
 offset_right = 2200.0
 offset_bottom = 1800.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("14_oyolq")
+texture = ExtResource("9_sot8h")
 
 [node name="Back_From_Sound" type="Button" parent="Sound_Panel"]
 layout_mode = 0
@@ -418,7 +418,7 @@ offset_right = 60.0
 offset_bottom = 60.0
 scale = Vector2(1.7, 1.7)
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("15_23jrv")
+icon = ExtResource("8_8aoe7")
 
 [node name="Sound_Settings" type="VBoxContainer" parent="Sound_Panel"]
 layout_mode = 1
@@ -452,9 +452,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = SubResource("Theme_klus8")
-theme_override_icons/grabber = ExtResource("22_bqpvs")
-theme_override_icons/grabber_highlight = ExtResource("22_bqpvs")
-theme_override_icons/grabber_disabled = ExtResource("22_bqpvs")
+theme_override_icons/grabber = ExtResource("16_aocl1")
+theme_override_icons/grabber_highlight = ExtResource("16_aocl1")
+theme_override_icons/grabber_disabled = ExtResource("16_aocl1")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -476,9 +476,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = SubResource("Theme_klus8")
-theme_override_icons/grabber = ExtResource("22_bqpvs")
-theme_override_icons/grabber_highlight = ExtResource("22_bqpvs")
-theme_override_icons/grabber_disabled = ExtResource("22_bqpvs")
+theme_override_icons/grabber = ExtResource("16_aocl1")
+theme_override_icons/grabber_highlight = ExtResource("16_aocl1")
+theme_override_icons/grabber_disabled = ExtResource("16_aocl1")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -500,9 +500,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = SubResource("Theme_klus8")
-theme_override_icons/grabber = ExtResource("22_bqpvs")
-theme_override_icons/grabber_highlight = ExtResource("22_bqpvs")
-theme_override_icons/grabber_disabled = ExtResource("22_bqpvs")
+theme_override_icons/grabber = ExtResource("16_aocl1")
+theme_override_icons/grabber_highlight = ExtResource("16_aocl1")
+theme_override_icons/grabber_disabled = ExtResource("16_aocl1")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -516,7 +516,7 @@ offset_top = 200.0
 offset_right = 2200.0
 offset_bottom = 1800.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("14_oyolq")
+texture = ExtResource("9_sot8h")
 
 [node name="Back_From_Video" type="Button" parent="Video_Panel"]
 layout_mode = 0
@@ -526,7 +526,7 @@ offset_right = 60.0
 offset_bottom = 60.0
 scale = Vector2(1.7, 1.7)
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("15_23jrv")
+icon = ExtResource("8_8aoe7")
 
 [node name="Video_Settings" type="VBoxContainer" parent="Video_Panel"]
 layout_mode = 1
@@ -566,7 +566,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 theme = SubResource("Theme_y6vxa")
 theme_override_font_sizes/font_size = 0
-theme_override_icons/checked = ExtResource("23_b66wh")
+theme_override_icons/checked = ExtResource("17_fmpok")
 
 [node name="Kontrol_Panel" type="TextureRect" parent="."]
 process_mode = 3
@@ -577,7 +577,7 @@ offset_top = 200.0
 offset_right = 2200.0
 offset_bottom = 1800.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("14_oyolq")
+texture = ExtResource("9_sot8h")
 
 [node name="Kontrol_Value" type="TextureRect" parent="Kontrol_Panel"]
 layout_mode = 1
@@ -593,7 +593,7 @@ offset_bottom = 391.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("24_e63g2")
+texture = ExtResource("25_2cy50")
 
 [node name="Back_From_Kontrol" type="Button" parent="Kontrol_Panel"]
 layout_mode = 0
@@ -603,7 +603,7 @@ offset_right = 60.0
 offset_bottom = 60.0
 scale = Vector2(1.7, 1.7)
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("15_23jrv")
+icon = ExtResource("8_8aoe7")
 
 [node name="ChooseLevel_Panel" type="Control" parent="."]
 visible = false
@@ -622,7 +622,7 @@ layout_mode = 0
 offset_top = -4.0
 offset_right = 1940.0
 offset_bottom = 1100.0
-texture = ExtResource("25_67l86")
+texture = ExtResource("25_o21mc")
 
 [node name="Dark" type="ColorRect" parent="ChooseLevel_Panel"]
 layout_mode = 1
@@ -644,7 +644,7 @@ offset_right = 210.0
 offset_bottom = 210.0
 scale = Vector2(0.8, 0.8)
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("15_23jrv")
+icon = ExtResource("8_8aoe7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ChooseLevel_Panel"]
 layout_mode = 1
@@ -668,17 +668,17 @@ theme_override_constants/separation = 150
 [node name="Level1" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("26_eh20r")
+icon = ExtResource("26_hwcji")
 
 [node name="Level2" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="Level3" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ChooseLevel_Panel/VBoxContainer"]
 layout_mode = 2
@@ -687,17 +687,17 @@ theme_override_constants/separation = 150
 [node name="Level4" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="Level5" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="Level6" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="ChooseLevel_Panel/VBoxContainer"]
 layout_mode = 2
@@ -706,17 +706,17 @@ theme_override_constants/separation = 150
 [node name="Level7" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="Level8" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="Level9" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_cqltl")
 
 [node name="TextureRect" type="TextureRect" parent="ChooseLevel_Panel"]
 layout_mode = 1
@@ -728,7 +728,7 @@ offset_top = 50.0
 offset_right = 191.5
 offset_bottom = 190.0
 grow_horizontal = 2
-texture = ExtResource("28_k5278")
+texture = ExtResource("28_rcnr5")
 
 [node name="AnimationFade" type="ColorRect" parent="."]
 visible = false

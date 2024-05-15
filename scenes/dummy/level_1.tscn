@@ -1,21 +1,82 @@
-[gd_scene load_steps=22 format=3 uid="uid://q7ko6feedexo"]
+[gd_scene load_steps=36 format=3 uid="uid://q7ko6feedexo"]
 
-[ext_resource type="Script" path="res://scenes/dummy/level_manager.gd" id="1_8780c"]
+[ext_resource type="Script" path="res://scripts/level_manager.gd" id="1_8780c"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_hc8hl"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_wpfud"]
-[ext_resource type="PackedScene" uid="uid://cc4jweiquqoam" path="res://scenes/pause_button.tscn" id="4_sqpc6"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://pause_menu_yudha.tscn" id="3_wpfud"]
 [ext_resource type="PackedScene" uid="uid://b0sg1qqarvea4" path="res://scenes/dummy/rating_system.tscn" id="5_f2x4h"]
+[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="5_l5gvi"]
+[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="6_38xvn"]
 [ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="6_dp0oq"]
 [ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="7_1bxoj"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="7_7lnkf"]
 [ext_resource type="Texture2D" uid="uid://be1hn7foapenn" path="res://assets/environment/grass_tiles_2.png" id="8_8vgq0"]
+[ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_ylafg"]
+[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_8pwft"]
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="9_vo8fy"]
 [ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan.tscn" id="10_0e2tt"]
+[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_yjt0s"]
 [ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="11_ca0ab"]
 [ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah.tscn" id="12_qbamp"]
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="13_1cl43"]
 [ext_resource type="PackedScene" uid="uid://d1r8xk85gjq8q" path="res://scenes/dummy/object/batu_dummy.tscn" id="14_np011"]
 [ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="15_i74i5"]
 [ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="16_c8g0r"]
+[ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="22_mnafg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lesfk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2twc2"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ohwfx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jaxxe"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t400o"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_r2eu0"]
+resource_name = "Quest_Appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
+}
+
+[sub_resource type="Animation" id="Animation_ltt5s"]
+resource_name = "Start_Quest"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7i0bb"]
+_data = {
+"Quest_Appear": SubResource("Animation_r2eu0"),
+"Start_Quest": SubResource("Animation_ltt5s")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p2pq"]
 texture = ExtResource("6_dp0oq")
@@ -60,11 +121,106 @@ position = Vector2(960, 20)
 minute = 2
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_wpfud")]
+offset_left = 6.0
+offset_right = 6.0
 
-[node name="Pause" parent="UI" instance=ExtResource("4_sqpc6")]
+[node name="Pause" type="Button" parent="UI"]
+offset_left = 1800.0
+offset_top = 30.0
+offset_right = 2033.0
+offset_bottom = 240.0
+scale = Vector2(0.402468, 0.4)
+theme = ExtResource("5_l5gvi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lesfk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2twc2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ohwfx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_jaxxe")
+theme_override_styles/focus = SubResource("StyleBoxFlat_t400o")
+icon = ExtResource("6_38xvn")
+
+[node name="Pause_Text" type="Label" parent="UI/Pause"]
+visibility_layer = 7
+layout_mode = 0
+offset_left = 21.8747
+offset_top = 218.75
+offset_right = 204.875
+offset_bottom = 289.75
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_font_sizes/font_size = 60
+text = "Pause
+(Esc)"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RatingSystem" parent="UI" instance=ExtResource("5_f2x4h")]
 position = Vector2(0, 6)
+
+[node name="PlayQuest" type="TextureRect" parent="UI"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = 560.0
+offset_right = 1339.0
+offset_bottom = 3352.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("8_ylafg")
+
+[node name="Level1" type="TextureRect" parent="UI/PlayQuest"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 310.0
+offset_right = 1459.0
+offset_bottom = 2226.0
+texture = ExtResource("9_8pwft")
+
+[node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
+libraries = {
+"": SubResource("AnimationLibrary_7i0bb")
+}
+
+[node name="PlayButton" type="Button" parent="UI/PlayQuest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = 204.0
+offset_right = -28.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+theme = ExtResource("5_l5gvi")
+icon = ExtResource("10_yjt0s")
+
+[node name="Play_Text" type="Label" parent="UI/PlayQuest/PlayButton"]
+visibility_layer = 7
+layout_mode = 0
+offset_left = -17.0
+offset_top = 105.0
+offset_right = 166.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_font_sizes/font_size = 40
+text = "Mulai"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Environment" type="Node" parent="."]
 
@@ -186,6 +342,13 @@ limit_bottom = 0
 position = Vector2(-56, -8)
 color = Color(0.0251327, 0.0607366, 0.118205, 1)
 
+[node name="open_handphone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_mnafg")
+bus = &"SFX"
+
 [connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]

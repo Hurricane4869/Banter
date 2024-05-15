@@ -5,7 +5,6 @@ extends CharacterBody2D
 #@export var _ddefault_collider = {RIGHT: , LEFT, UP, DOWN}
 # Memetakan arah dengan indeks frame animasi yang ada pada AnimatedSprite node.
 @export var _sprites = {Vector2.RIGHT: 1, Vector2.LEFT: 0, Vector2.UP: 2, Vector2.DOWN: 3}
-var _velocity = Vector2.ZERO
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var light_h = $Lighting/LightBeam_Horizontal
