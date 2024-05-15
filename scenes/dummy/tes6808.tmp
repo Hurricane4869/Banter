@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1jp0xufscnpl"]
+
+[ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="1_7co6e"]
+[ext_resource type="PackedScene" uid="uid://cfg34tqtykwcd" path="res://scenes/dummy/object/semak.tscn" id="2_4ghrv"]
+[ext_resource type="Script" path="res://scenes/dummy/light_follow_dummy.gd" id="3_su675"]
+
+[sub_resource type="Gradient" id="Gradient_d4nul"]
+offsets = PackedFloat32Array(0, 0.668622, 0.870968, 0.958944, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.610169, 0.610169, 0.610169, 1, 0.40113, 0.40113, 0.40113, 1, 0.163842, 0.163842, 0.163842, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ruwu4"]
+gradient = SubResource("Gradient_d4nul")
+fill = 1
+fill_from = Vector2(0.517094, 0.512821)
+fill_to = Vector2(0.722222, 0.0299145)
+
+[node name="testing_light" type="Node2D"]
+
+[node name="Dirt" type="Sprite2D" parent="."]
+scale = Vector2(50, 50)
+texture = ExtResource("1_7co6e")
+
+[node name="Semak" parent="." instance=ExtResource("2_4ghrv")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("3_su675")
+
+[node name="LightDummy" type="PointLight2D" parent="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ruwu4")
+texture_scale = 20.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cw6ka7nktnvej"]
+[gd_scene load_steps=11 format=3 uid="uid://etkaqh5xuhw3"]
 
 [ext_resource type="Script" path="res://scripts/dummy/character_movement_dummy.gd" id="1_va3vg"]
 [ext_resource type="Texture2D" uid="uid://bi1mqd30dnmcc" path="res://assets/player/chara kiri original.png" id="2_emy3x"]
@@ -53,24 +53,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4g86"]
-size = Vector2(100.623, 37.7773)
+size = Vector2(21.2, 8.8)
 
 [sub_resource type="Gradient" id="Gradient_74w74"]
 interpolation_mode = 2
-offsets = PackedFloat32Array(0, 0.0117302, 0.0234604, 0.13783, 0.662757, 0.991202, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.942411, 0.942411, 0.942411, 1, 0.930047, 0.930047, 0.930047, 1, 0.621852, 0.621852, 0.621852, 1, 0.264057, 0.264057, 0.264057, 1, 0.0296182, 0.0296182, 0.0296182, 1, 0, 0, 0, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_c2kv8"]
 gradient = SubResource("Gradient_74w74")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.8, 0.9)
+fill_to = Vector2(0.4, 1)
 metadata/_snap_enabled = true
 
 [node name="AliTopDown" type="CharacterBody2D"]
 light_mask = 2
 visibility_layer = 2
-z_index = 5
+scale = Vector2(5, 5)
 disable_mode = 2
 collision_layer = 2
 collision_mask = 2
@@ -79,13 +78,13 @@ speed = 200
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
-scale = Vector2(0.105, 0.105)
+scale = Vector2(0.0212879, 0.0212879)
 sprite_frames = SubResource("SpriteFrames_vy2hp")
 animation = &"driving"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
-position = Vector2(-6.5, 28.5)
+position = Vector2(-1.4, 5.6)
 scale = Vector2(1.00375, 0.714715)
 shape = SubResource("RectangleShape2D_v4g86")
 
@@ -93,48 +92,54 @@ shape = SubResource("RectangleShape2D_v4g86")
 position = Vector2(-7.62939e-07, 0)
 
 [node name="LightBeam_Horizontal" type="PointLight2D" parent="Lighting"]
-position = Vector2(7.62939e-07, -3.55271e-15)
-scale = Vector2(0.105, 0.105)
+position = Vector2(7.62939e-07, -1.77636e-15)
+scale = Vector2(0.026, 0.026)
 color = Color(0.823529, 0.823529, 0, 0.733333)
 range_item_cull_mask = 5
 shadow_enabled = true
-shadow_color = Color(0.194911, 0.000455846, 0.440106, 0)
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
 texture = ExtResource("7_p05ll")
-offset = Vector2(-752.381, -9.52381)
+offset = Vector2(-700, -7.69231)
 
 [node name="LightBeam_Down" type="PointLight2D" parent="Lighting"]
-position = Vector2(7.64616e-07, 0.015625)
+position = Vector2(7.15256e-07, 0)
 rotation = -1.5708
-scale = Vector2(0.105, 0.105)
+scale = Vector2(0.026, 0.026)
 color = Color(1, 0.843, 0.004, 1)
 range_item_cull_mask = 7
 shadow_enabled = true
-shadow_color = Color(0.194911, 0.000455846, 0.440106, 0)
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
 texture = ExtResource("7_p05ll")
-offset = Vector2(-632.279, 0.952545)
+offset = Vector2(-537.19, 0.952889)
 
 [node name="LightBeam_Up" type="PointLight2D" parent="Lighting"]
-position = Vector2(-2, -25)
+position = Vector2(-0.4, -0.0456078)
 rotation = 1.5708
-scale = Vector2(0.105, 0.105)
+scale = Vector2(0.026, 0.026)
 color = Color(1, 0.843, 0.004, 1)
-range_item_cull_mask = 5
+range_item_cull_mask = 4
 shadow_enabled = true
-shadow_color = Color(0.194911, 0.000455846, 0.440106, 0)
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
 texture = ExtResource("7_p05ll")
 offset = Vector2(-636.707, 1.52588e-05)
 
 [node name="AmbientLight" type="PointLight2D" parent="Lighting"]
+position = Vector2(7.62939e-07, -0.2)
 color = Color(0.823529, 0.823529, 0, 0.733333)
-range_item_cull_mask = 5
-shadow_color = Color(0.194911, 0.000455846, 0.440106, 0)
+range_item_cull_mask = 6
+shadow_enabled = true
+shadow_filter_smooth = 50.0
+shadow_item_cull_mask = 4
 texture = SubResource("GradientTexture2D_c2kv8")
-texture_scale = 3.0
+texture_scale = 0.5
 
 [node name="AmbientLight2" type="PointLight2D" parent="Lighting"]
-light_mask = 7
+position = Vector2(7.62939e-07, -0.2)
 color = Color(0.823529, 0.823529, 0, 0.733333)
-range_item_cull_mask = 7
-shadow_enabled = true
+energy = 0.2
+range_item_cull_mask = 6
+shadow_item_cull_mask = 5
 texture = SubResource("GradientTexture2D_c2kv8")
-texture_scale = 8.0

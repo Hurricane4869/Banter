@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://cc4jweiquqoam"]
+
+[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="1_1bbnt"]
+[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="2_xowab"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="3_1kk8c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dpxy5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1rpr"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blt2c"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjn27"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5w2m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Pause" type="Button"]
+offset_left = 1738.44
+offset_top = 39.4799
+offset_right = 1971.44
+offset_bottom = 249.48
+scale = Vector2(0.6, 0.6)
+theme = ExtResource("1_1bbnt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_dpxy5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k1rpr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_blt2c")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pjn27")
+theme_override_styles/focus = SubResource("StyleBoxFlat_s5w2m")
+icon = ExtResource("2_xowab")
+
+[node name="Pause_Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.8747
+offset_top = 218.75
+offset_right = 204.875
+offset_bottom = 289.75
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_1kk8c")
+theme_override_font_sizes/font_size = 60
+text = "Pause
+(Esc)"
+horizontal_alignment = 1
+vertical_alignment = 1

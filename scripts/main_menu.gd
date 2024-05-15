@@ -7,7 +7,7 @@ var parameters: Dictionary
 @onready var play = $menu/HBoxContainer/Play
 @onready var transition = $Transition
 @onready var pengaturan_text = $menu/HBoxContainer/Pengaturan/Pengaturan_Text
-@onready var click_sound = $menu/click_sound
+@onready var click_sound = $menu/click
 @onready var main_text = $menu/HBoxContainer/Play/Main_Text
 @onready var quit_panel = $Quit_Panel
 @onready var quit_temenan = $"Quit_Panel/Quit_Menu/HBoxContainer/Quit temenan"
@@ -56,6 +56,9 @@ func _on_quit_temenan_pressed():
 	click_sound.play()
 	await click_sound.finished
 	get_tree().quit()
+	transition.play("fade_out")
+	await get_tree().create_timer(1).timeout
+	Functions.load_screen_to_scene("res://scenes/dummy/level_1.tscn", {"test": "test"})
 
 func _on_back_from_quit_pressed():
 	click_sound.play()

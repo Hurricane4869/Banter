@@ -250,7 +250,6 @@ vertical_alignment = 1
 
 [node name="click_sound" type="AudioStreamPlayer" parent="menu"]
 stream = ExtResource("11_cvu6i")
-bus = &"SFX"
 
 [node name="Judul Game" type="Sprite2D" parent="menu"]
 position = Vector2(320.963, 110.512)
@@ -740,7 +739,9 @@ color = Color(0, 0, 0, 0.494118)
 
 [connection signal="mouse_entered" from="menu/HBoxContainer/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="menu/HBoxContainer/Play" to="." method="_on_play_mouse_exited"]
+
 [connection signal="pressed" from="menu/HBoxContainer/Play" to="." method="_on_play_pressed"]
+
 [connection signal="mouse_entered" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_mouse_entered"]
 [connection signal="mouse_exited" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_mouse_exited"]
 [connection signal="pressed" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_pressed"]

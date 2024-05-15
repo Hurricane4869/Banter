@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sk3gbj5hjkg"
-path="res://.godot/imported/BUSH.png-f61fed1009de1e8ef3122ecb1916243f.ctex"
+uid="uid://b7ytnr5j3fvap"
+path="res://.godot/imported/road_tiles.png-64828a43bbc91233896148da5dac507b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/BUSH.png"
-dest_files=["res://.godot/imported/BUSH.png-f61fed1009de1e8ef3122ecb1916243f.ctex"]
+source_file="res://assets/environment/road_tiles.png"
+dest_files=["res://.godot/imported/road_tiles.png-64828a43bbc91233896148da5dac507b.ctex"]
 
 [params]
 
