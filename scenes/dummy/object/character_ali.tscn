@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://qkbsmm0dhgmf"]
+
+[ext_resource type="Script" path="res://scripts/character_movement.gd" id="1_gkjqa"]
+[ext_resource type="SpriteFrames" uid="uid://dijh2p50mtae0" path="res://assets/player/animation_ali.tres" id="2_gk1s7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_553ny"]
+size = Vector2(100.623, 37.7773)
+
+[node name="Character_Ali" type="CharacterBody2D"]
+script = ExtResource("1_gkjqa")
+
+[node name="CharacterBody2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.105, 0.105)
+sprite_frames = ExtResource("2_gk1s7")
+animation = &"drive_left"
+frame_progress = 0.586391
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+position = Vector2(-6.5, 28.5)
+scale = Vector2(1.00375, 0.714715)
+shape = SubResource("RectangleShape2D_553ny")
