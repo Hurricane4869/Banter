@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://eyjjp6rydhdv"]
 
-[ext_resource type="Script" path="res://scripts/PauseMenu_yudha.gd" id="1_dqnjy"]
+[ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_dqnjy"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="2_vu3m5"]
 [ext_resource type="Texture2D" uid="uid://da3r1xrm40je" path="res://assets/Art/WALLPAPER HP.png" id="3_1g6i3"]
 [ext_resource type="Texture2D" uid="uid://cext3h3occmuo" path="res://assets/Art/BACK.png" id="3_bnieb"]
@@ -135,9 +135,9 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 680.0
+offset_left = -1240.0
 offset_top = 90.0
-offset_right = 2286.0
+offset_right = 366.0
 offset_bottom = 2882.0
 grow_horizontal = 0
 scale = Vector2(0.32, 0.32)
