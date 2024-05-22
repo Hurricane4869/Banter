@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://2jmkstysi5ps"]
+[gd_scene load_steps=42 format=3 uid="uid://2jmkstysi5ps"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_p3fll"]
 [ext_resource type="Texture2D" uid="uid://dgkl53ihodge6" path="res://assets/Art/MAIN MENU (BLUR KIRI).png" id="2_r30i0"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://bceh1sk8q28xj" path="res://assets/Art/bg blur.png" id="25_67l86"]
 [ext_resource type="Texture2D" uid="uid://ddtl314xyiww6" path="res://assets/Art/LEVEL 1.png" id="26_eh20r"]
 [ext_resource type="Texture2D" uid="uid://cn2rqiu877cfy" path="res://assets/Art/LOCKED LEVEL.png" id="27_ehl2s"]
+[ext_resource type="Texture2D" uid="uid://fesdco6gqtud" path="res://assets/Art/LVL 2.png" id="27_l2o1q"]
 [ext_resource type="Texture2D" uid="uid://bswn7crqjteyb" path="res://assets/Art/LEVEL.png" id="28_k5278"]
 
 [sub_resource type="FontVariation" id="FontVariation_x2qgt"]
@@ -673,7 +674,7 @@ icon = ExtResource("26_eh20r")
 [node name="Level2" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
+icon = ExtResource("27_l2o1q")
 
 [node name="Level3" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -759,3 +760,4 @@ color = Color(0, 0, 0, 0.494118)
 [connection signal="pressed" from="Kontrol_Panel/Back_From_Kontrol" to="." method="_on_back_from_kontrol_pressed"]
 [connection signal="pressed" from="ChooseLevel_Panel/Back_From_level" to="." method="_on_back_from_level_pressed"]
 [connection signal="pressed" from="ChooseLevel_Panel/VBoxContainer/HBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="ChooseLevel_Panel/VBoxContainer/HBoxContainer/Level2" to="." method="_on_level_2_pressed"]

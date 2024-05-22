@@ -146,3 +146,11 @@ func _on_back_from_level_pressed():
 	click_sound.play()
 	choose_level_panel.visible = false
 	menu.visible = true
+
+
+func _on_level_2_pressed():
+	click_sound.play()
+	await click_sound.finished
+	transition.play("fade_out")
+	await get_tree().create_timer(1).timeout
+	Functions.load_screen_to_scene("res://scenes/dummy/level_2.tscn", {"test": "test"})
