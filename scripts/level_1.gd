@@ -14,6 +14,7 @@ extends Node2D
 @onready var play_quest = $UI/PlayQuest
 @onready var play_text = $UI/PlayQuest/PlayButton/Play_Text
 @onready var open_handphone_sound = $open_handphone
+@onready var bgm_lvl_1 = $BGM_lvl1
 
 #rating
 @onready var perfect_time = 60
@@ -72,6 +73,7 @@ func _on_play_button_pressed():
 	get_tree().paused = false
 	open_handphone_sound.play()
 	await open_handphone_sound.finished
+	bgm_lvl_1.play()
 
 func _on_play_button_mouse_entered():
 	play_text.visible = true	

@@ -12,6 +12,10 @@ extends CharacterBody2D
 @onready var light_down = $Lighting/LightBeam_Down
 @onready var collision = $CollisionShape2D
 
+		
+func player():
+	pass
+
 func _ready():
 	light_h.show()
 	light_up.hide()
@@ -77,5 +81,4 @@ func _update_collision(direction: Vector2):
 		Vector2.DOWN:
 			collision.rotation_degrees = 90
 			collision.position = Vector2(0, 20)
-			
 
