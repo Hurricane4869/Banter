@@ -1,0 +1,128 @@
+[gd_scene load_steps=18 format=3 uid="uid://bl81mxr4l1ubh"]
+
+[ext_resource type="Script" path="res://scenes/dummy/Ghost.gd" id="1_g7qbv"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost down f1.png" id="2_hoe8u"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost down f2.png" id="3_rubrb"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost down f3.png" id="4_g2l0c"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost left f1.png" id="5_7sle8"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost left f2.png" id="6_bbum6"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost left f3.png" id="7_vyv51"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost right f1.PNG" id="8_cfc54"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost right f2.PNG" id="9_62m0w"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost right f3.PNG" id="10_xd2h1"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost up f1.png" id="11_sc484"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost up f2.png" id="12_ob84i"]
+[ext_resource type="Texture2D" path="res://assets/enemy/ghost up f3.png" id="13_1eger"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_21d1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hoe8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rubrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g2l0c")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7sle8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bbum6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vyv51")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cfc54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_62m0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xd2h1")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_sc484")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ob84i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1eger")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1igv"]
+size = Vector2(49, 81)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rburs"]
+radius = 370.109
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdivf"]
+size = Vector2(48, 81)
+
+[node name="Ghost" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+script = ExtResource("1_g7qbv")
+
+[node name="ghost_animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_21d1h")
+animation = &"down"
+frame_progress = 0.766066
+offset = Vector2(0, -6)
+
+[node name="ghost_collision" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_w1igv")
+
+[node name="detection_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Enemy_collision" type="CollisionShape2D" parent="detection_area"]
+shape = SubResource("CircleShape2D_rburs")
+
+[node name="stun_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="stun_collision" type="CollisionShape2D" parent="stun_area"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_tdivf")
+
+[node name="Black_Screen" type="ColorRect" parent="."]
+visible = false
+offset_left = -2135.0
+offset_top = -1873.0
+offset_right = -2095.0
+offset_bottom = -1833.0
+scale = Vector2(105.56, 105.56)
+color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="stun_area" to="." method="_on_stun_area_body_entered"]
