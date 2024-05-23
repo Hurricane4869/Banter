@@ -1,0 +1,35 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://c2wn1no8xhpbw"]
+
+[ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="1_llns2"]
+[ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="2_ing7k"]
+[ext_resource type="Texture2D" uid="uid://be1hn7foapenn" path="res://assets/environment/grass_tiles_2.png" id="3_cq2rv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p2pq"]
+texture = ExtResource("1_llns2")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nowb"]
+texture = ExtResource("2_ing7k")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e08vm"]
+texture = ExtResource("3_cq2rv")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
+
+[resource]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/1 = SubResource("TileSetAtlasSource_3nowb")
+sources/0 = SubResource("TileSetAtlasSource_5p2pq")
+sources/3 = SubResource("TileSetAtlasSource_e08vm")

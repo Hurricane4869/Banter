@@ -75,7 +75,6 @@ disable_mode = 2
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_va3vg")
-speed = 200
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 light_mask = 2
