@@ -1,0 +1,218 @@
+[gd_scene load_steps=24 format=3 uid="uid://dtge71egtiyrf"]
+
+[ext_resource type="Script" path="res://scripts/hari_pertama.gd" id="1_c6wp0"]
+[ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_2lkgq"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://pause_menu_yudha.tscn" id="3_ocu16"]
+[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_vqevv"]
+[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_5633u"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_33qdb"]
+[ext_resource type="PackedScene" uid="uid://b0sg1qqarvea4" path="res://scenes/dummy/rating_system.tscn" id="7_2wj5t"]
+[ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_mwmvf"]
+[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_bxtwa"]
+[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_7anfu"]
+[ext_resource type="PackedScene" uid="uid://c6am1kusod3kl" path="res://scenes/Gameplay/world_tile_map.tscn" id="11_re4js"]
+[ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="12_3325k"]
+[ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="13_gpgxo"]
+[ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="14_bue6b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w472"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vucx"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k8n4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fff3b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy4ti"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_r2eu0"]
+resource_name = "Quest_Appear"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
+}
+
+[sub_resource type="Animation" id="Animation_ltt5s"]
+resource_name = "Start_Quest"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7i0bb"]
+_data = {
+"Quest_Appear": SubResource("Animation_r2eu0"),
+"Start_Quest": SubResource("Animation_ltt5s")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0opji"]
+size = Vector2(104, 49)
+
+[node name="HariPertama" type="Node2D"]
+script = ExtResource("1_c6wp0")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="QuestTimer" parent="UI" instance=ExtResource("2_2lkgq")]
+position = Vector2(960, 20)
+minute = 2
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_ocu16")]
+offset_left = 6.0
+offset_right = 6.0
+
+[node name="Pause" type="Button" parent="UI"]
+visible = false
+offset_left = 1800.0
+offset_top = 30.0
+offset_right = 2033.0
+offset_bottom = 240.0
+scale = Vector2(0.402468, 0.4)
+theme = ExtResource("4_vqevv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0w472")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4vucx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1k8n4")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_fff3b")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xy4ti")
+icon = ExtResource("5_5633u")
+
+[node name="Pause_Text" type="Label" parent="UI/Pause"]
+visibility_layer = 7
+layout_mode = 0
+offset_left = 21.8747
+offset_top = 218.75
+offset_right = 204.875
+offset_bottom = 289.75
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_font_sizes/font_size = 60
+text = "Pause
+(Esc)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RatingSystem" parent="UI" instance=ExtResource("7_2wj5t")]
+position = Vector2(0, 6)
+
+[node name="PlayQuest" type="TextureRect" parent="UI"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -267.0
+offset_top = 560.0
+offset_right = 1339.0
+offset_bottom = 3352.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("8_mwmvf")
+
+[node name="Level1" type="TextureRect" parent="UI/PlayQuest"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 310.0
+offset_right = 1459.0
+offset_bottom = 2226.0
+texture = ExtResource("9_bxtwa")
+
+[node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
+libraries = {
+"": SubResource("AnimationLibrary_7i0bb")
+}
+
+[node name="PlayButton" type="Button" parent="UI/PlayQuest"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = 204.0
+offset_right = -28.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+theme = ExtResource("4_vqevv")
+icon = ExtResource("10_7anfu")
+
+[node name="Play_Text" type="Label" parent="UI/PlayQuest/PlayButton"]
+visibility_layer = 7
+layout_mode = 0
+offset_left = -17.0
+offset_top = 105.0
+offset_right = 166.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_font_sizes/font_size = 40
+text = "Mulai"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="WorldTileMap" parent="Environment" instance=ExtResource("11_re4js")]
+
+[node name="AntarPaket" parent="Environment" instance=ExtResource("12_3325k")]
+visibility_layer = 4
+position = Vector2(1155, -797)
+action_name = "antar paket"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/AntarPaket"]
+position = Vector2(0, 52.5)
+shape = SubResource("RectangleShape2D_0opji")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Environment"]
+position = Vector2(-56, -8)
+color = Color(0.359216, 0.00115514, 0.864972, 1)
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="open_handphone_sound" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("13_gpgxo")
+bus = &"SFX"
+
+[node name="day_1_bgm" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("14_bue6b")
+volume_db = -5.0
+bus = &"Music"
+
+[connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
+[connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
+[connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]

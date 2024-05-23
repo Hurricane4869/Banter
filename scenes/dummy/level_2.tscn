@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_uivvb"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_w4lwc"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_5gojh"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_k0v63"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_myen2"]
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_60skm"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_fgjoj"]
@@ -20,12 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="18_l5pfb"]
 [ext_resource type="PackedScene" uid="uid://d1r8xk85gjq8q" path="res://scenes/dummy/object/batu_dummy.tscn" id="19_afv8k"]
 [ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="20_dbbtc"]
-
 [ext_resource type="PackedScene" uid="uid://curh11q3r54wy" path="res://scenes/ghost.tscn" id="21_1vap6"]
 [ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="21_kkday"]
 [ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="22_aj5py"]
 [ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="24_invyp"]
-
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lesfk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -124,9 +122,7 @@ script = ExtResource("1_uivvb")
 position = Vector2(960, 20)
 minute = 2
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("3_5gojh")]
-offset_left = 6.0
-offset_right = 6.0
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_k0v63")]
 
 [node name="Pause" type="Button" parent="UI"]
 visible = false
