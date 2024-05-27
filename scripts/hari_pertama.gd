@@ -19,8 +19,8 @@ extends Node2D
 @onready var handphone = $UI/PlayQuest/Handphone
 @onready var play_quest = $UI/PlayQuest
 @onready var play_text = $UI/PlayQuest/PlayButton/Play_Text
-@onready var open_handphone_sound = $open_handphone
-@onready var bgm_lvl_1 = $BGM_lvl1
+@onready var open_handphone_sound = $Sound/open_handphone_sound
+@onready var bgm_lvl_1 = $Sound/day_1_bgm
 
 var time_left
 

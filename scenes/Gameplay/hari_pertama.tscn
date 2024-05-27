@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dtge71egtiyrf"]
+[gd_scene load_steps=25 format=3 uid="uid://dtge71egtiyrf"]
 
 [ext_resource type="Script" path="res://scripts/hari_pertama.gd" id="1_c6wp0"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_2lkgq"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_7anfu"]
 [ext_resource type="PackedScene" uid="uid://c6am1kusod3kl" path="res://scenes/Gameplay/world_tile_map.tscn" id="11_re4js"]
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="12_3325k"]
+[ext_resource type="PackedScene" uid="uid://qkbsmm0dhgmf" path="res://scenes/Player/character_ali.tscn" id="13_3fikr"]
 [ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="13_gpgxo"]
 [ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="14_bue6b"]
 
@@ -202,6 +203,16 @@ shape = SubResource("RectangleShape2D_0opji")
 position = Vector2(-56, -8)
 color = Color(0.359216, 0.00115514, 0.864972, 1)
 
+[node name="Character_Ali" parent="." instance=ExtResource("13_3fikr")]
+position = Vector2(3464, -2296)
+scale = Vector2(1.2, 1.2)
+ACCEL = 800
+FRICTION = 200
+MAX_SPEED = 200
+
+[node name="Camera2D" type="Camera2D" parent="Character_Ali"]
+zoom = Vector2(2, 2)
+
 [node name="Sound" type="Node" parent="."]
 
 [node name="open_handphone_sound" type="AudioStreamPlayer" parent="Sound"]
@@ -216,3 +227,6 @@ bus = &"Music"
 [connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
+[connection signal="mouse_entered" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_exited"]
+[connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
