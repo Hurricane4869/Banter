@@ -26,6 +26,7 @@ var parameters: Dictionary
 @onready var full_screen_check_box = $Video_Panel/Video_Settings/Fullscreen/FullScreenCheckBox
 @onready var choose_level_panel = $ChooseLevel_Panel
 @onready var level_1 = $ChooseLevel_Panel/VBoxContainer/HBoxContainer/Level1
+@onready var levels = $ChooseLevel_Panel/Levels_VBoxCOntainer/Levels
 
 func _input (event):
 	if event.is_action_pressed("ui_cancel"):
@@ -39,19 +40,14 @@ func show_and_hide(first, second):
 
 func _ready():
 	print(parameters)
-	pengaturan_text.visible = false
-	main_text.visible = false
 	play.button_down.connect(_on_play_pressed)
 	quit_panel.visible = false
 	bgm.play()
 	full_screen_check_box.set_pressed(true)
 
-func _on_pengaturan_mouse_entered():
-	pengaturan_text.visible = true
-
-func _on_play_mouse_exited():
-	main_text.visible = false
-
+func change_level(lvl_no):
+	Functions.load_screen_to_scene("res://scenes/dummy/level_" + lvl_no + ".tscn")
+	
 func _on_quit_temenan_pressed():
 	click_sound.play()
 	await click_sound.finished
@@ -67,16 +63,12 @@ func _on_pengaturan_pressed():
 	menu.visible = false
 	settings_panel.visible = true
 	
-func _on_pengaturan_mouse_exited():
-	pengaturan_text.visible = false
 
 func _on_play_pressed():
 	click_sound.play()
 	menu.visible = false
 	choose_level_panel.visible = true
 	
-func _on_play_mouse_entered():
-	main_text.visible = true
 
 func _on_back_from_settings_pressed():
 	click_sound.play()

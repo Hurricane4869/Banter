@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://q7ko6feedexo"]
+[gd_scene load_steps=45 format=3 uid="uid://q7ko6feedexo"]
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_8780c"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_hc8hl"]
@@ -31,7 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="18_wqefp"]
 [ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="22_mnafg"]
 [ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="23_rb51k"]
-[ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="31_c1u1i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lesfk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -64,7 +63,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.7, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 130)]
+"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
 }
 
 [sub_resource type="Animation" id="Animation_ltt5s"]
@@ -127,8 +126,8 @@ script = ExtResource("1_8780c")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_hc8hl")]
-position = Vector2(875, 20)
-second = 20
+position = Vector2(960, 20)
+minute = 2
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_wpfud")]
 offset_left = 6.0
@@ -175,9 +174,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -267.0
-offset_top = -410.0
+offset_top = 560.0
 offset_right = 1339.0
-offset_bottom = 2382.0
+offset_bottom = 3352.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.32, 0.32)
@@ -231,12 +230,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RatingSystem" type="Control" parent="UI"]
-process_mode = 3
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = -75.0
-offset_right = -35.0
+offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_yhnfh")
 
@@ -548,10 +545,6 @@ color = Color(0.327104, 0.476892, 0.706584, 1)
 
 [node name="open_handphone" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_mnafg")
-bus = &"SFX"
-
-[node name="Finish_quest_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("31_c1u1i")
 bus = &"SFX"
 
 [node name="BGM_lvl1" type="AudioStreamPlayer" parent="."]

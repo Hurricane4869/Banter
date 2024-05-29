@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @onready var ghost_animation = $ghost_animation
 @onready var black_screen = $Black_Screen
+@export var waktu_pingsan : int
+@onready var ghost_hit_sound = $Ghost_hit_sound
 
 var speed = 80
 var player_chase = false
@@ -35,10 +37,11 @@ func _on_detection_area_body_exited(body):
 
 func _on_stun_area_body_entered(body):
 	if body.is_in_group("Player"):
+		ghost_hit_sound.play()
 		black_screen.visible = true
 		player_chase = false  # Hentikan pengejaran hantu
 		body.set_physics_process(false)  # Hentikan pergerakan player
-		await get_tree().create_timer(5).timeout  # Tunggu selama 5 detik
+		await get_tree().create_timer(waktu_pingsan).timeout  # Tunggu selama 5 detik
 		body.set_physics_process(true)  # Kembalikan pergerakan player
 		queue_free()  # Hapus hantu dari scene
 		black_screen.visible = false

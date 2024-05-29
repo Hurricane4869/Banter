@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bd78351saikdw"]
+[gd_scene load_steps=37 format=3 uid="uid://dax1uvefgxn8r"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_uivvb"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_w4lwc"]
@@ -20,12 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="18_l5pfb"]
 [ext_resource type="PackedScene" uid="uid://d1r8xk85gjq8q" path="res://scenes/dummy/object/batu_dummy.tscn" id="19_afv8k"]
 [ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="20_dbbtc"]
-
-[ext_resource type="PackedScene" uid="uid://curh11q3r54wy" path="res://scenes/ghost.tscn" id="21_1vap6"]
+[ext_resource type="PackedScene" uid="uid://bl81mxr4l1ubh" path="res://scenes/ghost.tscn" id="21_1vap6"]
 [ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="21_kkday"]
 [ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="22_aj5py"]
 [ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="24_invyp"]
-
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lesfk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -46,21 +44,6 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t400o"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="Animation" id="Animation_r2eu0"]
-resource_name = "Quest_Appear"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
-}
-
 [sub_resource type="Animation" id="Animation_ltt5s"]
 resource_name = "Start_Quest"
 tracks/0/type = "value"
@@ -73,12 +56,11 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.7, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
+"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 120)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7i0bb"]
 _data = {
-"Quest_Appear": SubResource("Animation_r2eu0"),
 "Start_Quest": SubResource("Animation_ltt5s")
 }
 
@@ -121,7 +103,7 @@ script = ExtResource("1_uivvb")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_w4lwc")]
-position = Vector2(960, 20)
+position = Vector2(865, 20)
 minute = 2
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_5gojh")]
@@ -172,9 +154,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -267.0
-offset_top = 560.0
+offset_top = -420.0
 offset_right = 1339.0
-offset_bottom = 3352.0
+offset_bottom = 2372.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.32, 0.32)
