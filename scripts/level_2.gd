@@ -37,7 +37,7 @@ func _ready():
 	play_text.visible = false
 	timer_node.start()
 	get_tree().paused = true
-	handphone.play("Quest_Appear");
+	handphone.play("Start_Quest");
 	open_handphone_sound.play()
 	await open_handphone_sound.finished
 	

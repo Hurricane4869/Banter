@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkckgfx41dq7p"
+path="res://.godot/imported/ghost_flashbangs edit.mp3-c9eb8a08d2d024265965832bf8a58dee.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/ghost_flashbangs edit.mp3"
+dest_files=["res://.godot/imported/ghost_flashbangs edit.mp3-c9eb8a08d2d024265965832bf8a58dee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
