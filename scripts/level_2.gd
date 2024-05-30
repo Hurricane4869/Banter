@@ -71,11 +71,6 @@ func _show_rating(rating):
 	star_1.visible = rating == 1
 	star_2.visible = rating == 2
 	star_3.visible = rating == 3
-	if rating == 0 :
-		star_0.visible = true
-		get_tree().paused = true
-		black_overlay.visible = true
-		rating_system.visible = true
 
 func _on_pause_pressed():
 	pause_menu.pause()

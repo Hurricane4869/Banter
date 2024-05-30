@@ -1,15 +1,14 @@
-[gd_scene load_steps=46 format=3 uid="uid://dax1uvefgxn8r"]
+[gd_scene load_steps=45 format=3 uid="uid://dax1uvefgxn8r"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_uivvb"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_w4lwc"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://pause_menu_yudha.tscn" id="3_k0v63"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_k0v63"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_myen2"]
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_60skm"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_fgjoj"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_qf0q5"]
 [ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_gvrsg"]
 [ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_2p2jb"]
-[ext_resource type="Script" path="res://scenes/dummy/RatingSystem.gd" id="10_252wm"]
 [ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="11_wnsap"]
 [ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="11_xonqb"]
 [ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="12_1epbs"]
@@ -220,7 +219,6 @@ anchors_preset = 0
 offset_left = -75.0
 offset_right = -35.0
 offset_bottom = 40.0
-script = ExtResource("10_252wm")
 
 [node name="rating_menu" type="TextureRect" parent="UI/RatingSystem"]
 layout_mode = 0

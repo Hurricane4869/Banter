@@ -1,21 +1,29 @@
-[gd_scene load_steps=26 format=3 uid="uid://dtge71egtiyrf"]
+[gd_scene load_steps=34 format=3 uid="uid://dtge71egtiyrf"]
 
 [ext_resource type="Script" path="res://scripts/hari_pertama.gd" id="1_c6wp0"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_2lkgq"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://pause_menu_yudha.tscn" id="3_ocu16"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_ocu16"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_vqevv"]
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_5633u"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_33qdb"]
-[ext_resource type="PackedScene" uid="uid://b0sg1qqarvea4" path="res://scenes/dummy/rating_system.tscn" id="7_2wj5t"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_mwmvf"]
 [ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_bxtwa"]
 [ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_7anfu"]
+[ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="10_43dar"]
+[ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="11_d3887"]
 [ext_resource type="PackedScene" uid="uid://c6am1kusod3kl" path="res://scenes/Gameplay/world_tile_map.tscn" id="11_re4js"]
 [ext_resource type="TileSet" uid="uid://c2wn1no8xhpbw" path="res://assets/environment/world_tileset.tres" id="11_yyol6"]
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="12_3325k"]
+[ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="12_g3ona"]
 [ext_resource type="PackedScene" uid="uid://qkbsmm0dhgmf" path="res://scenes/Player/character_ali.tscn" id="13_3fikr"]
 [ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="13_gpgxo"]
+[ext_resource type="Texture2D" uid="uid://cm570wcmxrpme" path="res://assets/Art/ui rating/Salinan NEXT LEVEL.png" id="13_qu4gn"]
 [ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="14_bue6b"]
+[ext_resource type="Texture2D" uid="uid://cq861qg6s2hfh" path="res://assets/Art/BINTANG 0.png" id="14_emodb"]
+[ext_resource type="Texture2D" uid="uid://dqeqy8cqtwqpt" path="res://assets/Art/BINTANG 1.png" id="15_xndxm"]
+[ext_resource type="Texture2D" uid="uid://b35jd1qlrnkmg" path="res://assets/Art/BINTANG 2.png" id="16_6470y"]
+[ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="17_w8rdu"]
+[ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="24_25mdx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w472"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -73,10 +81,12 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0opji"]
-size = Vector2(104, 49)
+size = Vector2(160, 145)
 
 [node name="HariPertama" type="Node2D"]
 script = ExtResource("1_c6wp0")
+NORMAL_TIME = 60
+GOOD_TIME = 120
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -119,9 +129,6 @@ text = "Pause
 (Esc)"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="RatingSystem" parent="UI" instance=ExtResource("7_2wj5t")]
-position = Vector2(0, 6)
 
 [node name="PlayQuest" type="TextureRect" parent="UI"]
 process_mode = 3
@@ -186,6 +193,208 @@ text = "Mulai"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="RatingSystem" type="Control" parent="UI"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -75.0
+offset_right = -35.0
+offset_bottom = 40.0
+
+[node name="rating_menu" type="TextureRect" parent="UI/RatingSystem"]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 175.0
+offset_right = 1899.0
+offset_bottom = 1742.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_43dar")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/RatingSystem/rating_menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.884493
+anchor_right = 1.0
+anchor_bottom = 0.884493
+offset_top = -180.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Chooselevel_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vqevv")
+icon = ExtResource("11_d3887")
+
+[node name="Restart_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vqevv")
+icon = ExtResource("12_g3ona")
+
+[node name="NextLevel_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_vqevv")
+icon = ExtResource("13_qu4gn")
+
+[node name="Label" type="Label" parent="UI/RatingSystem/rating_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -424.5
+offset_top = -655.5
+offset_right = 456.5
+offset_bottom = -514.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_font_sizes/font_size = 100
+text = "KAMU BERHASIL!"
+
+[node name="Star0" type="VBoxContainer" parent="UI/RatingSystem/rating_menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.5
+offset_top = -297.5
+offset_right = 237.5
+offset_bottom = 12.5001
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+theme_override_constants/separation = 50
+
+[node name="star0_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star0"]
+layout_mode = 2
+texture = ExtResource("14_emodb")
+
+[node name="Star0_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star0"]
+visibility_layer = 7
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_font_sizes/font_size = 50
+text = "Pelanggan kecewa..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Star1" type="VBoxContainer" parent="UI/RatingSystem/rating_menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.5
+offset_top = -297.5
+offset_right = 237.5
+offset_bottom = 12.5001
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+theme_override_constants/separation = 50
+
+[node name="star1_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star1"]
+layout_mode = 2
+texture = ExtResource("15_xndxm")
+
+[node name="Star1_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star1"]
+visibility_layer = 7
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_font_sizes/font_size = 50
+text = "Pelanggan ikhlas..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Star2" type="VBoxContainer" parent="UI/RatingSystem/rating_menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.5
+offset_top = -297.5
+offset_right = 237.5
+offset_bottom = 12.5001
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+theme_override_constants/separation = 50
+
+[node name="star2_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star2"]
+layout_mode = 2
+texture = ExtResource("16_6470y")
+
+[node name="Star2_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star2"]
+visibility_layer = 7
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_font_sizes/font_size = 50
+text = "Pelanggan puas!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Star3" type="VBoxContainer" parent="UI/RatingSystem/rating_menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -464.5
+offset_top = -297.5
+offset_right = 237.5
+offset_bottom = 12.5001
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+theme_override_constants/separation = 50
+
+[node name="star3_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star3"]
+layout_mode = 2
+texture = ExtResource("17_w8rdu")
+
+[node name="Star3_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star3"]
+visibility_layer = 7
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_font_sizes/font_size = 50
+text = "Pelanggan bahagia!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Environment" type="Node" parent="."]
 
 [node name="WorldTileMap" parent="Environment" instance=ExtResource("11_re4js")]
@@ -198,11 +407,11 @@ layer_0/tile_data = PackedInt32Array(-1310688, 0, 0, -1245152, 0, 0, -1179616, 0
 
 [node name="AntarPaket" parent="Environment" instance=ExtResource("12_3325k")]
 visibility_layer = 4
-position = Vector2(1155, -797)
+position = Vector2(1905, -2333)
 action_name = "antar paket"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/AntarPaket"]
-position = Vector2(0, 52.5)
+position = Vector2(-1, 100.5)
 shape = SubResource("RectangleShape2D_0opji")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Environment"]
@@ -215,7 +424,7 @@ scale = Vector2(1.2, 1.2)
 ACCEL = 800
 FRICTION = 200
 MAX_SPEED = 200
-starting_direction = Vector2(0, 1)
+starting_direction = Vector2(-1, 0)
 
 [node name="Sound" type="Node" parent="."]
 
@@ -228,9 +437,17 @@ stream = ExtResource("14_bue6b")
 volume_db = -5.0
 bus = &"Music"
 
+[node name="Finish_quest_sound" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource("24_25mdx")
+bus = &"SFX"
+
+[connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
 [connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
 [connection signal="mouse_entered" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="mouse_exited" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Chooselevel_Button" to="." method="_on_chooselevel_button_pressed"]
+[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/NextLevel_Button" to="." method="_on_next_level_button_pressed"]

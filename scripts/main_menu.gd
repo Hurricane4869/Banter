@@ -131,7 +131,7 @@ func _on_level_1_pressed():
 	await click_sound.finished
 	transition.play("fade_out")
 	await get_tree().create_timer(1).timeout
-	Functions.load_screen_to_scene("res://scenes/dummy/level_1.tscn", {"test": "test"})
+	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_pertama.tscn", {"test": "test"})
 
 
 func _on_back_from_level_pressed():
