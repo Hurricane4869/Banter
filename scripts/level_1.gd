@@ -3,7 +3,6 @@ extends Node2D
 @onready var interaction_area: InteractionArea = $Environment/AntarPaket
 @onready var play_button = $UI/PlayDummy
 @onready var timer = $UI/QuestTimer
-@onready var timer_node = get_node("UI/QuestTimer/Timer")
 @onready var pause_button = $UI/Pause
 @onready var pause_text = $UI/Pause/Pause_Text
 @onready var pause_menu = $UI/PauseMenu
@@ -32,7 +31,7 @@ func _ready():
 	#rating_dummy.visible = false
 	pause_text.visible = false
 	play_text.visible = false
-	timer_node.start(180)  # Timer set to 3 minutes (180 seconds)
+	timer.start() 
 	get_tree().paused = true
 	handphone.play("Quest_Appear")
 	open_handphone_sound.play()
@@ -46,11 +45,11 @@ func _process(_delta):
 func _antar_paket():
 	print_debug("Paket Sampai")
 	status_paket = true
-	timer_node.set_paused(true)
+	timer.set_paused(true)
 
-	time_left = timer_node.get_time_left()
+	time_left = timer.get_time_left()
 	_process_rating(time_left)
-
+	
 	get_tree().paused = true
 	black_overlay.visible = true
 	rating_system.visible = true
@@ -64,17 +63,13 @@ func _process_rating(time_left):
 	elif time_left > 0 and time_left < 60:  # More than 0 seconds
 		_show_rating(1)
 	elif time_left <= 0:  # 0 seconds or less
+		get_tree().paused = true
 		_show_rating(0)
 
 func _show_rating(rating):
 	star_1.visible = rating == 1
 	star_2.visible = rating == 2
 	star_3.visible = rating == 3
-	if rating == 0 :
-		star_0.visible = true
-		get_tree().paused = true
-		black_overlay.visible = true
-		rating_system.visible = true
 
 func _on_pause_pressed():
 	pause_menu.pause()
@@ -109,3 +104,10 @@ func _on_restart_button_pressed():
 func _on_next_level_button_pressed():
 	get_tree().paused = false
 	Functions.load_screen_to_scene("res://scenes/dummy/level_2.tscn", {"test": "test"})
+
+
+func _on_quest_timer_timeout():
+	get_tree().paused = true
+	star_0.visible = true
+	black_overlay.visible = true
+	rating_system.visible = true

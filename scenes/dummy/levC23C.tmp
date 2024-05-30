@@ -112,6 +112,7 @@ script = ExtResource("1_uivvb")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_w4lwc")]
+position = Vector2(865, 20)
 minute = 2
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_5gojh")]
@@ -558,13 +559,9 @@ stream = ExtResource("24_invyp")
 volume_db = -5.0
 bus = &"Music"
 
-[connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
 [connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
 [connection signal="mouse_entered" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="mouse_exited" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Chooselevel_Button" to="." method="_on_chooselevel_button_pressed"]
-[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/NextLevel_Button" to="." method="_on_next_level_button_pressed"]
