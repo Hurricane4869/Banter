@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/dummy/QuestTimer.gd" id="1_frd7a"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_5xclg"]
 
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0d0y"]
 bg_color = Color(0.85098, 0.290196, 0.337255, 1)
 border_width_left = 5

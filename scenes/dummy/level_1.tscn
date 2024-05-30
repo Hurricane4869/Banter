@@ -12,12 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_ylafg"]
 [ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_8pwft"]
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="9_vo8fy"]
-[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan.tscn" id="10_0e2tt"]
+[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan_bawah.tscn" id="10_0e2tt"]
 [ext_resource type="Script" path="res://scenes/dummy/RatingSystem.gd" id="10_yhnfh"]
 [ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_yjt0s"]
 [ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="11_borgc"]
 [ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="11_ca0ab"]
-[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah.tscn" id="12_qbamp"]
+[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah_bawah.tscn" id="12_qbamp"]
 [ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="12_vupbh"]
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="13_1cl43"]
 [ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="13_3u05a"]
@@ -130,9 +130,7 @@ script = ExtResource("1_8780c")
 second = 50
 minute = 2
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("3_wpfud")]
-offset_left = 6.0
-offset_right = 6.0
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_i3vi5")]
 
 [node name="Pause" type="Button" parent="UI"]
 visible = false
@@ -544,6 +542,7 @@ limit_right = 1664
 limit_bottom = 0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(-56, -8)
 color = Color(0.327104, 0.476892, 0.706584, 1)
 

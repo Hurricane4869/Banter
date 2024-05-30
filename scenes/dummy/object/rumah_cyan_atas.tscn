@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b170ond1u3gko"]
+
+[ext_resource type="Texture2D" uid="uid://c8r5gv2wywmgj" path="res://assets/environment/RUMAH 2_belakang.png" id="1_0u5q0"]
+
+[node name="RumahCyanAtas" type="Sprite2D"]
+texture = ExtResource("1_0u5q0")

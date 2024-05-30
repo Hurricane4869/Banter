@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://1t0yax6ogc21"]
+
+[ext_resource type="Texture2D" uid="uid://dp12tnhm3s0ky" path="res://assets/environment/log.png" id="1_hv1ck"]
+
+[node name="BatangKayu" type="Sprite2D"]
+texture = ExtResource("1_hv1ck")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-128, -48, -168, -64, -192, -56, -192, -16, -208, -16, -208, 16, -184, 72, -120, 80, 176, 56, 200, 32, 208, -24, 176, -48, 8, -48, 0, -64, -40, -80, -56, -80, -56, -64, -8, -48)

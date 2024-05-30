@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7bfu16swinpp"]
+
+[ext_resource type="Texture2D" uid="uid://bmkpgt04tn35y" path="res://assets/environment/RUMAH_belakang.png" id="1_51i30"]
+
+[node name="RumahMerahAtas" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_51i30")
