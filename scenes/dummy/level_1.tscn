@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_8780c"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_hc8hl"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_wpfud"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://pause_menu_yudha.tscn" id="3_vuq5g"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="5_l5gvi"]
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="6_38xvn"]
 [ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="6_dp0oq"]
@@ -130,9 +130,7 @@ script = ExtResource("1_8780c")
 second = 50
 minute = 2
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("3_wpfud")]
-offset_left = 6.0
-offset_right = 6.0
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_vuq5g")]
 
 [node name="Pause" type="Button" parent="UI"]
 visible = false
