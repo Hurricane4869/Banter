@@ -57,7 +57,20 @@ z_index = 1
 position = Vector2(886.667, 566.667)
 scale = Vector2(1, 1)
 
+[node name="DoublePagar" type="Node2D" parent="Rumah"]
+
+[node name="Pagar4" parent="Rumah/DoublePagar" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(2176, -1866)
+scale = Vector2(0.3, 0.3)
+
+[node name="Pagar5" parent="Rumah/DoublePagar" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(2350, -1866)
+scale = Vector2(0.3, 0.3)
+
 [node name="RumahCyanKiri" parent="Rumah" instance=ExtResource("5_ie3wc")]
+z_index = 1
 position = Vector2(2264, -1784)
 scale = Vector2(0.3, 0.3)
 
@@ -65,9 +78,16 @@ scale = Vector2(0.3, 0.3)
 position = Vector2(-613.333, 266.667)
 scale = Vector2(0.666667, 0.666667)
 
-[node name="Pagar2" parent="Rumah/RumahCyanKiri" instance=ExtResource("3_hk66x")]
+[node name="DoublePagar" type="Node2D" parent="Rumah/RumahCyanKiri"]
+
+[node name="Pagar2" parent="Rumah/RumahCyanKiri/DoublePagar" instance=ExtResource("3_hk66x")]
 z_index = 1
-position = Vector2(886.667, 566.667)
+position = Vector2(-293.333, 640)
+scale = Vector2(1, 1)
+
+[node name="Pagar3" parent="Rumah/RumahCyanKiri/DoublePagar" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(286.667, 640)
 scale = Vector2(1, 1)
 
 [node name="RumahMerahKanan" parent="Rumah" instance=ExtResource("6_7giff")]
@@ -290,6 +310,7 @@ scale = Vector2(1.87593, 1.87593)
 texture = ExtResource("3_xl1s8")
 
 [node name="LevelDesign2" type="Sprite2D" parent="Ref"]
+visible = false
 position = Vector2(4800, -3352)
 scale = Vector2(2.3043, 2.04335)
 texture = ExtResource("4_os673")

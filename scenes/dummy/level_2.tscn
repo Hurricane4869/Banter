@@ -119,7 +119,6 @@ script = ExtResource("1_uivvb")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_w4lwc")]
-position = Vector2(960, 20)
 minute = 2
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_k0v63")]
