@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://6b3w3jfb8tte"]
+
+[ext_resource type="Texture2D" uid="uid://brp27fxml6dfg" path="res://assets/environment/RUMAH_kiri.png" id="1_iwuqm"]
+
+[node name="RumahMerahKiri" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_iwuqm")

@@ -1,0 +1,316 @@
+[gd_scene load_steps=12 format=3 uid="uid://c6am1kusod3kl"]
+
+[ext_resource type="TileSet" uid="uid://c2wn1no8xhpbw" path="res://assets/environment/world_tileset.tres" id="1_amqba"]
+[ext_resource type="Texture2D" uid="uid://bjb4xdiy0w4bc" path="res://assets/level_design_5.jpg" id="2_hxn3n"]
+[ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="3_hk66x"]
+[ext_resource type="Texture2D" uid="uid://bpc05kk6v7wwk" path="res://assets/level_design_1.jpg" id="3_xl1s8"]
+[ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="4_mw2fe"]
+[ext_resource type="Texture2D" uid="uid://bhf4u756xd4vr" path="res://assets/level_design_2.jpg" id="4_os673"]
+[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah_bawah.tscn" id="5_gmhbv"]
+[ext_resource type="PackedScene" uid="uid://bexhxsdhaqcvb" path="res://scenes/dummy/object/rumah_cyan_kiri.tscn" id="5_ie3wc"]
+[ext_resource type="PackedScene" uid="uid://dqa8b40dipxwa" path="res://scenes/dummy/object/rumah_merah_kanan.tscn" id="6_7giff"]
+[ext_resource type="PackedScene" uid="uid://cfg34tqtykwcd" path="res://scenes/dummy/object/semak.tscn" id="6_kqpbi"]
+[ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="6_v2cqm"]
+
+[node name="WorldTileMap" type="TileMap"]
+position = Vector2(0, -128)
+tile_set = ExtResource("1_amqba")
+format = 2
+layer_0/tile_data = PackedInt32Array(-917504, 3, 0, -851968, 3, 0, -786432, 3, 0, -720896, 3, 0, -655360, 3, 0, -589824, 3, 0, -524288, 3, 0, -458752, 3, 0, -393216, 3, 0, -327680, 3, 0, -262144, 3, 0, -196608, 3, 0, -131072, 3, 0, -65536, 3, 0, -917490, 0, 0, -917489, 0, 0, -917488, 3, 0, -917487, 3, 0, -917486, 3, 0, -917485, 3, 0, -1114112, 3, 0, -1048576, 3, 0, -983040, 3, 0, -1114111, 3, 0, -1048575, 3, 0, -983039, 3, 0, -1114110, 3, 0, -1048574, 3, 0, -983038, 3, 0, -1114109, 3, 0, -1048573, 3, 0, -983037, 3, 0, -1114108, 3, 0, -1048572, 3, 0, -983036, 3, 0, -1114107, 3, 0, -1048571, 3, 0, -983035, 3, 0, -1114106, 3, 0, -1048570, 3, 0, -983034, 3, 0, -1114105, 3, 0, -1048569, 3, 0, -983033, 3, 0, -1114104, 3, 0, -1048568, 3, 0, -983032, 3, 0, -1114103, 0, 0, -1048567, 0, 0, -983031, 0, 0, -1114102, 0, 0, -1048566, 0, 0, -983030, 0, 0, -1114101, 0, 0, -1048565, 0, 0, -983029, 3, 0, -1114100, 0, 0, -1048564, 0, 0, -983028, 3, 0, -1114099, 0, 0, -1048563, 0, 0, -983027, 3, 0, -1114098, 0, 0, -1048562, 0, 0, -983026, 0, 0, -1114097, 0, 0, -1048561, 0, 0, -983025, 0, 0, -1114096, 0, 0, -1048560, 0, 0, -983024, 3, 0, -1114095, 0, 0, -1048559, 0, 0, -983023, 3, 0, -1114094, 0, 0, -1048558, 0, 0, -983022, 3, 0, -1114093, 0, 0, -1048557, 0, 0, -983021, 3, 0, -1114092, 0, 0, -1048556, 0, 0, -983020, 3, 0, -917484, 3, 0, -1114091, 0, 0, -1048555, 0, 0, -983019, 3, 0, -917483, 3, 0, -1114090, 0, 0, -1048554, 0, 0, -983018, 3, 0, -917482, 3, 0, -1114089, 0, 0, -1048553, 0, 0, -983017, 3, 0, -917481, 3, 0, -1114088, 0, 0, -1048552, 0, 0, -983016, 0, 0, -917480, 0, 0, -1114087, 0, 0, -1048551, 0, 0, -983015, 0, 0, -917479, 0, 0, -1114086, 0, 0, -1048550, 0, 0, -983014, 3, 0, -917478, 3, 0, -1114085, 0, 0, -1048549, 0, 0, -1048548, 0, 0, -1114084, 0, 0, -1114083, 0, 0, -1048547, 0, 0, -983013, 3, 0, -917477, 3, 0, -983012, 3, 0, -917476, 3, 0, -983011, 3, 0, -917475, 3, 0, -1310720, 3, 0, -1245184, 3, 0, -1179648, 3, 0, -1310719, 3, 0, -1245183, 3, 0, -1179647, 3, 0, -1310718, 3, 0, -1245182, 3, 0, -1179646, 3, 0, -1310717, 3, 0, -1245181, 3, 0, -1179645, 3, 0, -1310716, 3, 0, -1245180, 3, 0, -1179644, 3, 0, -1310715, 3, 0, -1245179, 3, 0, -1179643, 3, 0, -1310714, 3, 0, -1245178, 3, 0, -1179642, 3, 0, -1310713, 3, 0, -1245177, 3, 0, -1179641, 3, 0, -1310712, 3, 0, -1245176, 3, 0, -1179640, 3, 0, -1310711, 3, 0, -1245175, 3, 0, -1179639, 3, 0, -1310710, 3, 0, -1245174, 3, 0, -1179638, 3, 0, -1310709, 3, 0, -1245173, 3, 0, -1179637, 3, 0, -1310708, 3, 0, -1245172, 3, 0, -1179636, 3, 0, -1310707, 3, 0, -1245171, 3, 0, -1179635, 3, 0, -1310706, 3, 0, -1245170, 3, 0, -1179634, 3, 0, -1310705, 3, 0, -1245169, 3, 0, -1179633, 3, 0, -1310704, 3, 0, -1245168, 3, 0, -1179632, 3, 0, -1310703, 3, 0, -1245167, 3, 0, -1179631, 3, 0, -1310702, 3, 0, -1245166, 3, 0, -1179630, 3, 0, -1310701, 3, 0, -1245165, 3, 0, -1179629, 3, 0, -1310700, 3, 0, -1245164, 3, 0, -1179628, 3, 0, -1310699, 3, 0, -1245163, 3, 0, -1179627, 3, 0, -1310698, 3, 0, -1245162, 3, 0, -1179626, 3, 0, -1310697, 3, 0, -1245161, 3, 0, -1179625, 3, 0, -1310696, 3, 0, -1245160, 3, 0, -1179624, 3, 0, -1310695, 3, 0, -1245159, 3, 0, -1179623, 3, 0, -1310694, 3, 0, -1245158, 3, 0, -1179622, 3, 0, -1310693, 3, 0, -1245157, 3, 0, -1179621, 3, 0, -1310692, 3, 0, -1245156, 3, 0, -1179620, 3, 0, -1310691, 3, 0, -1245155, 3, 0, -1179619, 3, 0, 0, 3, 0, -1245154, 3, 0, -1179618, 3, 0, -1114082, 0, 0, -1048546, 0, 0, -983010, 3, 0, -917474, 3, 0, -1245153, 3, 0, -1179617, 3, 0, -1114081, 0, 0, -1048545, 0, 0, -983009, 3, 0, -917473, 3, 0, -851937, 3, 0, -786401, 3, 0, -720865, 3, 0, -655329, 3, 0, -589793, 3, 0, -524257, 3, 0, -458721, 3, 0, -393185, 3, 0, -327649, 3, 0, -262113, 3, 0, -196577, 3, 0, -131041, 3, 0, -65505, 3, 0, 31, 3, 0, -1245152, 3, 0, -1179616, 3, 0, -1114080, 0, 0, -1048544, 0, 0, -983008, 3, 0, -917472, 3, 0, -851936, 3, 0, -786400, 3, 0, -720864, 3, 0, -655328, 3, 0, -589792, 3, 0, -524256, 3, 0, -458720, 3, 0, -393184, 3, 0, -327648, 3, 0, -262112, 3, 0, -196576, 3, 0, -131040, 3, 0, -65504, 3, 0, 32, 3, 0, -1245151, 3, 0, -1179615, 3, 0, -1114079, 0, 0, -1048543, 0, 0, -983007, 3, 0, -917471, 3, 0, -851935, 3, 0, -786399, 3, 0, -720863, 3, 0, -655327, 3, 0, -589791, 3, 0, -524255, 3, 0, -458719, 3, 0, -393183, 3, 0, -327647, 3, 0, -262111, 3, 0, -196575, 3, 0, -131039, 3, 0, -65503, 3, 0, 33, 3, 0, -1310690, 3, 0, -1310689, 3, 0, -1310688, 3, 0, -1310687, 3, 0, -1310686, 3, 0, -1245150, 3, 0, -1179614, 3, 0, -1114078, 3, 0, -1048542, 3, 0, -983006, 3, 0, -917470, 3, 0, -851934, 3, 0, -786398, 3, 0, -720862, 3, 0, -655326, 3, 0, -589790, 3, 0, -524254, 3, 0, -458718, 3, 0, -393182, 3, 0, -327646, 3, 0, -262110, 3, 0, -196574, 3, 0, -131038, 3, 0, -65502, 3, 0, 34, 3, 0, -917503, 3, 0, -917502, 3, 0, -917501, 3, 0, -917500, 3, 0, -917499, 3, 0, -917498, 3, 0, -917497, 3, 0, -917496, 3, 0, -917495, 0, 0, -917494, 0, 0, -917493, 3, 0, -917492, 3, 0, -917491, 3, 0, -786431, 3, 0, -720895, 3, 0, -655359, 3, 0, -589823, 3, 0, -524287, 3, 0, -458751, 3, 0, -393215, 3, 0, -327679, 3, 0, -262143, 3, 0, -196607, 3, 0, -131071, 3, 0, -65535, 3, 0, 1, 3, 0, -786430, 3, 0, -720894, 3, 0, -655358, 3, 0, -589822, 3, 0, -524286, 0, 0, -458750, 0, 0, -393214, 0, 0, -327678, 0, 0, -262142, 0, 0, -196606, 0, 0, -131070, 0, 0, -65534, 0, 0, 2, 3, 0, -786429, 3, 0, -720893, 3, 0, -655357, 3, 0, -589821, 3, 0, -524285, 0, 0, -458749, 0, 0, -393213, 0, 0, -327677, 0, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 3, 0, -786428, 3, 0, -720892, 3, 0, -655356, 3, 0, -589820, 3, 0, -524284, 0, 0, -458748, 0, 0, -393212, 3, 0, -327676, 3, 0, -262140, 3, 0, -196604, 3, 0, -131068, 0, 0, -65532, 0, 0, 4, 3, 0, -786427, 3, 0, -720891, 3, 0, -655355, 3, 0, -589819, 3, 0, -524283, 0, 0, -458747, 0, 0, -393211, 3, 0, -327675, 3, 0, -262139, 3, 0, -196603, 3, 0, -131067, 0, 0, -65531, 0, 0, 5, 3, 0, -786426, 3, 0, -720890, 3, 0, -655354, 3, 0, -589818, 3, 0, -524282, 0, 0, -458746, 0, 0, -393210, 3, 0, -327674, 3, 0, -262138, 3, 0, -196602, 3, 0, -131066, 0, 0, -65530, 0, 0, 6, 3, 0, -786425, 3, 0, -720889, 3, 0, -655353, 3, 0, -589817, 3, 0, -524281, 0, 0, -458745, 0, 0, -393209, 3, 0, -327673, 3, 0, -262137, 3, 0, -196601, 3, 0, -131065, 0, 0, -65529, 0, 0, 7, 3, 0, -786424, 3, 0, -720888, 3, 0, -655352, 3, 0, -589816, 3, 0, -524280, 0, 0, -458744, 0, 0, -393208, 3, 0, -327672, 3, 0, -262136, 3, 0, -196600, 3, 0, -131064, 0, 0, -65528, 0, 0, 8, 3, 0, -786423, 0, 0, -720887, 0, 0, -655351, 0, 0, -589815, 0, 0, -524279, 0, 0, -458743, 0, 0, -393207, 0, 0, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, 9, 3, 0, -786422, 0, 0, -720886, 0, 0, -655350, 0, 0, -589814, 0, 0, -524278, 0, 0, -458742, 0, 0, -393206, 0, 0, -327670, 0, 0, -262134, 0, 0, -196598, 0, 0, -131062, 0, 0, -65526, 0, 0, 10, 3, 0, -786421, 3, 0, -720885, 3, 0, -655349, 3, 0, -589813, 3, 0, -524277, 0, 0, -458741, 0, 0, -393205, 3, 0, -327669, 3, 0, -262133, 3, 0, -196597, 3, 0, -131061, 0, 0, -65525, 0, 0, 11, 3, 0, -786420, 3, 0, -720884, 3, 0, -655348, 3, 0, -589812, 3, 0, -524276, 0, 0, -458740, 0, 0, -393204, 3, 0, -327668, 3, 0, -262132, 3, 0, -196596, 3, 0, -131060, 0, 0, -65524, 0, 0, 12, 3, 0, -786419, 3, 0, -720883, 3, 0, -655347, 3, 0, -589811, 3, 0, -524275, 0, 0, -458739, 0, 0, -393203, 3, 0, -327667, 3, 0, -262131, 3, 0, -196595, 3, 0, -131059, 0, 0, -65523, 0, 0, 13, 3, 0, -786418, 0, 0, -720882, 0, 0, -655346, 0, 0, -589810, 0, 0, -524274, 0, 0, -458738, 0, 0, -393202, 3, 0, -327666, 3, 0, -262130, 3, 0, -196594, 3, 0, -131058, 0, 0, -65522, 0, 0, 14, 3, 0, -786417, 0, 0, -720881, 0, 0, -655345, 0, 0, -589809, 0, 0, -524273, 0, 0, -458737, 0, 0, -393201, 3, 0, -327665, 3, 0, -262129, 3, 0, -196593, 3, 0, -131057, 0, 0, -65521, 0, 0, 15, 3, 0, -786416, 0, 0, -720880, 0, 0, -655344, 3, 0, -589808, 3, 0, -524272, 3, 0, -458736, 3, 0, -393200, 3, 0, -327664, 3, 0, -262128, 3, 0, -196592, 3, 0, -131056, 0, 0, -65520, 0, 0, 16, 3, 0, -786415, 0, 0, -720879, 0, 0, -655343, 3, 0, -589807, 3, 0, -524271, 3, 0, -458735, 3, 0, -393199, 3, 0, -327663, 3, 0, -262127, 3, 0, -196591, 3, 0, -131055, 0, 0, -65519, 0, 0, 17, 3, 0, -786414, 0, 0, -720878, 0, 0, -655342, 3, 0, -589806, 3, 0, -524270, 3, 0, -458734, 3, 0, -393198, 3, 0, -327662, 3, 0, -262126, 3, 0, -196590, 3, 0, -131054, 0, 0, -65518, 0, 0, 18, 3, 0, -786413, 0, 0, -720877, 0, 0, -655341, 3, 0, -589805, 3, 0, -524269, 3, 0, -458733, 3, 0, -393197, 3, 0, -327661, 3, 0, -262125, 3, 0, -196589, 3, 0, -131053, 0, 0, -65517, 0, 0, 19, 3, 0, -786412, 0, 0, -720876, 0, 0, -655340, 3, 0, -589804, 3, 0, -524268, 3, 0, -458732, 3, 0, -393196, 3, 0, -327660, 3, 0, -262124, 3, 0, -196588, 3, 0, -131052, 0, 0, -65516, 0, 0, 20, 3, 0, -786411, 0, 0, -720875, 0, 0, -655339, 3, 0, -589803, 3, 0, -524267, 3, 0, -458731, 3, 0, -393195, 3, 0, -327659, 3, 0, -262123, 3, 0, -196587, 3, 0, -131051, 0, 0, -65515, 0, 0, 21, 3, 0, -786410, 0, 0, -720874, 0, 0, -655338, 3, 0, -589802, 3, 0, -524266, 3, 0, -458730, 3, 0, -393194, 3, 0, -327658, 3, 0, -262122, 3, 0, -196586, 3, 0, -131050, 0, 0, -65514, 0, 0, 22, 3, 0, -786409, 0, 0, -720873, 0, 0, -655337, 3, 0, -589801, 3, 0, -524265, 3, 0, -458729, 3, 0, -393193, 3, 0, -327657, 3, 0, -262121, 3, 0, -196585, 3, 0, -131049, 3, 0, -65513, 3, 0, 23, 3, 0, -786408, 0, 0, -720872, 0, 0, -655336, 0, 0, -589800, 0, 0, -524264, 0, 0, -458728, 3, 0, -393192, 3, 0, -327656, 3, 0, -262120, 3, 0, -196584, 3, 0, -131048, 3, 0, -65512, 3, 0, 24, 3, 0, -786407, 0, 0, -720871, 0, 0, -655335, 0, 0, -589799, 0, 0, -524263, 0, 0, -458727, 3, 0, -393191, 3, 0, -327655, 3, 0, -262119, 3, 0, -196583, 3, 0, -131047, 3, 0, -65511, 3, 0, 25, 3, 0, -786406, 3, 0, -720870, 3, 0, -655334, 3, 0, -589798, 3, 0, -524262, 3, 0, -458726, 3, 0, -393190, 3, 0, -327654, 3, 0, -262118, 3, 0, -196582, 3, 0, -131046, 3, 0, -65510, 3, 0, 26, 3, 0, -786405, 3, 0, -720869, 3, 0, -655333, 3, 0, -589797, 3, 0, -524261, 3, 0, -458725, 3, 0, -393189, 3, 0, -327653, 3, 0, -262117, 3, 0, -196581, 3, 0, -131045, 3, 0, -65509, 3, 0, 27, 3, 0, -786404, 3, 0, -720868, 3, 0, -655332, 3, 0, -589796, 3, 0, -524260, 3, 0, -458724, 3, 0, -393188, 3, 0, -327652, 3, 0, -262116, 3, 0, -196580, 3, 0, -131044, 3, 0, -65508, 3, 0, 28, 3, 0, -786403, 3, 0, -720867, 3, 0, -655331, 3, 0, -589795, 3, 0, -524259, 3, 0, -458723, 3, 0, -393187, 3, 0, -327651, 3, 0, -262115, 3, 0, -196579, 3, 0, -131043, 3, 0, -65507, 3, 0, 29, 3, 0, -786402, 3, 0, -720866, 3, 0, -655330, 3, 0, -589794, 3, 0, -524258, 3, 0, -458722, 3, 0, -393186, 3, 0, -327650, 3, 0, -262114, 3, 0, -196578, 3, 0, -131042, 3, 0, -65506, 3, 0, 30, 3, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 3, 0, 65547, 3, 0, 65548, 3, 0, 65549, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 65554, 3, 0, 65555, 3, 0, 65556, 3, 0, 65557, 3, 0, 65558, 3, 0, 65559, 3, 0, 65560, 3, 0, 65561, 3, 0, 65562, 3, 0, 65563, 3, 0, 65564, 3, 0, 65565, 3, 0, 65566, 3, 0, -851967, 3, 0, -851966, 3, 0, -851965, 3, 0, -851964, 3, 0, -851963, 3, 0, -851962, 3, 0, -851961, 3, 0, -851960, 3, 0, -851959, 0, 0, -851958, 0, 0, -851957, 3, 0, -851956, 3, 0, -851955, 3, 0, -851954, 0, 0, -851953, 0, 0, -851952, 3, 0, -851951, 3, 0, -851950, 3, 0, -851949, 3, 0, -851948, 3, 0, -851947, 3, 0, -851946, 3, 0, -851945, 3, 0, -851944, 0, 0, -851943, 0, 0, -851942, 3, 0, -851941, 3, 0, -851940, 3, 0, -851939, 3, 0, -851938, 3, 0, 65536, 3, 0, 65567, 3, 0, 65568, 3, 0, 65569, 3, 0, 65570, 3, 0)
+
+[node name="Rumah" type="Node2D" parent="."]
+
+[node name="RumahMerahBawah1" parent="Rumah" instance=ExtResource("5_gmhbv")]
+position = Vector2(3760, -2376)
+scale = Vector2(0.3, 0.3)
+
+[node name="Pagar" parent="Rumah/RumahMerahBawah1" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(-420, 566.667)
+scale = Vector2(1, 1)
+
+[node name="Tanda" parent="Rumah/RumahMerahBawah1/Pagar" instance=ExtResource("4_mw2fe")]
+position = Vector2(290.833, -58.3755)
+scale = Vector2(0.861112, 0.861112)
+
+[node name="Pagar2" parent="Rumah/RumahMerahBawah1" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(886.667, 566.667)
+scale = Vector2(1, 1)
+
+[node name="RumahMerahBawah2" parent="Rumah" instance=ExtResource("5_gmhbv")]
+z_index = 1
+position = Vector2(1944, -2376)
+scale = Vector2(0.3, 0.3)
+
+[node name="Pagar" parent="Rumah/RumahMerahBawah2" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(-420, 566.667)
+scale = Vector2(1, 1)
+
+[node name="Tanda" parent="Rumah/RumahMerahBawah2/Pagar" instance=ExtResource("4_mw2fe")]
+position = Vector2(290.833, -58.3755)
+scale = Vector2(0.861112, 0.861112)
+
+[node name="Pagar2" parent="Rumah/RumahMerahBawah2" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(886.667, 566.667)
+scale = Vector2(1, 1)
+
+[node name="DoublePagar" type="Node2D" parent="Rumah"]
+
+[node name="Pagar4" parent="Rumah/DoublePagar" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(2176, -1866)
+scale = Vector2(0.3, 0.3)
+
+[node name="Pagar5" parent="Rumah/DoublePagar" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(2350, -1866)
+scale = Vector2(0.3, 0.3)
+
+[node name="RumahCyanKiri" parent="Rumah" instance=ExtResource("5_ie3wc")]
+z_index = 1
+position = Vector2(2264, -1784)
+scale = Vector2(0.3, 0.3)
+
+[node name="Tanda" parent="Rumah/RumahCyanKiri" instance=ExtResource("4_mw2fe")]
+position = Vector2(-613.333, 266.667)
+scale = Vector2(0.666667, 0.666667)
+
+[node name="DoublePagar" type="Node2D" parent="Rumah/RumahCyanKiri"]
+
+[node name="Pagar2" parent="Rumah/RumahCyanKiri/DoublePagar" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(-293.333, 640)
+scale = Vector2(1, 1)
+
+[node name="Pagar3" parent="Rumah/RumahCyanKiri/DoublePagar" instance=ExtResource("3_hk66x")]
+z_index = 1
+position = Vector2(286.667, 640)
+scale = Vector2(1, 1)
+
+[node name="RumahMerahKanan" parent="Rumah" instance=ExtResource("6_7giff")]
+position = Vector2(2880, -1784)
+scale = Vector2(0.3, 0.3)
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="AroundRumahMerahBawah1" type="Node2D" parent="Decoration"]
+position = Vector2(104, 8)
+
+[node name="Pohon" parent="Decoration/AroundRumahMerahBawah1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(3496, -2328)
+scale = Vector2(0.32, 0.32)
+
+[node name="Semak" parent="Decoration/AroundRumahMerahBawah1" instance=ExtResource("6_kqpbi")]
+position = Vector2(3440, -2247)
+scale = Vector2(0.158883, 0.158883)
+
+[node name="Semak2" parent="Decoration/AroundRumahMerahBawah1" instance=ExtResource("6_kqpbi")]
+position = Vector2(3504, -2236)
+scale = Vector2(0.125931, 0.125931)
+
+[node name="Semak3" parent="Decoration/AroundRumahMerahBawah1" instance=ExtResource("6_kqpbi")]
+position = Vector2(3888, -2234)
+
+[node name="Semak4" parent="Decoration/AroundRumahMerahBawah1" instance=ExtResource("6_kqpbi")]
+position = Vector2(3960, -2232)
+
+[node name="AroundRumahMerahBawah2" type="Node2D" parent="Decoration"]
+
+[node name="Pohon" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(1800, -2496)
+scale = Vector2(0.36422, 0.36422)
+
+[node name="Semak5" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_kqpbi")]
+position = Vector2(1709, -2405)
+
+[node name="Semak6" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_kqpbi")]
+position = Vector2(1744, -2384)
+scale = Vector2(0.12, 0.12)
+
+[node name="Semak7" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_kqpbi")]
+position = Vector2(1714, -2360)
+scale = Vector2(0.151576, 0.151576)
+
+[node name="Semak3" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_kqpbi")]
+position = Vector2(1680, -2323)
+scale = Vector2(0.177364, 0.177364)
+
+[node name="Semak4" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_kqpbi")]
+position = Vector2(1715, -2288)
+scale = Vector2(0.168768, 0.168768)
+
+[node name="Semak2" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_kqpbi")]
+position = Vector2(1663, -2253)
+scale = Vector2(0.214613, 0.214613)
+
+[node name="Semak" parent="Decoration/AroundRumahMerahBawah2" instance=ExtResource("6_kqpbi")]
+position = Vector2(1698.77, -2214.55)
+scale = Vector2(0.220344, 0.220344)
+
+[node name="FoliageLevel1" type="Node2D" parent="Decoration"]
+
+[node name="Pohon9" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2432, -2514)
+scale = Vector2(0.36422, 0.36422)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon9" instance=ExtResource("6_kqpbi")]
+position = Vector2(-197.683, 282.796)
+scale = Vector2(0.584956, 0.584956)
+
+[node name="Pohon10" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2728, -2520)
+scale = Vector2(0.36422, 0.36422)
+
+[node name="Pohon11" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2968, -2568)
+scale = Vector2(0.275444, 0.275444)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon11" instance=ExtResource("6_kqpbi")]
+position = Vector2(-87.1322, 319.484)
+scale = Vector2(0.632544, 0.632544)
+
+[node name="Semak" parent="Decoration/FoliageLevel1" instance=ExtResource("6_kqpbi")]
+position = Vector2(2856, -2333)
+scale = Vector2(0.156766, 0.156766)
+
+[node name="Pohon" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2840, -2405)
+scale = Vector2(0.36422, 0.36422)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon" instance=ExtResource("6_kqpbi")]
+position = Vector2(-109.824, 277.305)
+scale = Vector2(0.330127, 0.330127)
+
+[node name="Semak2" parent="Decoration/FoliageLevel1/Pohon" instance=ExtResource("6_kqpbi")]
+position = Vector2(43.9294, 302.015)
+scale = Vector2(0.373613, 0.373613)
+
+[node name="Pohon8" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(3184, -2464)
+scale = Vector2(0.36422, 0.36422)
+
+[node name="Pohon12" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(3352, -2464)
+scale = Vector2(0.30211, 0.30211)
+
+[node name="Pohon6" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(3072, -2354)
+scale = Vector2(0.36422, 0.36422)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon6" instance=ExtResource("6_kqpbi")]
+position = Vector2(98.3047, 250.246)
+scale = Vector2(0.501218, 0.501218)
+
+[node name="Semak2" parent="Decoration/FoliageLevel1/Pohon6" instance=ExtResource("6_kqpbi")]
+position = Vector2(-109.824, 285.541)
+scale = Vector2(0.407949, 0.407949)
+
+[node name="Pohon4" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2624, -2391)
+scale = Vector2(0.34211, 0.34211)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon4" instance=ExtResource("6_kqpbi")]
+position = Vector2(-210.459, 230.921)
+scale = Vector2(0.359641, 0.359641)
+
+[node name="Semak2" parent="Decoration/FoliageLevel1/Pohon4" instance=ExtResource("6_kqpbi")]
+position = Vector2(93.5368, 254.305)
+scale = Vector2(0.359641, 0.359641)
+
+[node name="Semak3" parent="Decoration/FoliageLevel1/Pohon4" instance=ExtResource("6_kqpbi")]
+position = Vector2(-70.1539, 295.227)
+scale = Vector2(0.472961, 0.472961)
+
+[node name="Pohon3" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2720, -2317)
+scale = Vector2(0.30211, 0.30211)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon3" instance=ExtResource("6_kqpbi")]
+position = Vector2(-185.363, 301.214)
+scale = Vector2(0.460407, 0.460407)
+
+[node name="Semak2" parent="Decoration/FoliageLevel1/Pohon3" instance=ExtResource("6_kqpbi")]
+position = Vector2(79.441, 281.354)
+scale = Vector2(0.460407, 0.460407)
+
+[node name="Pohon7" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(3248, -2352)
+scale = Vector2(0.36422, 0.36422)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon7" instance=ExtResource("6_kqpbi")]
+position = Vector2(-153.754, 280.05)
+scale = Vector2(0.31241, 0.31241)
+
+[node name="Semak2" parent="Decoration/FoliageLevel1/Pohon7" instance=ExtResource("6_kqpbi")]
+position = Vector2(87.8584, 247.103)
+scale = Vector2(0.31241, 0.31241)
+
+[node name="Semak3" parent="Decoration/FoliageLevel1/Pohon7" instance=ExtResource("6_kqpbi")]
+position = Vector2(-0.000906944, 312.997)
+scale = Vector2(0.439418, 0.439418)
+
+[node name="Semak3" parent="Decoration/FoliageLevel1" instance=ExtResource("6_kqpbi")]
+position = Vector2(2472, -2294)
+scale = Vector2(0.129329, 0.129329)
+
+[node name="Pohon5" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2496, -2344)
+scale = Vector2(0.30211, 0.30211)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon5" instance=ExtResource("6_kqpbi")]
+position = Vector2(-208.533, 291.284)
+scale = Vector2(0.552672, 0.552672)
+
+[node name="Semak2" parent="Decoration/FoliageLevel1/Pohon5" instance=ExtResource("6_kqpbi")]
+position = Vector2(79.4415, 291.284)
+scale = Vector2(0.552672, 0.552672)
+
+[node name="Pohon2" parent="Decoration/FoliageLevel1" instance=ExtResource("6_v2cqm")]
+light_mask = 1
+position = Vector2(2968, -2287)
+scale = Vector2(0.290444, 0.290444)
+
+[node name="Semak" parent="Decoration/FoliageLevel1/Pohon2" instance=ExtResource("6_kqpbi")]
+position = Vector2(-220.354, 244.454)
+scale = Vector2(0.445288, 0.445288)
+
+[node name="Semak2" parent="Decoration/FoliageLevel1/Pohon2" instance=ExtResource("6_kqpbi")]
+position = Vector2(82.6312, 278.884)
+scale = Vector2(0.445288, 0.445288)
+
+[node name="Ref" type="Node2D" parent="."]
+
+[node name="LevelDesign5" type="Sprite2D" parent="Ref"]
+visible = false
+position = Vector2(5592, -3960)
+scale = Vector2(2.66371, 2.66371)
+texture = ExtResource("2_hxn3n")
+
+[node name="LevelDesign1" type="Sprite2D" parent="Ref"]
+visible = false
+modulate = Color(1, 1, 1, 0.298039)
+position = Vector2(2952, -3440)
+scale = Vector2(1.87593, 1.87593)
+texture = ExtResource("3_xl1s8")
+
+[node name="LevelDesign2" type="Sprite2D" parent="Ref"]
+visible = false
+position = Vector2(4800, -3352)
+scale = Vector2(2.3043, 2.04335)
+texture = ExtResource("4_os673")

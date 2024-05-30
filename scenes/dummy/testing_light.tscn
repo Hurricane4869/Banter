@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="1_7co6e"]
 [ext_resource type="PackedScene" uid="uid://cfg34tqtykwcd" path="res://scenes/dummy/object/semak.tscn" id="2_4ghrv"]
 [ext_resource type="Script" path="res://scripts/light_follow_dummy.gd" id="3_su675"]
-[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah.tscn" id="3_tl7gi"]
-[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan.tscn" id="5_t27c5"]
+[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah_bawah.tscn" id="3_tl7gi"]
+[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan_bawah.tscn" id="5_t27c5"]
 [ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="6_eor17"]
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="7_b6pim"]
 

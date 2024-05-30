@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqa8b40dipxwa"]
+
+[ext_resource type="Texture2D" uid="uid://b1qhubrdw2dwt" path="res://assets/environment/RUMAH_kanan.png" id="1_n4j8k"]
+
+[node name="RumahMerahKanan" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_n4j8k")

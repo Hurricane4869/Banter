@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_uivvb"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_w4lwc"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_5gojh"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://pause_menu_yudha.tscn" id="3_k0v63"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_myen2"]
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_60skm"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_fgjoj"]
@@ -19,10 +19,10 @@
 [ext_resource type="Texture2D" uid="uid://cm570wcmxrpme" path="res://assets/Art/ui rating/Salinan NEXT LEVEL.png" id="14_a3oa2"]
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="14_m3wbv"]
 [ext_resource type="Texture2D" uid="uid://cq861qg6s2hfh" path="res://assets/Art/BINTANG 0.png" id="15_gjxdg"]
-[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan.tscn" id="15_nwy2c"]
+[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan_bawah.tscn" id="15_nwy2c"]
 [ext_resource type="Texture2D" uid="uid://dqeqy8cqtwqpt" path="res://assets/Art/BINTANG 1.png" id="16_8tl72"]
 [ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="16_vuxek"]
-[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah.tscn" id="17_fu584"]
+[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah_bawah.tscn" id="17_fu584"]
 [ext_resource type="Texture2D" uid="uid://b35jd1qlrnkmg" path="res://assets/Art/BINTANG 2.png" id="17_i4xyh"]
 [ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="18_as6oh"]
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="18_l5pfb"]
@@ -114,9 +114,7 @@ script = ExtResource("1_uivvb")
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_w4lwc")]
 minute = 2
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("3_5gojh")]
-offset_left = 6.0
-offset_right = 6.0
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_k0v63")]
 
 [node name="Pause" type="Button" parent="UI"]
 visible = false

@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://byvrmj1srso11"]
+[gd_scene load_steps=7 format=3 uid="uid://cn0vbseu0dq5n"]
 
-[ext_resource type="Texture2D" uid="uid://ca1dt4xdrtyyw" path="res://assets/environment/RUMAH 2.png" id="1_v1brj"]
+[ext_resource type="Texture2D" uid="uid://2i3i4bcfb70g" path="res://assets/environment/RUMAH.png" id="1_svoxy"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xuris"]
 polygon = PackedVector2Array(25, -20, 25, 325, 25, 325, 25, 480, 30, 480, 30, -15, 440, -15, 440, 480, 445, 480, 445, -15, 560, -20, 560, -290, 505, -290, 505, -280, 555, -280, 555, -25)
@@ -17,28 +17,31 @@ polygon = PackedVector2Array(-245, -170, -10, -265, 220, -165, 225, -170, -10, -
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_m6s0s"]
 polygon = PackedVector2Array(-225, 200, -225, 70, -415, 70, -415, 70, -415, 65, -415, 65, -35, 65, -35, 70, -220, 70, -220, 205, -225, 205, -225, 205)
 
-[node name="RumahCyan" type="Sprite2D"]
-light_mask = 4
-visibility_layer = 4
+[node name="RumahMerahBawah" type="Sprite2D"]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_v1brj")
+texture = ExtResource("1_svoxy")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 position = Vector2(15, 15)
 occluder = SubResource("OccluderPolygon2D_xuris")
+sdf_collision = false
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
 position = Vector2(15, 15)
 occluder = SubResource("OccluderPolygon2D_oam1p")
+sdf_collision = false
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
 position = Vector2(15, 15)
 occluder = SubResource("OccluderPolygon2D_jipce")
+sdf_collision = false
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
 position = Vector2(15, 15)
 occluder = SubResource("OccluderPolygon2D_ortl2")
+sdf_collision = false
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
 position = Vector2(15, 15)
 occluder = SubResource("OccluderPolygon2D_m6s0s")
+sdf_collision = false

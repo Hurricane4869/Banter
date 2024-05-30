@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxy7kas2q1aed"]
+
+[ext_resource type="Texture2D" uid="uid://cepqnnmw4bq3a" path="res://assets/environment/rumah hadap kanan (cyan).png" id="1_1fyvr"]
+
+[node name="RumahCyanKanan" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1fyvr")
