@@ -1,12 +1,12 @@
-[gd_scene load_steps=42 format=3 uid="uid://2jmkstysi5ps"]
+[gd_scene load_steps=43 format=3 uid="uid://2jmkstysi5ps"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_p3fll"]
 [ext_resource type="Texture2D" uid="uid://dgkl53ihodge6" path="res://assets/Art/MAIN MENU (BLUR KIRI).png" id="2_r30i0"]
 [ext_resource type="Texture2D" uid="uid://c6r228b4t8r4v" path="res://assets/Art/Judul game.png" id="3_5gg7b"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_y8p3e"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="5_tqq4j"]
-[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="5_vb44h"]
-[ext_resource type="Texture2D" uid="uid://bl07lxriapvx" path="res://assets/Art/ICON SETTINGS (1).png" id="6_1j7gc"]
+[ext_resource type="Texture2D" uid="uid://siyo1ar2leq" path="res://assets/Art/MAIN (1).png" id="7_iti8y"]
+[ext_resource type="Texture2D" uid="uid://b67ewkpaga4rs" path="res://assets/Art/PENGATURAN (1).png" id="8_4eaa1"]
 [ext_resource type="Texture2D" uid="uid://x8ont0pclq7d" path="res://assets/Art/tombol x.png" id="8_ejebu"]
 [ext_resource type="Texture2D" uid="uid://cvsphvvus8128" path="res://assets/Art/ICON LOGO.png" id="9_13bst"]
 [ext_resource type="Texture2D" uid="uid://ebcxcwajn8fj" path="res://assets/Art/R U SURE WANT TO QUIT_.png" id="10_nrg1b"]
@@ -21,10 +21,11 @@
 [ext_resource type="Texture2D" uid="uid://cwhhdlkb7hmf5" path="res://assets/Art/SUARA.png" id="19_lsn8x"]
 [ext_resource type="Texture2D" uid="uid://brw4chr80l1wj" path="res://assets/Art/VIDEO.png" id="20_tqeic"]
 [ext_resource type="Texture2D" uid="uid://cgcsrh2purj7d" path="res://assets/Art/KONTROL.png" id="21_4lryd"]
-[ext_resource type="Texture2D" uid="uid://bu5oct1jlua3t" path="res://assets/SLIDER MERAH.png" id="22_bqpvs"]
+[ext_resource type="Texture2D" uid="uid://bu5oct1jlua3t" path="res://assets/Art/SLIDER MERAH.png" id="22_bqpvs"]
 [ext_resource type="Texture2D" uid="uid://m3431e72uwhq" path="res://assets/Art/centang polosan.png" id="23_b66wh"]
-[ext_resource type="Texture2D" uid="uid://bioyfhbblvd0s" path="res://assets/Art/TOMBOL KONTROL SETTINGS.png" id="24_e63g2"]
+[ext_resource type="Texture2D" uid="uid://rydokstp0e0p" path="res://assets/Art/TOMBOL KONTROL SETTINGS (1).png" id="24_wb5pv"]
 [ext_resource type="Texture2D" uid="uid://bceh1sk8q28xj" path="res://assets/Art/bg blur.png" id="25_67l86"]
+[ext_resource type="Script" path="res://scenes/main menu/Level.gd" id="26_1sa0e"]
 [ext_resource type="Texture2D" uid="uid://ddtl314xyiww6" path="res://assets/Art/LEVEL 1.png" id="26_eh20r"]
 [ext_resource type="Texture2D" uid="uid://cn2rqiu877cfy" path="res://assets/Art/LOCKED LEVEL.png" id="27_ehl2s"]
 [ext_resource type="Texture2D" uid="uid://fesdco6gqtud" path="res://assets/Art/LVL 2.png" id="27_l2o1q"]
@@ -181,18 +182,18 @@ grow_vertical = 2
 texture = ExtResource("2_r30i0")
 
 [node name="menu" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 3.00903
-offset_top = 283.0
-offset_right = 643.009
-offset_bottom = 920.0
+layout_mode = 1
+offset_top = 375.0
+offset_right = 640.0
+offset_bottom = 1012.0
 scale = Vector2(1, 1.113)
 theme_override_constants/separation = 0
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="menu"]
+[node name="HBoxContainer" type="VBoxContainer" parent="menu"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 50
+alignment = 1
 
 [node name="Play" type="Button" parent="menu/HBoxContainer"]
 layout_mode = 2
@@ -204,23 +205,10 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 11
 theme_override_fonts/font = SubResource("FontVariation_x2qgt")
 theme_override_font_sizes/font_size = 1
-icon = ExtResource("5_vb44h")
+icon = ExtResource("7_iti8y")
 icon_alignment = 1
 vertical_icon_alignment = 0
 script = SubResource("GDScript_0q3kc")
-
-[node name="Main_Text" type="Label" parent="menu/HBoxContainer/Play"]
-layout_mode = 0
-offset_left = -20.0
-offset_top = 115.0
-offset_right = 163.0
-offset_bottom = 186.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_tqq4j")
-theme_override_font_sizes/font_size = 35
-text = "Main"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Pengaturan" type="Button" parent="menu/HBoxContainer"]
 layout_mode = 2
@@ -233,33 +221,20 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 11
 theme_override_fonts/font = SubResource("FontVariation_tk7ru")
 theme_override_font_sizes/font_size = 1
-icon = ExtResource("6_1j7gc")
+icon = ExtResource("8_4eaa1")
 icon_alignment = 1
-
-[node name="Pengaturan_Text" type="Label" parent="menu/HBoxContainer/Pengaturan"]
-layout_mode = 0
-offset_left = -15.0
-offset_top = 115.0
-offset_right = 168.0
-offset_bottom = 186.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_tqq4j")
-theme_override_font_sizes/font_size = 35
-text = "Pengaturan"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="click_sound" type="AudioStreamPlayer" parent="menu"]
 stream = ExtResource("11_cvu6i")
 bus = &"SFX"
 
 [node name="Judul Game" type="Sprite2D" parent="menu"]
-position = Vector2(320.963, 110.512)
+position = Vector2(323.972, 27.8525)
 scale = Vector2(0.988, 0.770889)
 texture = ExtResource("3_5gg7b")
 
 [node name="IconLogo" type="Sprite2D" parent="menu"]
-position = Vector2(317.954, -103.324)
+position = Vector2(320.963, -185.983)
 scale = Vector2(1, 0.898473)
 texture = ExtResource("9_13bst")
 
@@ -594,7 +569,7 @@ offset_bottom = 391.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("24_e63g2")
+texture = ExtResource("24_wb5pv")
 
 [node name="Back_From_Kontrol" type="Button" parent="Kontrol_Panel"]
 layout_mode = 0
@@ -607,7 +582,6 @@ theme = ExtResource("4_y8p3e")
 icon = ExtResource("15_23jrv")
 
 [node name="ChooseLevel_Panel" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -647,86 +621,53 @@ scale = Vector2(0.8, 0.8)
 theme = ExtResource("4_y8p3e")
 icon = ExtResource("15_23jrv")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ChooseLevel_Panel"]
+[node name="Levels_VBoxCOntainer" type="VBoxContainer" parent="ChooseLevel_Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -420.0
-offset_top = -242.0
-offset_right = 420.0
-offset_bottom = 558.0
+offset_left = -546.0
+offset_top = -42.0
+offset_right = 294.0
+offset_bottom = 108.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 125
+scale = Vector2(1.3, 1.3)
+theme_override_constants/separation = 0
+script = ExtResource("26_1sa0e")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ChooseLevel_Panel/VBoxContainer"]
+[node name="Levels" type="HBoxContainer" parent="ChooseLevel_Panel/Levels_VBoxCOntainer"]
 layout_mode = 2
 theme_override_constants/separation = 150
 
-[node name="Level1" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
+[node name="Level1" type="Button" parent="ChooseLevel_Panel/Levels_VBoxCOntainer/Levels"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "
+"
 icon = ExtResource("26_eh20r")
 
-[node name="Level2" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
+[node name="Level2" type="Button" parent="ChooseLevel_Panel/Levels_VBoxCOntainer/Levels"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
 icon = ExtResource("27_l2o1q")
 
-[node name="Level3" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer"]
+[node name="Level3" type="Button" parent="ChooseLevel_Panel/Levels_VBoxCOntainer/Levels"]
 layout_mode = 2
 theme = ExtResource("4_y8p3e")
 icon = ExtResource("27_ehl2s")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="ChooseLevel_Panel/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 150
-
-[node name="Level4" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
-
-[node name="Level5" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
-
-[node name="Level6" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
-
-[node name="HBoxContainer3" type="HBoxContainer" parent="ChooseLevel_Panel/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 150
-
-[node name="Level7" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
-
-[node name="Level8" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
-
-[node name="Level9" type="Button" parent="ChooseLevel_Panel/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-theme = ExtResource("4_y8p3e")
-icon = ExtResource("27_ehl2s")
-
-[node name="TextureRect" type="TextureRect" parent="ChooseLevel_Panel"]
+[node name="Level_Text" type="TextureRect" parent="ChooseLevel_Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -191.5
+offset_left = -186.0
 offset_top = 50.0
-offset_right = 191.5
+offset_right = 197.0
 offset_bottom = 190.0
 grow_horizontal = 2
 texture = ExtResource("28_k5278")
@@ -739,11 +680,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.494118)
 
-[connection signal="mouse_entered" from="menu/HBoxContainer/Play" to="." method="_on_play_mouse_entered"]
-[connection signal="mouse_exited" from="menu/HBoxContainer/Play" to="." method="_on_play_mouse_exited"]
 [connection signal="pressed" from="menu/HBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="mouse_entered" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_mouse_entered"]
-[connection signal="mouse_exited" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_mouse_exited"]
 [connection signal="pressed" from="menu/HBoxContainer/Pengaturan" to="." method="_on_pengaturan_pressed"]
 [connection signal="pressed" from="Quit_Panel/Quit_Menu/HBoxContainer/Quit temenan" to="." method="_on_quit_temenan_pressed"]
 [connection signal="pressed" from="Quit_Panel/Quit_Menu/HBoxContainer/BackFromQuit" to="." method="_on_back_from_quit_pressed"]
@@ -759,5 +696,5 @@ color = Color(0, 0, 0, 0.494118)
 [connection signal="toggled" from="Video_Panel/Video_Settings/Fullscreen/FullScreenCheckBox" to="." method="_on_full_screen_check_box_toggled"]
 [connection signal="pressed" from="Kontrol_Panel/Back_From_Kontrol" to="." method="_on_back_from_kontrol_pressed"]
 [connection signal="pressed" from="ChooseLevel_Panel/Back_From_level" to="." method="_on_back_from_level_pressed"]
-[connection signal="pressed" from="ChooseLevel_Panel/VBoxContainer/HBoxContainer/Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="ChooseLevel_Panel/VBoxContainer/HBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="ChooseLevel_Panel/Levels_VBoxCOntainer/Levels/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="ChooseLevel_Panel/Levels_VBoxCOntainer/Levels/Level2" to="." method="_on_level_2_pressed"]

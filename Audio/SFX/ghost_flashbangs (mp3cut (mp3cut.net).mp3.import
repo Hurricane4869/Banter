@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bit1nd8tbcwvh"
+path="res://.godot/imported/ghost_flashbangs (mp3cut (mp3cut.net).mp3-19e9af1ccb30a1dfc1f1febf93ca59c1.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/ghost_flashbangs (mp3cut (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/ghost_flashbangs (mp3cut (mp3cut.net).mp3-19e9af1ccb30a1dfc1f1febf93ca59c1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

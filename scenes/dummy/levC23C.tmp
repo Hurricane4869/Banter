@@ -1,37 +1,38 @@
-[gd_scene load_steps=46 format=3 uid="uid://q7ko6feedexo"]
+[gd_scene load_steps=46 format=3 uid="uid://dax1uvefgxn8r"]
 
-[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_8780c"]
-[ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_hc8hl"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_wpfud"]
-[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="5_l5gvi"]
-[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="6_38xvn"]
-[ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="6_dp0oq"]
-[ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="7_1bxoj"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="7_7lnkf"]
-[ext_resource type="Texture2D" uid="uid://be1hn7foapenn" path="res://assets/environment/grass_tiles_2.png" id="8_8vgq0"]
-[ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_ylafg"]
-[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_8pwft"]
-[ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="9_vo8fy"]
-[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan_bawah.tscn" id="10_0e2tt"]
-[ext_resource type="Script" path="res://scenes/dummy/RatingSystem.gd" id="10_yhnfh"]
-[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_yjt0s"]
-[ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="11_borgc"]
-[ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="11_ca0ab"]
-[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah_bawah.tscn" id="12_qbamp"]
-[ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="12_vupbh"]
-[ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="13_1cl43"]
-[ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="13_3u05a"]
-[ext_resource type="Texture2D" uid="uid://cm570wcmxrpme" path="res://assets/Art/ui rating/Salinan NEXT LEVEL.png" id="14_1pwc4"]
-[ext_resource type="PackedScene" uid="uid://d1r8xk85gjq8q" path="res://scenes/dummy/object/batu_dummy.tscn" id="14_np011"]
-[ext_resource type="Texture2D" uid="uid://cq861qg6s2hfh" path="res://assets/Art/BINTANG 0.png" id="15_baw5y"]
-[ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="15_i74i5"]
-[ext_resource type="Texture2D" uid="uid://dqeqy8cqtwqpt" path="res://assets/Art/BINTANG 1.png" id="16_15qmo"]
-[ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="16_c8g0r"]
-[ext_resource type="Texture2D" uid="uid://b35jd1qlrnkmg" path="res://assets/Art/BINTANG 2.png" id="17_7186a"]
-[ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="18_wqefp"]
-[ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="22_mnafg"]
-[ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="23_rb51k"]
-[ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="31_c1u1i"]
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_uivvb"]
+[ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_w4lwc"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_5gojh"]
+[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_myen2"]
+[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_60skm"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_fgjoj"]
+[ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_qf0q5"]
+[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_gvrsg"]
+[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_2p2jb"]
+[ext_resource type="Script" path="res://scenes/dummy/RatingSystem.gd" id="10_252wm"]
+[ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="11_wnsap"]
+[ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="11_xonqb"]
+[ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="12_1epbs"]
+[ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="12_aqjfh"]
+[ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="13_ip0uo"]
+[ext_resource type="Texture2D" uid="uid://be1hn7foapenn" path="res://assets/environment/grass_tiles_2.png" id="13_wdp8t"]
+[ext_resource type="Texture2D" uid="uid://cm570wcmxrpme" path="res://assets/Art/ui rating/Salinan NEXT LEVEL.png" id="14_a3oa2"]
+[ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="14_m3wbv"]
+[ext_resource type="Texture2D" uid="uid://cq861qg6s2hfh" path="res://assets/Art/BINTANG 0.png" id="15_gjxdg"]
+[ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan.tscn" id="15_nwy2c"]
+[ext_resource type="Texture2D" uid="uid://dqeqy8cqtwqpt" path="res://assets/Art/BINTANG 1.png" id="16_8tl72"]
+[ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="16_vuxek"]
+[ext_resource type="PackedScene" uid="uid://cn0vbseu0dq5n" path="res://scenes/dummy/object/rumah_merah.tscn" id="17_fu584"]
+[ext_resource type="Texture2D" uid="uid://b35jd1qlrnkmg" path="res://assets/Art/BINTANG 2.png" id="17_i4xyh"]
+[ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="18_as6oh"]
+[ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="18_l5pfb"]
+[ext_resource type="PackedScene" uid="uid://d1r8xk85gjq8q" path="res://scenes/dummy/object/batu_dummy.tscn" id="19_afv8k"]
+[ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="20_dbbtc"]
+[ext_resource type="PackedScene" uid="uid://bl81mxr4l1ubh" path="res://scenes/ghost.tscn" id="21_1vap6"]
+[ext_resource type="PackedScene" uid="uid://etkaqh5xuhw3" path="res://scenes/dummy/object/Ali_Sprite_Proto.tscn" id="21_kkday"]
+[ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="22_aj5py"]
+[ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="24_invyp"]
+[ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="32_atsev"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lesfk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -52,21 +53,6 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t400o"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="Animation" id="Animation_r2eu0"]
-resource_name = "Quest_Appear"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 130)]
-}
-
 [sub_resource type="Animation" id="Animation_ltt5s"]
 resource_name = "Start_Quest"
 tracks/0/type = "value"
@@ -79,31 +65,30 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.7, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
+"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 120)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7i0bb"]
 _data = {
-"Quest_Appear": SubResource("Animation_r2eu0"),
 "Start_Quest": SubResource("Animation_ltt5s")
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p2pq"]
-texture = ExtResource("6_dp0oq")
+texture = ExtResource("11_wnsap")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nowb"]
-texture = ExtResource("7_1bxoj")
+texture = ExtResource("12_1epbs")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e08vm"]
-texture = ExtResource("8_8vgq0")
+texture = ExtResource("13_wdp8t")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -121,16 +106,18 @@ sources/3 = SubResource("TileSetAtlasSource_e08vm")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4pb2"]
 size = Vector2(104, 49)
 
-[node name="Level1" type="Node2D"]
-script = ExtResource("1_8780c")
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_uivvb")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="QuestTimer" parent="UI" instance=ExtResource("2_hc8hl")]
-second = 50
+[node name="QuestTimer" parent="UI" instance=ExtResource("2_w4lwc")]
+position = Vector2(865, 20)
 minute = 2
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("3_i3vi5")]
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_5gojh")]
+offset_left = 6.0
+offset_right = 6.0
 
 [node name="Pause" type="Button" parent="UI"]
 visible = false
@@ -139,13 +126,13 @@ offset_top = 30.0
 offset_right = 2033.0
 offset_bottom = 240.0
 scale = Vector2(0.402468, 0.4)
-theme = ExtResource("5_l5gvi")
+theme = ExtResource("4_myen2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lesfk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2twc2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ohwfx")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_jaxxe")
 theme_override_styles/focus = SubResource("StyleBoxFlat_t400o")
-icon = ExtResource("6_38xvn")
+icon = ExtResource("5_60skm")
 
 [node name="Pause_Text" type="Label" parent="UI/Pause"]
 visibility_layer = 7
@@ -158,7 +145,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_fonts/font = ExtResource("6_fgjoj")
 theme_override_font_sizes/font_size = 60
 text = "Pause
 (Esc)"
@@ -173,13 +160,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -267.0
-offset_top = -410.0
+offset_top = -420.0
 offset_right = 1339.0
-offset_bottom = 2382.0
+offset_bottom = 2372.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("8_ylafg")
+texture = ExtResource("8_qf0q5")
 
 [node name="Level1" type="TextureRect" parent="UI/PlayQuest"]
 layout_mode = 0
@@ -187,7 +174,7 @@ offset_left = 145.0
 offset_top = 310.0
 offset_right = 1459.0
 offset_bottom = 2226.0
-texture = ExtResource("9_8pwft")
+texture = ExtResource("9_gvrsg")
 
 [node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
 libraries = {
@@ -208,8 +195,8 @@ offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
-theme = ExtResource("5_l5gvi")
-icon = ExtResource("10_yjt0s")
+theme = ExtResource("4_myen2")
+icon = ExtResource("10_2p2jb")
 
 [node name="Play_Text" type="Label" parent="UI/PlayQuest/PlayButton"]
 visibility_layer = 7
@@ -222,7 +209,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_fonts/font = ExtResource("6_fgjoj")
 theme_override_font_sizes/font_size = 40
 text = "Mulai"
 horizontal_alignment = 1
@@ -236,7 +223,7 @@ anchors_preset = 0
 offset_left = -75.0
 offset_right = -35.0
 offset_bottom = 40.0
-script = ExtResource("10_yhnfh")
+script = ExtResource("10_252wm")
 
 [node name="rating_menu" type="TextureRect" parent="UI/RatingSystem"]
 layout_mode = 0
@@ -245,7 +232,7 @@ offset_top = 175.0
 offset_right = 1899.0
 offset_bottom = 1742.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_borgc")
+texture = ExtResource("11_xonqb")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/RatingSystem/rating_menu"]
 layout_mode = 1
@@ -262,18 +249,18 @@ alignment = 1
 
 [node name="Chooselevel_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_l5gvi")
-icon = ExtResource("12_vupbh")
+theme = ExtResource("4_myen2")
+icon = ExtResource("12_aqjfh")
 
 [node name="Restart_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_l5gvi")
-icon = ExtResource("13_3u05a")
+theme = ExtResource("4_myen2")
+icon = ExtResource("13_ip0uo")
 
 [node name="NextLevel_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("5_l5gvi")
-icon = ExtResource("14_1pwc4")
+theme = ExtResource("4_myen2")
+icon = ExtResource("14_a3oa2")
 
 [node name="Label" type="Label" parent="UI/RatingSystem/rating_menu"]
 layout_mode = 1
@@ -291,7 +278,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_fonts/font = ExtResource("6_fgjoj")
 theme_override_font_sizes/font_size = 100
 text = "KAMU BERHASIL!"
 
@@ -314,7 +301,7 @@ theme_override_constants/separation = 50
 
 [node name="star0_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star0"]
 layout_mode = 2
-texture = ExtResource("15_baw5y")
+texture = ExtResource("15_gjxdg")
 
 [node name="Star0_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star0"]
 visibility_layer = 7
@@ -323,7 +310,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_fonts/font = ExtResource("6_fgjoj")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan kecewa..."
 horizontal_alignment = 1
@@ -348,7 +335,7 @@ theme_override_constants/separation = 50
 
 [node name="star1_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star1"]
 layout_mode = 2
-texture = ExtResource("16_15qmo")
+texture = ExtResource("16_8tl72")
 
 [node name="Star1_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star1"]
 visibility_layer = 7
@@ -357,7 +344,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_fonts/font = ExtResource("6_fgjoj")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan ikhlas..."
 horizontal_alignment = 1
@@ -382,7 +369,7 @@ theme_override_constants/separation = 50
 
 [node name="star2_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star2"]
 layout_mode = 2
-texture = ExtResource("17_7186a")
+texture = ExtResource("17_i4xyh")
 
 [node name="Star2_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star2"]
 visibility_layer = 7
@@ -391,14 +378,13 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_fonts/font = ExtResource("6_fgjoj")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan puas!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Star3" type="VBoxContainer" parent="UI/RatingSystem/rating_menu"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -416,7 +402,7 @@ theme_override_constants/separation = 50
 
 [node name="star3_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star3"]
 layout_mode = 2
-texture = ExtResource("18_wqefp")
+texture = ExtResource("18_as6oh")
 
 [node name="Star3_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star3"]
 visibility_layer = 7
@@ -425,11 +411,20 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("7_7lnkf")
+theme_override_fonts/font = ExtResource("6_fgjoj")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan bahagia!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Ghost" parent="." instance=ExtResource("21_1vap6")]
+position = Vector2(1052, -378)
+
+[node name="Ghost2" parent="." instance=ExtResource("21_1vap6")]
+position = Vector2(614, -1050)
+
+[node name="Ghost3" parent="." instance=ExtResource("21_1vap6")]
+position = Vector2(1574, -1087)
 
 [node name="Environment" type="Node" parent="."]
 
@@ -439,7 +434,7 @@ tile_set = SubResource("TileSet_2s1f3")
 format = 2
 layer_0/tile_data = PackedInt32Array(65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 9, 0, 0, -65527, 0, 0, -131063, 0, 0, -196599, 0, 0, -262135, 3, 0, -262136, 3, 0, -262137, 3, 0, -262138, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, -327677, 0, 0, -393213, 0, 0, -458749, 0, 0, -524285, 0, 0, -327678, 0, 0, -327679, 0, 0, -327680, 0, 0, -262134, 3, 0, -262133, 0, 0, -327669, 0, 0, -393205, 0, 0, -458741, 0, 0, -524277, 0, 0, 65546, 0, 0, 65547, 0, 0, -262144, 3, 0, -262143, 3, 0, -262142, 3, 0, -196606, 3, 0, -131070, 3, 0, -65534, 3, 0, 2, 3, 0, 1, 3, 0, 0, 3, 0, -65536, 3, 0, -131072, 3, 0, -196608, 3, 0, -196607, 3, 0, -131071, 3, 0, -65535, 3, 0, -196604, 0, 0, -131068, 3, 0, -65532, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, -65528, 3, 0, -131064, 3, 0, -196600, 0, 0, -196601, 0, 0, -196602, 0, 0, -196603, 0, 0, -131067, 3, 0, -131066, 3, 0, -65530, 3, 0, -65529, 3, 0, -131065, 3, 0, -65531, 3, 0, -524288, 3, 0, -524287, 3, 0, -524286, 3, 0, -458750, 3, 0, -393214, 3, 0, -393215, 3, 0, -393216, 3, 0, -458752, 3, 0, -458751, 3, 0, -524284, 3, 0, -458748, 0, 0, -393212, 3, 0, -327676, 3, 0, -327675, 3, 0, -327674, 3, 0, -327673, 3, 0, -327672, 3, 0, -327671, 3, 0, -327670, 3, 0, -393206, 3, 0, -458742, 0, 0, -524278, 3, 0, -524279, 3, 0, -524280, 3, 0, -524281, 3, 0, -458746, 0, 0, -458747, 0, 0, -524283, 3, 0, -524282, 3, 0, -393210, 3, 0, -393211, 3, 0, -393209, 3, 0, -458745, 0, 0, -458744, 0, 0, -393208, 3, 0, -458743, 0, 0, -393207, 3, 0, -196598, 0, 0, -196597, 0, 0, -131061, 3, 0, -65525, 3, 0, 11, 3, 0, -65526, 3, 0, 10, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, -524276, 3, 0, -458740, 3, 0, -393204, 3, 0, -327668, 3, 0, -262132, 3, 0, -196596, 0, 0, -131060, 3, 0, -65524, 3, 0, 12, 3, 0, 65548, 0, 0, 131084, 3, 0, -131062, 3, 0)
 
-[node name="AntarPaket" parent="Environment" instance=ExtResource("9_vo8fy")]
+[node name="AntarPaket" parent="Environment" instance=ExtResource("14_m3wbv")]
 visibility_layer = 4
 position = Vector2(1155, -797)
 action_name = "antar paket"
@@ -450,91 +445,97 @@ shape = SubResource("RectangleShape2D_j4pb2")
 
 [node name="Rumah" type="Node" parent="Environment"]
 
-[node name="RumahCyan" parent="Environment/Rumah" instance=ExtResource("10_0e2tt")]
+[node name="RumahCyan" parent="Environment/Rumah" instance=ExtResource("15_nwy2c")]
 position = Vector2(153, -384)
 
-[node name="Pagar" parent="Environment/Rumah/RumahCyan" instance=ExtResource("11_ca0ab")]
+[node name="Pagar" parent="Environment/Rumah/RumahCyan" instance=ExtResource("16_vuxek")]
 position = Vector2(-390, 540)
 scale = Vector2(1, 1)
 
-[node name="Pagar2" parent="Environment/Rumah/RumahCyan" instance=ExtResource("11_ca0ab")]
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan" instance=ExtResource("16_vuxek")]
 position = Vector2(840, 540)
 scale = Vector2(1, 1)
 
-[node name="RumahMerah" parent="Environment/Rumah" instance=ExtResource("12_qbamp")]
+[node name="RumahMerah" parent="Environment/Rumah" instance=ExtResource("17_fu584")]
 position = Vector2(153, -1151)
 
-[node name="Pagar" parent="Environment/Rumah/RumahMerah" instance=ExtResource("11_ca0ab")]
+[node name="Pagar" parent="Environment/Rumah/RumahMerah" instance=ExtResource("16_vuxek")]
 position = Vector2(-390, 540)
 scale = Vector2(1, 1)
 
-[node name="Pagar2" parent="Environment/Rumah/RumahMerah" instance=ExtResource("11_ca0ab")]
+[node name="Pagar2" parent="Environment/Rumah/RumahMerah" instance=ExtResource("16_vuxek")]
 position = Vector2(840, 540)
 scale = Vector2(1, 1)
 
-[node name="RumahMerah2" parent="Environment/Rumah" instance=ExtResource("12_qbamp")]
+[node name="RumahMerah2" parent="Environment/Rumah" instance=ExtResource("17_fu584")]
 position = Vector2(1176.1, -896)
 
-[node name="Pagar" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("11_ca0ab")]
+[node name="Pagar" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("16_vuxek")]
 position = Vector2(-390, 540)
 scale = Vector2(1, 1)
 
-[node name="Pagar2" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("11_ca0ab")]
+[node name="Pagar2" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("16_vuxek")]
 position = Vector2(840, 540)
 scale = Vector2(1, 1)
 
-[node name="Tanda" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("13_1cl43")]
+[node name="Tanda" parent="Environment/Rumah/RumahMerah2" instance=ExtResource("18_l5pfb")]
 position = Vector2(-105, 455)
 scale = Vector2(1, 1)
 
-[node name="RumahMerah3" parent="Environment/Rumah" instance=ExtResource("12_qbamp")]
+[node name="RumahMerah3" parent="Environment/Rumah" instance=ExtResource("17_fu584")]
 position = Vector2(807.1, -384)
 
-[node name="Pagar" parent="Environment/Rumah/RumahMerah3" instance=ExtResource("11_ca0ab")]
+[node name="Pagar" parent="Environment/Rumah/RumahMerah3" instance=ExtResource("16_vuxek")]
 position = Vector2(-390, 540)
 scale = Vector2(1, 1)
 
-[node name="Pagar2" parent="Environment/Rumah/RumahMerah3" instance=ExtResource("11_ca0ab")]
+[node name="Pagar2" parent="Environment/Rumah/RumahMerah3" instance=ExtResource("16_vuxek")]
 position = Vector2(840, 540)
 scale = Vector2(1, 1)
 
-[node name="RumahCyan2" parent="Environment/Rumah" instance=ExtResource("10_0e2tt")]
+[node name="RumahCyan2" parent="Environment/Rumah" instance=ExtResource("15_nwy2c")]
 position = Vector2(710.1, -896)
 
-[node name="Pagar" parent="Environment/Rumah/RumahCyan2" instance=ExtResource("11_ca0ab")]
+[node name="Pagar" parent="Environment/Rumah/RumahCyan2" instance=ExtResource("16_vuxek")]
 position = Vector2(-390, 540)
 scale = Vector2(1, 1)
 
-[node name="Pagar2" parent="Environment/Rumah/RumahCyan2" instance=ExtResource("11_ca0ab")]
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan2" instance=ExtResource("16_vuxek")]
 position = Vector2(840, 540)
 scale = Vector2(1, 1)
 
-[node name="RumahCyan3" parent="Environment/Rumah" instance=ExtResource("10_0e2tt")]
+[node name="RumahCyan3" parent="Environment/Rumah" instance=ExtResource("15_nwy2c")]
 position = Vector2(1494.1, -384)
 
-[node name="Pagar" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("11_ca0ab")]
+[node name="Pagar" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("16_vuxek")]
 position = Vector2(-390, 540)
 scale = Vector2(1, 1)
 
-[node name="Pagar2" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("11_ca0ab")]
+[node name="Pagar2" parent="Environment/Rumah/RumahCyan3" instance=ExtResource("16_vuxek")]
 position = Vector2(840, 540)
 scale = Vector2(1, 1)
 
-[node name="BatuDummy3" parent="Environment" instance=ExtResource("14_np011")]
+[node name="BatuDummy" parent="Environment" instance=ExtResource("19_afv8k")]
+position = Vector2(1196, -288)
+
+[node name="BatuDummy2" parent="Environment" instance=ExtResource("19_afv8k")]
+position = Vector2(1242, -276)
+
+[node name="BatuDummy3" parent="Environment" instance=ExtResource("19_afv8k")]
 position = Vector2(892, -736)
 
-[node name="BatuDummy4" parent="Environment" instance=ExtResource("14_np011")]
+[node name="BatuDummy4" parent="Environment" instance=ExtResource("19_afv8k")]
 position = Vector2(898, -684)
 
-[node name="Pohon" parent="Environment" instance=ExtResource("15_i74i5")]
+[node name="Pohon" parent="Environment" instance=ExtResource("20_dbbtc")]
 position = Vector2(600, -328)
 
-[node name="AliTopDown" parent="." instance=ExtResource("16_c8g0r")]
+[node name="Player" parent="." instance=ExtResource("21_kkday")]
 position = Vector2(1600, -200)
 collision_mask = 1
 speed = 230
 
-[node name="Camera2D" type="Camera2D" parent="AliTopDown"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_top = -1408
@@ -542,30 +543,25 @@ limit_right = 1664
 limit_bottom = 0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2(-56, -8)
-color = Color(0.327104, 0.476892, 0.706584, 1)
+color = Color(0.359216, 0.00115514, 0.864972, 1)
 
 [node name="open_handphone" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("22_mnafg")
+stream = ExtResource("22_aj5py")
 bus = &"SFX"
 
 [node name="Finish_quest_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("31_c1u1i")
+stream = ExtResource("32_atsev")
 bus = &"SFX"
 
-[node name="BGM_lvl1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("23_rb51k")
-volume_db = -10.0
+[node name="BGM_lvl2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_invyp")
+volume_db = -5.0
 bus = &"Music"
 
-[connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
 [connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
 [connection signal="mouse_entered" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_entered"]
 [connection signal="mouse_exited" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Chooselevel_Button" to="." method="_on_chooselevel_button_pressed"]
-[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/NextLevel_Button" to="." method="_on_next_level_button_pressed"]

@@ -1,19 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnphv7esbmo4w"]
+[gd_scene load_steps=5 format=3 uid="uid://dnphv7esbmo4w"]
 
-[ext_resource type="Script" path="res://scripts/QuestTimer.gd" id="1_u7u6y"]
+[ext_resource type="Script" path="res://scenes/dummy/QuestTimer.gd" id="1_frd7a"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_5xclg"]
+
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0d0y"]
+bg_color = Color(0.85098, 0.290196, 0.337255, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 50.0
+expand_margin_top = 15.0
+expand_margin_right = 50.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="Theme" id="Theme_if6um"]
+Label/styles/normal = SubResource("StyleBoxFlat_m0d0y")
 
 [node name="QuestTimer" type="Timer"]
-script = ExtResource("1_u7u6y")
-minute = 1
+script = ExtResource("1_frd7a")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -65.0
-offset_right = 65.0
-offset_bottom = 69.0
+offset_left = -85.0
+offset_top = 25.0
+offset_right = 71.0
+offset_bottom = 106.0
 grow_horizontal = 2
 size_flags_horizontal = 4
+theme = SubResource("Theme_if6um")
+theme_override_fonts/font = ExtResource("2_5xclg")
 theme_override_font_sizes/font_size = 50
 text = "00:00"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://eyjjp6rydhdv"]
+[gd_scene load_steps=35 format=3 uid="uid://eyjjp6rydhdv"]
 
 [ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_dqnjy"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="2_vu3m5"]
@@ -20,8 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://brw4chr80l1wj" path="res://assets/Art/VIDEO.png" id="17_qvn6a"]
 [ext_resource type="Texture2D" uid="uid://cgcsrh2purj7d" path="res://assets/Art/KONTROL.png" id="18_a68j0"]
 [ext_resource type="Texture2D" uid="uid://0hebwgv5a01a" path="res://assets/Art/Tasklevel1.png" id="19_0qdvu"]
+[ext_resource type="Texture2D" uid="uid://bu5oct1jlua3t" path="res://assets/Art/SLIDER MERAH.png" id="19_a4t3w"]
 [ext_resource type="Texture2D" uid="uid://m3431e72uwhq" path="res://assets/Art/centang polosan.png" id="20_4742u"]
-[ext_resource type="Texture2D" uid="uid://bioyfhbblvd0s" path="res://assets/Art/TOMBOL KONTROL SETTINGS.png" id="21_4ljvg"]
+[ext_resource type="Texture2D" uid="uid://rydokstp0e0p" path="res://assets/Art/TOMBOL KONTROL SETTINGS (1).png" id="20_jnul1"]
+[ext_resource type="AudioStream" uid="uid://bg2ud4rikydwk" path="res://Audio/SFX/sound_hp.mp3" id="22_5bwi5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_df7xw"]
 
@@ -83,10 +85,10 @@ tracks/0/path = NodePath("Handphone:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.5, 0.7),
+"times": PackedFloat32Array(0, 0.0001, 0.5, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(680, 1094), Vector2(680, 1090), Vector2(680, 50), Vector2(680, 90)]
+"values": [Vector2(680, 1094), Vector2(680, 1090), Vector2(680, 50), Vector2(680, 125)]
 }
 
 [sub_resource type="Animation" id="Animation_eh7dv"]
@@ -366,7 +368,6 @@ theme = ExtResource("3_u7xel")
 icon = ExtResource("18_a68j0")
 
 [node name="Sound_Panel" type="TextureRect" parent="Handphone"]
-visible = false
 layout_mode = 0
 offset_left = 148.125
 offset_top = 306.0
@@ -433,6 +434,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = SubResource("Theme_tlqju")
+theme_override_icons/grabber = ExtResource("19_a4t3w")
+theme_override_icons/grabber_highlight = ExtResource("19_a4t3w")
+theme_override_icons/grabber_disabled = ExtResource("19_a4t3w")
+theme_override_icons/tick = ExtResource("19_a4t3w")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -454,6 +459,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = SubResource("Theme_tlqju")
+theme_override_icons/grabber = ExtResource("19_a4t3w")
+theme_override_icons/grabber_highlight = ExtResource("19_a4t3w")
+theme_override_icons/grabber_disabled = ExtResource("19_a4t3w")
+theme_override_icons/tick = ExtResource("19_a4t3w")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -475,6 +484,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme = SubResource("Theme_tlqju")
+theme_override_icons/grabber = ExtResource("19_a4t3w")
+theme_override_icons/grabber_highlight = ExtResource("19_a4t3w")
+theme_override_icons/grabber_disabled = ExtResource("19_a4t3w")
+theme_override_icons/tick = ExtResource("19_a4t3w")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -597,7 +610,7 @@ offset_right = 513.5
 offset_bottom = 470.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("21_4ljvg")
+texture = ExtResource("20_jnul1")
 
 [node name="Back_From_Kontrol" type="Button" parent="Handphone/Kontrol_Panel"]
 layout_mode = 0
@@ -651,6 +664,9 @@ icon = ExtResource("3_bnieb")
 libraries = {
 "": SubResource("AnimationLibrary_ympw5")
 }
+
+[node name="button_hp_audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_5bwi5")
 
 [node name="open_handphone" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_32clx")

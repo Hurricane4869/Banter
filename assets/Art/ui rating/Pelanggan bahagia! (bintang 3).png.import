@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu5oct1jlua3t"
-path="res://.godot/imported/SLIDER MERAH.png-d2ce3534ba73cbae1a936fa7c0a8c048.ctex"
+uid="uid://cikp32qotw7gf"
+path="res://.godot/imported/Pelanggan bahagia! (bintang 3).png-91e4ad8d37cd3dcd7986963630202e71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SLIDER MERAH.png"
-dest_files=["res://.godot/imported/SLIDER MERAH.png-d2ce3534ba73cbae1a936fa7c0a8c048.ctex"]
+source_file="res://assets/Art/ui rating/Pelanggan bahagia! (bintang 3).png"
+dest_files=["res://.godot/imported/Pelanggan bahagia! (bintang 3).png-91e4ad8d37cd3dcd7986963630202e71.ctex"]
 
 [params]
 

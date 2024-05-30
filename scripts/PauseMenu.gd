@@ -18,6 +18,7 @@ extends Control
 @onready var music_BUS_ID = AudioServer.get_bus_index("Music")
 @onready var master_BUS_ID = AudioServer.get_bus_index("Master")
 @onready var full_screen_check_box = $Handphone/Video_Panel/Video_Settings/Fullscreen/FullScreenCheckBox
+@onready var button_hp_audio = $button_hp_audio
 
 @export var main_menu_scene: PackedScene
 func _ready():
@@ -62,10 +63,12 @@ func _on_restart_pressed():
 	await get_tree().create_timer(0.8).timeout   
 	Functions.restart_scene() # Hapus upaya mengatur 'parameters'
 
+
 func _on_quit_pressed():
 	resume()
 	await get_tree().create_timer(0.75).timeout      
 	Functions.load_screen_to_scene("res://scenes/main menu/main_menu.tscn", {"test": "test"})
+
 
 func _process(delta):
 	testEsc()
@@ -79,6 +82,7 @@ func _on_restart_mouse_exited():
 func _on_quests_pressed():
 	task_panel.visible = true
 	pause_panel.visible = false
+	button_hp_audio.play()
 	
 func _on_quests_mouse_entered():
 	misi_text.visible = true
@@ -107,39 +111,48 @@ func _on_resume_mouse_exited():
 func _on_settings_pressed():
 	settings_panel.visible = true
 	pause_panel.visible = false
+	button_hp_audio.play()
 
 func _on_back_from_settings_pressed():
 	settings_panel.visible = false
 	pause_panel.visible = true
+	button_hp_audio.play()
 
 func _on_suara_button_pressed():
 	sound_panel.visible = true
 	settings_panel.visible = false
+	button_hp_audio.play()
 
 func _on_video_button_pressed():
 	video_panel.visible = true
 	settings_panel.visible = false
+	button_hp_audio.play()
 
 func _on_kontrol_button_pressed():
 	kontrol_panel.visible = true
 	settings_panel.visible = false
+	button_hp_audio.play()
 
 func _on_back_from_sound_pressed():
 	sound_panel.visible = false
 	settings_panel.visible = true
+	button_hp_audio.play()
 
 func _on_back_from_video_pressed():
 	video_panel.visible = false
 	settings_panel.visible = true
+	button_hp_audio.play()
 
 func _on_back_from_kontrol_pressed():
 	kontrol_panel.visible = false
 	settings_panel.visible = true
+	button_hp_audio.play()
 
 
 func _on_back_from_misi_pressed():
 	task_panel.visible = false
 	pause_panel.visible = true
+	button_hp_audio.play()
 
 
 func _on_music_slider_value_changed(value):
