@@ -127,8 +127,8 @@ script = ExtResource("1_8780c")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_hc8hl")]
-position = Vector2(875, 20)
-second = 20
+second = 50
+minute = 2
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_wpfud")]
 offset_left = 6.0
@@ -400,6 +400,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Star3" type="VBoxContainer" parent="UI/RatingSystem/rating_menu"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -559,6 +560,7 @@ stream = ExtResource("23_rb51k")
 volume_db = -10.0
 bus = &"Music"
 
+[connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
 [connection signal="mouse_entered" from="UI/Pause" to="." method="_on_pause_mouse_entered"]
 [connection signal="mouse_exited" from="UI/Pause" to="." method="_on_pause_mouse_exited"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
