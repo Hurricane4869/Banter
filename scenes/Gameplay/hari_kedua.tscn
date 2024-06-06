@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="4_f8qvl"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="5_bs6q0"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="6_bcpyj"]
-[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="7_y7va8"]
-[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="8_pwqas"]
+[ext_resource type="Texture2D" uid="uid://bejc634d4k7sr" path="res://assets/Art/DETAIL MISI lvl 2.png" id="8_gbflq"]
+[ext_resource type="Texture2D" uid="uid://cvxx8kkwb0ha6" path="res://assets/Art/tombol mulai.png" id="9_nhgiw"]
 [ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="9_rex8c"]
 [ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="10_ewge3"]
 [ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="11_fmw1a"]
@@ -84,19 +84,18 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr4pt"]
-size = Vector2(186, 156)
+size = Vector2(98, 88)
 
 [node name="HariKedua" type="Node2D"]
 script = ExtResource("1_ly5wy")
 BAD_TIME = 30
 NORMAL_TIME = 60
-GOOD_TIME = 90
+GOOD_TIME = 120
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("1_bp2k5")]
-second = 30
-minute = 2
+minute = 3
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("2_gkp4c")]
 
@@ -156,7 +155,7 @@ offset_left = 145.0
 offset_top = 310.0
 offset_right = 1459.0
 offset_bottom = 2226.0
-texture = ExtResource("7_y7va8")
+texture = ExtResource("8_gbflq")
 
 [node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
 libraries = {
@@ -165,37 +164,19 @@ libraries = {
 
 [node name="PlayButton" type="Button" parent="UI/PlayQuest"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -178.0
-offset_top = 204.0
-offset_right = -28.0
-offset_bottom = 324.0
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -999.25
+offset_right = 231.0
+offset_bottom = -781.25
 grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+grow_vertical = 0
 theme = ExtResource("3_qlgpk")
-icon = ExtResource("8_pwqas")
-
-[node name="Play_Text" type="Label" parent="UI/PlayQuest/PlayButton"]
-visibility_layer = 7
-layout_mode = 0
-offset_left = -17.0
-offset_top = 105.0
-offset_right = 166.0
-offset_bottom = 190.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("5_bs6q0")
-theme_override_font_sizes/font_size = 40
-text = "Mulai"
-horizontal_alignment = 1
-vertical_alignment = 1
+icon = ExtResource("9_nhgiw")
 
 [node name="RatingSystem" type="Control" parent="UI"]
 process_mode = 3
@@ -417,14 +398,15 @@ layer_0/tile_data = PackedInt32Array(-1179636, 3, 0, -1114100, 3, 0, -524275, 3,
 
 [node name="AntarPaket" parent="Environment" instance=ExtResource("19_gep8m")]
 visibility_layer = 4
-position = Vector2(2083, -1840)
+position = Vector2(2082, -1911)
 action_name = "antar paket"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/AntarPaket"]
-position = Vector2(-126, 34)
+position = Vector2(-82, 103)
 shape = SubResource("RectangleShape2D_tr4pt")
 
 [node name="Tanda" parent="Environment/AntarPaket" instance=ExtResource("21_02iuw")]
+visible = false
 position = Vector2(0, -21)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Environment"]
@@ -467,8 +449,6 @@ bus = &"Music"
 
 [connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
-[connection signal="mouse_entered" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_entered"]
-[connection signal="mouse_exited" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Chooselevel_Button" to="." method="_on_chooselevel_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]

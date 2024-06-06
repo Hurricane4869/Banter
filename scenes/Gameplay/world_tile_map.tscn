@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6am1kusod3kl"]
+[gd_scene load_steps=17 format=3 uid="uid://c6am1kusod3kl"]
 
 [ext_resource type="TileSet" uid="uid://c2wn1no8xhpbw" path="res://assets/environment/world_tileset.tres" id="1_amqba"]
 [ext_resource type="PackedScene" uid="uid://cefns815uphh3" path="res://scenes/dummy/object/pagar.tscn" id="3_hk66x"]
@@ -12,6 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://byvrmj1srso11" path="res://scenes/dummy/object/rumah_cyan_bawah.tscn" id="8_3g3lx"]
 [ext_resource type="PackedScene" uid="uid://b170ond1u3gko" path="res://scenes/dummy/object/rumah_cyan_atas.tscn" id="9_oigmx"]
 [ext_resource type="PackedScene" uid="uid://c7bfu16swinpp" path="res://scenes/dummy/object/rumah_merah_atas.tscn" id="10_oetwm"]
+[ext_resource type="Script" path="res://scenes/Gameplay/JalanMasuk1.gd" id="13_xi3xt"]
+[ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="14_sqhi0"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="15_sshf3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrutg"]
+size = Vector2(96, 86)
 
 [node name="WorldTileMap" type="TileMap"]
 position = Vector2(0, -128)
@@ -41,12 +47,10 @@ position = Vector2(1944, -2376)
 scale = Vector2(0.3, 0.3)
 
 [node name="Pagar" parent="Rumah/RumahMerahBawah2" instance=ExtResource("3_hk66x")]
-z_index = 1
 position = Vector2(-420, 566.667)
 scale = Vector2(1, 1)
 
 [node name="Pagar2" parent="Rumah/RumahMerahBawah2" instance=ExtResource("3_hk66x")]
-z_index = 1
 position = Vector2(886.667, 566.667)
 scale = Vector2(1, 1)
 
@@ -63,7 +67,7 @@ position = Vector2(2350, -1866)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar2" type="Node2D" parent="Rumah"]
-position = Vector2(608, 0)
+position = Vector2(589, 0)
 
 [node name="Pagar4" parent="Rumah/DoublePagar2" instance=ExtResource("3_hk66x")]
 z_index = 1
@@ -89,7 +93,7 @@ position = Vector2(2350, -1866)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar4" type="Node2D" parent="Rumah"]
-position = Vector2(-8, 616)
+position = Vector2(5, 616)
 
 [node name="Pagar4" parent="Rumah/DoublePagar4" instance=ExtResource("3_hk66x")]
 z_index = 1
@@ -141,7 +145,7 @@ position = Vector2(2374, -1898)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar7" type="Node2D" parent="Rumah"]
-position = Vector2(-1332, 538)
+position = Vector2(-1325, 538)
 
 [node name="Pagar4" parent="Rumah/DoublePagar7" instance=ExtResource("3_hk66x")]
 z_index = 1
@@ -167,7 +171,7 @@ position = Vector2(2358, -1898)
 scale = Vector2(0.3, 0.3)
 
 [node name="RumahCyanKiri" parent="Rumah" instance=ExtResource("5_ie3wc")]
-z_index = 1
+z_index = 3
 position = Vector2(2264, -1784)
 scale = Vector2(0.3, 0.3)
 
@@ -184,8 +188,8 @@ position = Vector2(286.667, 640)
 scale = Vector2(1, 1)
 
 [node name="RumahMerahKanan" parent="Rumah" instance=ExtResource("6_7giff")]
-z_index = 1
-position = Vector2(2875, -1784)
+z_index = 3
+position = Vector2(2853, -1784)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar" type="Node2D" parent="Rumah/RumahMerahKanan"]
@@ -202,7 +206,7 @@ position = Vector2(286.667, 640)
 scale = Vector2(1, 1)
 
 [node name="RumahMerahKiri" parent="Rumah" instance=ExtResource("7_smsky")]
-z_index = 1
+z_index = 3
 position = Vector2(3528, -1784)
 scale = Vector2(0.3, 0.3)
 
@@ -220,8 +224,8 @@ position = Vector2(286.667, 640)
 scale = Vector2(1, 1)
 
 [node name="RumahMerahKiri2" parent="Rumah" instance=ExtResource("7_smsky")]
-z_index = 1
-position = Vector2(2256, -1176)
+z_index = 5
+position = Vector2(2265, -1176)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar" type="Node2D" parent="Rumah/RumahMerahKiri2"]
@@ -238,12 +242,12 @@ position = Vector2(286.667, 640)
 scale = Vector2(1, 1)
 
 [node name="RumahMerahKiri3" parent="Rumah" instance=ExtResource("7_smsky")]
-z_index = 1
-position = Vector2(1608, -1784)
+z_index = 3
+position = Vector2(1624, -1784)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar" type="Node2D" parent="Rumah/RumahMerahKiri3"]
-position = Vector2(6.66602, 0)
+position = Vector2(-43.334, 0)
 
 [node name="Pagar2" parent="Rumah/RumahMerahKiri3/DoublePagar" instance=ExtResource("3_hk66x")]
 z_index = 1
@@ -256,7 +260,7 @@ position = Vector2(286.667, 640)
 scale = Vector2(1, 1)
 
 [node name="RumahCyanKiri2" parent="Rumah" instance=ExtResource("5_ie3wc")]
-z_index = 7
+z_index = 8
 position = Vector2(3528, -1176)
 scale = Vector2(0.3, 0.3)
 
@@ -273,11 +277,12 @@ position = Vector2(286.667, 640)
 scale = Vector2(1, 1)
 
 [node name="RumahCyanKiri3" parent="Rumah" instance=ExtResource("5_ie3wc")]
-z_index = 1
-position = Vector2(1608, -1283)
+z_index = 3
+position = Vector2(1624, -1283)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar" type="Node2D" parent="Rumah/RumahCyanKiri3"]
+position = Vector2(-39.9995, 0)
 
 [node name="Pagar2" parent="Rumah/RumahCyanKiri3/DoublePagar" instance=ExtResource("3_hk66x")]
 z_index = 1
@@ -291,11 +296,11 @@ scale = Vector2(1, 1)
 
 [node name="RumahMerahKanan2" parent="Rumah" instance=ExtResource("6_7giff")]
 z_index = 1
-position = Vector2(941, -1283)
+position = Vector2(933, -1283)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar" type="Node2D" parent="Rumah/RumahMerahKanan2"]
-position = Vector2(-3.33496, 0)
+position = Vector2(49.998, 0)
 
 [node name="Pagar2" parent="Rumah/RumahMerahKanan2/DoublePagar" instance=ExtResource("3_hk66x")]
 z_index = 1
@@ -309,7 +314,7 @@ scale = Vector2(1, 1)
 
 [node name="RumahCyanKanan" parent="Rumah" instance=ExtResource("7_4gyrn")]
 z_index = 1
-position = Vector2(941, -1784)
+position = Vector2(933, -1784)
 scale = Vector2(0.3, 0.3)
 
 [node name="DoublePagar" type="Node2D" parent="Rumah/RumahCyanKanan"]
@@ -708,6 +713,7 @@ position = Vector2(82.6312, 278.884)
 scale = Vector2(0.445288, 0.445288)
 
 [node name="AroundRumahMerahCyanKiri" type="Node2D" parent="Decoration"]
+z_index = 1
 position = Vector2(144, 1278)
 
 [node name="Pohon9" parent="Decoration/AroundRumahMerahCyanKiri" instance=ExtResource("6_v2cqm")]
@@ -1378,3 +1384,549 @@ scale = Vector2(0.445288, 0.445288)
 [node name="Semak2" parent="Decoration/AroundRumahMerahCyanAtas/Pohon2" instance=ExtResource("6_kqpbi")]
 position = Vector2(82.6312, 278.884)
 scale = Vector2(0.445288, 0.445288)
+
+[node name="Addresses" type="Node2D" parent="."]
+
+[node name="JalanMasuk1" type="Area2D" parent="Addresses"]
+position = Vector2(3760, -2176)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanMasuk1" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanMasuk1/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Masuk No. 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanMasuk1"]
+position = Vector2(-38, 45)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanMasuk2" type="Area2D" parent="Addresses"]
+position = Vector2(1944, -2176)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanMasuk2" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanMasuk2/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Masuk No. 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanMasuk2"]
+position = Vector2(-38, 42)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanBuntu1" type="Area2D" parent="Addresses"]
+position = Vector2(3385, -1083)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanBuntu1" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanBuntu1/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Buntu No. 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanBuntu1"]
+position = Vector2(-105, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanBuntu2" type="Area2D" parent="Addresses"]
+position = Vector2(3385, -1691)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanBuntu2" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanBuntu2/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Buntu No. 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanBuntu2"]
+position = Vector2(-105, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanBuntu3" type="Area2D" parent="Addresses"]
+position = Vector2(3089, -1691)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanBuntu3" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-54, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanBuntu3/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Buntu No. 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanBuntu3"]
+position = Vector2(31, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanSempit1" type="Area2D" parent="Addresses"]
+position = Vector2(2121, -1691)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanSempit1" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanSempit1/Tanda"]
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Sempit No. 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanSempit1"]
+position = Vector2(-121, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanSempit2" type="Area2D" parent="Addresses"]
+position = Vector2(2121, -1083)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanSempit2" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanSempit2/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Sempit No. 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanSempit2"]
+position = Vector2(-121, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanTikungan1" type="Area2D" parent="Addresses"]
+position = Vector2(1153, -1203)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanTikungan1" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanTikungan1/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Tikungan No. 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanTikungan1"]
+position = Vector2(47, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanTikungan2" type="Area2D" parent="Addresses"]
+position = Vector2(1481, -1203)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanTikungan2" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanTikungan2/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Tikungan No. 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanTikungan2"]
+position = Vector2(-121, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanTikungan3" type="Area2D" parent="Addresses"]
+position = Vector2(1481, -1711)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanTikungan3" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanTikungan3/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Tikungan No. 3w"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanTikungan3"]
+position = Vector2(-121, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanTikungan4" type="Area2D" parent="Addresses/JalanTikungan3"]
+position = Vector2(-328, -1)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanTikungan3/JalanTikungan4" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanTikungan3/JalanTikungan4/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Tikungan No. 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanTikungan3/JalanTikungan4"]
+position = Vector2(47, 8)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanSaleh1" type="Area2D" parent="Addresses"]
+z_index = 1
+position = Vector2(2791, -104)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanSaleh1" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanSaleh1/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Saleh No. 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanSaleh1"]
+position = Vector2(-38, -69)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanSaleh2" type="Area2D" parent="Addresses"]
+z_index = 1
+position = Vector2(2573, -392)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanSaleh2" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanSaleh2/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Saleh No. 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanSaleh2"]
+position = Vector2(-38, 51)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanSaleh3" type="Area2D" parent="Addresses"]
+z_index = 1
+position = Vector2(1805, -392)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanSaleh3" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanSaleh3/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Saleh No. 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanSaleh3"]
+position = Vector2(-38, 50)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[node name="JalanSaleh4" type="Area2D" parent="Addresses"]
+z_index = 1
+position = Vector2(1513, -104)
+collision_mask = 2
+script = ExtResource("13_xi3xt")
+
+[node name="Tanda" parent="Addresses/JalanSaleh4" instance=ExtResource("14_sqhi0")]
+z_index = 1
+position = Vector2(-38, -47)
+scale = Vector2(0.25, 0.25)
+
+[node name="Label" type="Label" parent="Addresses/JalanSaleh4/Tanda"]
+visible = false
+layout_direction = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -281.5
+offset_right = -26.0
+offset_bottom = -252.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("15_sshf3")
+theme_override_font_sizes/font_size = 25
+text = "Jalan Saleh No. 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanSaleh4"]
+position = Vector2(-38, -70)
+shape = SubResource("RectangleShape2D_lrutg")
+
+[connection signal="body_entered" from="Addresses/JalanMasuk1" to="Addresses/JalanMasuk1" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanMasuk1" to="Addresses/JalanMasuk1" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanMasuk2" to="Addresses/JalanMasuk2" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanMasuk2" to="Addresses/JalanMasuk2" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanBuntu1" to="Addresses/JalanBuntu1" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanBuntu1" to="Addresses/JalanBuntu1" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanBuntu2" to="Addresses/JalanBuntu2" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanBuntu2" to="Addresses/JalanBuntu2" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanBuntu3" to="Addresses/JalanBuntu3" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanBuntu3" to="Addresses/JalanBuntu3" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanSempit1" to="Addresses/JalanSempit1" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanSempit1" to="Addresses/JalanSempit1" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanSempit2" to="Addresses/JalanSempit2" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanSempit2" to="Addresses/JalanSempit2" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanTikungan1" to="Addresses/JalanTikungan1" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanTikungan1" to="Addresses/JalanTikungan1" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanTikungan2" to="Addresses/JalanTikungan2" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanTikungan2" to="Addresses/JalanTikungan2" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanTikungan3" to="Addresses/JalanTikungan3" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanTikungan3" to="Addresses/JalanTikungan3" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanTikungan3/JalanTikungan4" to="Addresses/JalanTikungan3/JalanTikungan4" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanTikungan3/JalanTikungan4" to="Addresses/JalanTikungan3/JalanTikungan4" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanSaleh1" to="Addresses/JalanSaleh1" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanSaleh1" to="Addresses/JalanSaleh1" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanSaleh2" to="Addresses/JalanSaleh2" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanSaleh2" to="Addresses/JalanSaleh2" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanSaleh3" to="Addresses/JalanSaleh3" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanSaleh3" to="Addresses/JalanSaleh3" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanSaleh4" to="Addresses/JalanSaleh4" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanSaleh4" to="Addresses/JalanSaleh4" method="_on_body_exited"]

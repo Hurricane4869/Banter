@@ -21,6 +21,7 @@ polygon = PackedVector2Array(-384, -164, -384, 172, 192, 180, 216, 4, 400, -28, 
 
 [node name="Lumpur" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_1kh7b")
+volume_db = -20.0
 bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

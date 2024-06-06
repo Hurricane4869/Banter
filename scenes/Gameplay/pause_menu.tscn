@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://eyjjp6rydhdv"]
+[gd_scene load_steps=39 format=3 uid="uid://eyjjp6rydhdv"]
 
 [ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_dqnjy"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="2_vu3m5"]
@@ -19,11 +19,15 @@
 [ext_resource type="Texture2D" uid="uid://cwhhdlkb7hmf5" path="res://assets/Art/SUARA.png" id="16_3ni6c"]
 [ext_resource type="Texture2D" uid="uid://brw4chr80l1wj" path="res://assets/Art/VIDEO.png" id="17_qvn6a"]
 [ext_resource type="Texture2D" uid="uid://cgcsrh2purj7d" path="res://assets/Art/KONTROL.png" id="18_a68j0"]
-[ext_resource type="Texture2D" uid="uid://0hebwgv5a01a" path="res://assets/Art/Tasklevel1.png" id="19_0qdvu"]
 [ext_resource type="Texture2D" uid="uid://bu5oct1jlua3t" path="res://assets/Art/SLIDER MERAH.png" id="19_a4t3w"]
 [ext_resource type="Texture2D" uid="uid://m3431e72uwhq" path="res://assets/Art/centang polosan.png" id="20_4742u"]
 [ext_resource type="Texture2D" uid="uid://rydokstp0e0p" path="res://assets/Art/TOMBOL KONTROL SETTINGS (1).png" id="20_jnul1"]
 [ext_resource type="AudioStream" uid="uid://bg2ud4rikydwk" path="res://Audio/SFX/sound_hp.mp3" id="22_5bwi5"]
+[ext_resource type="Texture2D" uid="uid://b6safcyi4pf43" path="res://assets/Art/DETAIL MISI lvl 1.png" id="22_7rdxf"]
+[ext_resource type="Texture2D" uid="uid://bejc634d4k7sr" path="res://assets/Art/DETAIL MISI lvl 2.png" id="23_a1t8i"]
+[ext_resource type="Texture2D" uid="uid://cwyj3pxv0lp34" path="res://assets/Art/DETAIL MISI lvl 3.png" id="24_txgvw"]
+[ext_resource type="Texture2D" uid="uid://bp12i3v2rkt3w" path="res://assets/Art/DETAIL MISI lvl 4.png" id="25_ueghv"]
+[ext_resource type="Texture2D" uid="uid://c1rfvhyaqedmu" path="res://assets/Art/DETAIL MISI lvl 5.png" id="26_3ypl6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_df7xw"]
 
@@ -643,12 +647,84 @@ text = "MISI
 "
 
 [node name="Task_Level_1" type="TextureRect" parent="Handphone/Task_Panel"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 285.0
-offset_right = 1313.0
-offset_bottom = 1941.0
-texture = ExtResource("19_0qdvu")
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -657.0
+offset_top = -958.0
+offset_right = 657.0
+offset_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_7rdxf")
+
+[node name="Task_Level_2" type="TextureRect" parent="Handphone/Task_Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -657.0
+offset_top = -958.0
+offset_right = 657.0
+offset_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_a1t8i")
+
+[node name="Task_Level_3" type="TextureRect" parent="Handphone/Task_Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -657.0
+offset_top = -958.0
+offset_right = 657.0
+offset_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_txgvw")
+
+[node name="Task_Level_4" type="TextureRect" parent="Handphone/Task_Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -657.0
+offset_top = -958.0
+offset_right = 657.0
+offset_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("25_ueghv")
+
+[node name="Task_Level_5" type="TextureRect" parent="Handphone/Task_Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -657.0
+offset_top = -958.0
+offset_right = 657.0
+offset_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("26_3ypl6")
 
 [node name="Back_From_Misi" type="Button" parent="Handphone/Task_Panel"]
 layout_mode = 0

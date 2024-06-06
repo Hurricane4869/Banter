@@ -23,6 +23,7 @@ shape = SubResource("RectangleShape2D_tv5yb")
 
 [node name="Lumpur" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_qxqkg")
+volume_db = -20.0
 bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

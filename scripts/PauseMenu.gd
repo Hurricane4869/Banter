@@ -19,8 +19,16 @@ extends Control
 @onready var master_BUS_ID = AudioServer.get_bus_index("Master")
 @onready var full_screen_check_box = $Handphone/Video_Panel/Video_Settings/Fullscreen/FullScreenCheckBox
 @onready var button_hp_audio = $button_hp_audio
+@onready var task_level_1 = $Handphone/Task_Panel/Task_Level_1
+@onready var task_level_2 = $Handphone/Task_Panel/Task_Level_2
+@onready var task_level_3 = $Handphone/Task_Panel/Task_Level_3
+@onready var task_level_4 = $Handphone/Task_Panel/Task_Level_4
+@onready var task_level_5 = $Handphone/Task_Panel/Task_Level_5
 
 @export var main_menu_scene: PackedScene
+
+var current_level: int = 0
+
 func _ready():
 	color_rect.visible = false
 	restart_text.visible = false
@@ -48,6 +56,7 @@ func pause():
 	$AnimationPlayer.play("Handphone")
 	open_handphone.play()
 	await open_handphone.finished
+	update_tasks()
 
 func testEsc():
 	if Input.is_action_just_pressed("esc") and !get_tree().paused:
@@ -62,7 +71,6 @@ func _on_restart_pressed():
 	resume()
 	await get_tree().create_timer(0.8).timeout   
 	Functions.restart_scene() # Hapus upaya mengatur 'parameters'
-
 
 func _on_quit_pressed():
 	resume()
@@ -172,3 +180,10 @@ func _on_full_screen_check_box_toggled(toggled_on):
 	else:
 		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+func update_tasks():
+	task_level_1.visible = current_level == 1
+	task_level_2.visible = current_level == 2
+	task_level_3.visible = current_level == 3
+	task_level_4.visible = current_level == 4
+	task_level_5.visible = current_level == 5

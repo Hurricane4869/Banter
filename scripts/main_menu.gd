@@ -27,6 +27,7 @@ var parameters: Dictionary
 @onready var choose_level_panel = $ChooseLevel_Panel
 @onready var level_1 = $ChooseLevel_Panel/VBoxContainer/HBoxContainer/Level1
 @onready var levels = $ChooseLevel_Panel/Levels_VBoxCOntainer/Levels
+@onready var cutscene_prolog = $CutsceneProlog
 
 func _input (event):
 	if event.is_action_pressed("ui_cancel"):
@@ -135,7 +136,7 @@ func _on_level_1_pressed():
 	await click_sound.finished
 	transition.play("fade_out")
 	await get_tree().create_timer(1).timeout
-	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_pertama.tscn", {"test": "test"})
+	Functions.load_screen_to_scene("res://scenes/cutscene_prolog.tscn", {"test": "test"})
 
 func _on_level_2_pressed():
 	click_sound.play()
@@ -157,7 +158,6 @@ func _on_level_4_pressed():
 	transition.play("fade_out")
 	await get_tree().create_timer(1).timeout
 	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_keempat.tscn", {"test": "test"})
-
 
 func _on_level_5_pressed():
 	click_sound.play()

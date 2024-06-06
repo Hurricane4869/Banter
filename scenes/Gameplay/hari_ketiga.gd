@@ -17,7 +17,6 @@ extends Node2D
 @onready var rating_system = $UI/RatingSystem
 @onready var handphone = $UI/PlayQuest/Handphone
 @onready var play_quest = $UI/PlayQuest
-@onready var play_text = $UI/PlayQuest/PlayButton/Play_Text
 @onready var star_0 = $UI/RatingSystem/rating_menu/Star0
 @onready var star_1 = $UI/RatingSystem/rating_menu/Star1
 @onready var star_2 = $UI/RatingSystem/rating_menu/Star2
@@ -37,7 +36,6 @@ var time_left: int
 
 func _ready():
 	pause_text.visible = false
-	play_text.visible = false
 	timer.start()
 	handphone.play("Quest_Appear");
 	open_handphone_sound.play()
@@ -94,12 +92,7 @@ func _on_play_button_pressed():
 	await open_handphone_sound.finished
 	bgm_lvl_1.play()
 	malam_hari_backsound.play()
-
-func _on_play_button_mouse_entered():
-	play_text.visible = true	
-
-func _on_play_button_mouse_exited():
-	play_text.visible = false
+	pause_menu.current_level = 3
 
 func _on_chooselevel_button_pressed():
 	get_tree().paused = false

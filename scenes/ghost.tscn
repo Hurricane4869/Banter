@@ -132,7 +132,6 @@ bus = &"SFX"
 
 [node name="Ghost_chase_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_mm7rx")
-stream_paused = true
 bus = &"SFX"
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]

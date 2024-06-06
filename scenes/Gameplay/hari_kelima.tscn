@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_h5sta"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_8eh86"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="7_slres"]
-[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="8_gsffs"]
-[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="9_70n5l"]
+[ext_resource type="Texture2D" uid="uid://c1rfvhyaqedmu" path="res://assets/Art/DETAIL MISI lvl 5.png" id="8_u2oe2"]
+[ext_resource type="Texture2D" uid="uid://cvxx8kkwb0ha6" path="res://assets/Art/tombol mulai.png" id="9_c78ab"]
 [ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="10_wskaf"]
 [ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="11_2t508"]
 [ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="12_4kocq"]
@@ -87,15 +87,18 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80eo0"]
-size = Vector2(186, 156)
+size = Vector2(104, 90)
 
 [node name="HariKelima" type="Node2D"]
 script = ExtResource("1_wy2un")
+BAD_TIME = 100
+NORMAL_TIME = 200
+GOOD_TIME = 250
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_kjwho")]
-minute = 2
+minute = 5
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_smu86")]
 metadata/_edit_use_anchors_ = true
@@ -156,7 +159,7 @@ offset_left = 145.0
 offset_top = 310.0
 offset_right = 1459.0
 offset_bottom = 2226.0
-texture = ExtResource("8_gsffs")
+texture = ExtResource("8_u2oe2")
 metadata/_edit_use_anchors_ = true
 
 [node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
@@ -166,39 +169,19 @@ libraries = {
 
 [node name="PlayButton" type="Button" parent="UI/PlayQuest"]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -178.0
-offset_top = 204.0
-offset_right = -28.0
-offset_bottom = 324.0
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -999.25
+offset_right = 231.0
+offset_bottom = -781.25
 grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+grow_vertical = 0
 theme = ExtResource("4_xw2eu")
-icon = ExtResource("9_70n5l")
-metadata/_edit_use_anchors_ = true
-
-[node name="Play_Text" type="Label" parent="UI/PlayQuest/PlayButton"]
-visibility_layer = 7
-layout_mode = 0
-offset_left = -17.0
-offset_top = 105.0
-offset_right = 166.0
-offset_bottom = 190.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_8eh86")
-theme_override_font_sizes/font_size = 40
-text = "Mulai"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
+icon = ExtResource("9_c78ab")
 
 [node name="RatingSystem" type="Control" parent="UI"]
 process_mode = 3
@@ -410,20 +393,21 @@ vertical_alignment = 1
 visible = false
 tile_set = ExtResource("19_8734f")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1376228, 0, 0, -1376227, 0, 0, -1376226, 0, 0, -1376225, 0, 0, -1376224, 0, 0, -1376223, 0, 0, -1376229, 0, 0, -1376230, 0, 0, -1376231, 0, 0, -1376232, 0, 0, -1376233, 0, 0, -1376234, 0, 0, -1376235, 0, 0, -1376236, 0, 0, -1376237, 0, 0, -1376238, 0, 0, -1376239, 0, 0, -1376240, 0, 0, -1376241, 0, 0, -1376242, 0, 0, -1376243, 0, 0, -1376256, 0, 0, -1310720, 0, 0, -1245184, 0, 0, -1179648, 0, 0, -1114112, 0, 0, -1048576, 0, 0, -983040, 0, 0, -917504, 0, 0, -851968, 0, 0, -786432, 0, 0, -720896, 0, 0, -655360, 0, 0, -589824, 0, 0, -524288, 0, 0, -458752, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, -1376255, 0, 0, 1, 0, 0, -1376254, 0, 0, 2, 0, 0, -1376253, 0, 0, 3, 0, 0, -1376252, 0, 0, 4, 0, 0, -1376251, 0, 0, 5, 0, 0, -1376250, 0, 0, 6, 0, 0, -1376249, 0, 0, 7, 0, 0, -1376248, 0, 0, 8, 0, 0, -1376247, 0, 0, 9, 0, 0, -1376246, 0, 0, 10, 0, 0, -1376245, 0, 0, 11, 0, 0, -1376244, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, -1376222, 0, 0, -1310686, 0, 0, -1245150, 0, 0, -1179614, 0, 0, -1114078, 0, 0, -1048542, 0, 0, -983006, 0, 0, -917470, 0, 0, -851934, 0, 0, -786398, 0, 0, -720862, 0, 0, -655326, 0, 0, -589790, 0, 0, -524254, 0, 0, -458718, 0, 0, -393182, 0, 0, -327646, 0, 0, -262110, 0, 0, -196574, 0, 0, -131038, 0, 0, -65502, 0, 0, 34, 0, 0)
+layer_0/tile_data = PackedInt32Array(-1376228, 0, 0, -1376227, 0, 0, -1376226, 0, 0, -1376225, 0, 0, -1376224, 0, 0, -1376223, 0, 0, -1376229, 0, 0, -1376230, 0, 0, -1376231, 0, 0, -1376232, 0, 0, -1376233, 0, 0, -1376234, 0, 0, -1376235, 0, 0, -1376236, 0, 0, -1376237, 0, 0, -1376238, 0, 0, -1376239, 0, 0, -1376240, 0, 0, -1376241, 0, 0, -1376242, 0, 0, -1376243, 0, 0, -1376256, 0, 0, -1310720, 0, 0, -1245184, 0, 0, -1179648, 0, 0, -1114112, 0, 0, -1048576, 0, 0, -983040, 0, 0, -917504, 0, 0, -851968, 0, 0, -786432, 0, 0, -720896, 0, 0, -655360, 0, 0, -589824, 0, 0, -524288, 0, 0, -458752, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, -1376255, 0, 0, 1, 0, 0, -1376254, 0, 0, 2, 0, 0, -1376253, 0, 0, 3, 0, 0, -1376252, 0, 0, 4, 0, 0, -1376251, 0, 0, 5, 0, 0, -1376250, 0, 0, 6, 0, 0, -1376249, 0, 0, 7, 0, 0, -1376248, 0, 0, 8, 0, 0, -1376247, 0, 0, 9, 0, 0, -1376246, 0, 0, 10, 0, 0, -1376245, 0, 0, 11, 0, 0, -1376244, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, -1310687, 0, 0, -1245151, 0, 0, -1179615, 0, 0, -1114079, 0, 0, -1048543, 0, 0, -983007, 0, 0, -917471, 0, 0, -851935, 0, 0, -786399, 0, 0, -720863, 0, 0, -655327, 0, 0, -589791, 0, 0, -524255, 0, 0, -458719, 0, 0, -393183, 0, 0, -327647, 0, 0, -262111, 0, 0, -196575, 0, 0, -131039, 0, 0, -65503, 0, 0)
 
 [node name="AntarPaket" parent="Environment" instance=ExtResource("20_6hps7")]
 visibility_layer = 4
-position = Vector2(1456, -272)
+position = Vector2(1475, -324)
 action_name = "antar paket"
 
 [node name="Tanda" parent="Environment/AntarPaket" instance=ExtResource("21_uds10")]
+visible = false
 z_index = 2
 position = Vector2(-1, -8)
 scale = Vector2(0.25, 0.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/AntarPaket"]
-position = Vector2(-80, -64)
+position = Vector2(1, 25)
 shape = SubResource("RectangleShape2D_80eo0")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Environment"]
@@ -498,8 +482,6 @@ bus = &"Music"
 
 [connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
 [connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
-[connection signal="mouse_entered" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_entered"]
-[connection signal="mouse_exited" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Chooselevel_Button" to="." method="_on_chooselevel_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]
