@@ -148,12 +148,10 @@ func _on_back_from_kontrol_pressed():
 	settings_panel.visible = true
 	button_hp_audio.play()
 
-
 func _on_back_from_misi_pressed():
 	task_panel.visible = false
 	pause_panel.visible = true
 	button_hp_audio.play()
-
 
 func _on_music_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(music_BUS_ID, linear_to_db(value))

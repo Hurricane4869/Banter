@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://do3vdj4t8goqw"]
+
+[ext_resource type="Script" path="res://scenes/dummy/object/lumpur.gd" id="1_76rtt"]
+[ext_resource type="Texture2D" uid="uid://dq4m7ipaisysl" path="res://assets/environment/lumpur level 4 (v3).png" id="2_ku074"]
+[ext_resource type="AudioStream" uid="uid://dgv1njanro3p4" path="res://Audio/SFX/lumpur_sfx.mp3" id="3_ig6cn"]
+
+[node name="Lumpur3lvl4" type="Area2D" groups=["lumpur"]]
+scale = Vector2(0.6, 0.6)
+collision_mask = 2
+linear_damp_space_override = 3
+linear_damp = 100.0
+script = ExtResource("1_76rtt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ku074")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 4)
+polygon = PackedVector2Array(-720, 12, -712, 180, -520, 172, -512, 20, -56, -4, -56, 180, 464, 164, 488, 12, 712, -12, 728, -180, 512, -180, 504, -12, 0, 12, -16, -196, -552, -172, -552, 4)
+
+[node name="Lumpur" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ig6cn")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

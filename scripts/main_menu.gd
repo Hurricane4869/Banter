@@ -125,6 +125,10 @@ func _on_full_screen_check_box_toggled(toggled_on):
 		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
+func _on_back_from_level_pressed():
+	click_sound.play()
+	choose_level_panel.visible = false
+	menu.visible = true
 
 func _on_level_1_pressed():
 	click_sound.play()
@@ -133,16 +137,31 @@ func _on_level_1_pressed():
 	await get_tree().create_timer(1).timeout
 	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_pertama.tscn", {"test": "test"})
 
-
-func _on_back_from_level_pressed():
-	click_sound.play()
-	choose_level_panel.visible = false
-	menu.visible = true
-
-
 func _on_level_2_pressed():
 	click_sound.play()
 	await click_sound.finished
 	transition.play("fade_out")
 	await get_tree().create_timer(1).timeout
-	Functions.load_screen_to_scene("res://scenes/dummy/level_2.tscn", {"test": "test"})
+	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_kedua.tscn", {"test": "test"})
+
+func _on_level_3_pressed():
+	click_sound.play()
+	await click_sound.finished
+	transition.play("fade_out")
+	await get_tree().create_timer(1).timeout
+	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_ketiga.tscn", {"test": "test"})
+
+func _on_level_4_pressed():
+	click_sound.play()
+	await click_sound.finished
+	transition.play("fade_out")
+	await get_tree().create_timer(1).timeout
+	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_keempat.tscn", {"test": "test"})
+
+
+func _on_level_5_pressed():
+	click_sound.play()
+	await click_sound.finished
+	transition.play("fade_out")
+	await get_tree().create_timer(1).timeout
+	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_kelima.tscn", {"test": "test"})

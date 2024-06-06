@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dax1uvefgxn8r"]
+[gd_scene load_steps=39 format=3 uid="uid://dax1uvefgxn8r"]
 
 [ext_resource type="Script" path="res://scripts/level_2.gd" id="1_uivvb"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_w4lwc"]
@@ -9,12 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_qf0q5"]
 [ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_gvrsg"]
 [ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_2p2jb"]
-[ext_resource type="Texture2D" uid="uid://bafihobt6n3ul" path="res://assets/environment/road_tiles_2.png" id="11_wnsap"]
 [ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="11_xonqb"]
-[ext_resource type="Texture2D" uid="uid://q4jrda5bp65t" path="res://assets/dummy/dirt.png" id="12_1epbs"]
 [ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="12_aqjfh"]
 [ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="13_ip0uo"]
-[ext_resource type="Texture2D" uid="uid://be1hn7foapenn" path="res://assets/environment/grass_tiles_2.png" id="13_wdp8t"]
 [ext_resource type="Texture2D" uid="uid://cm570wcmxrpme" path="res://assets/Art/ui rating/Salinan NEXT LEVEL.png" id="14_a3oa2"]
 [ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="14_m3wbv"]
 [ext_resource type="Texture2D" uid="uid://cq861qg6s2hfh" path="res://assets/Art/BINTANG 0.png" id="15_gjxdg"]
@@ -25,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://b35jd1qlrnkmg" path="res://assets/Art/BINTANG 2.png" id="17_i4xyh"]
 [ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="18_as6oh"]
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="18_l5pfb"]
+[ext_resource type="TileSet" uid="uid://c2wn1no8xhpbw" path="res://assets/environment/world_tileset.tres" id="19_5jypf"]
 [ext_resource type="PackedScene" uid="uid://d1r8xk85gjq8q" path="res://scenes/dummy/object/batu_dummy.tscn" id="19_afv8k"]
 [ext_resource type="PackedScene" uid="uid://b2ssw1m7dsqcn" path="res://scenes/dummy/object/pohon.tscn" id="20_dbbtc"]
 [ext_resource type="PackedScene" uid="uid://bl81mxr4l1ubh" path="res://scenes/ghost.tscn" id="21_1vap6"]
@@ -71,36 +69,6 @@ tracks/0/keys = {
 _data = {
 "Start_Quest": SubResource("Animation_ltt5s")
 }
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5p2pq"]
-texture = ExtResource("11_wnsap")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3nowb"]
-texture = ExtResource("12_1epbs")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e08vm"]
-texture = ExtResource("13_wdp8t")
-texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, -64, 64, 64, 64, 64, -64)
-
-[sub_resource type="TileSet" id="TileSet_2s1f3"]
-tile_size = Vector2i(128, 128)
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 2
-sources/1 = SubResource("TileSetAtlasSource_3nowb")
-sources/0 = SubResource("TileSetAtlasSource_5p2pq")
-sources/3 = SubResource("TileSetAtlasSource_e08vm")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j4pb2"]
 size = Vector2(104, 49)
@@ -425,7 +393,7 @@ position = Vector2(1574, -1087)
 
 [node name="WorldTilemap" type="TileMap" parent="Environment"]
 position = Vector2(0.100006, -384)
-tile_set = SubResource("TileSet_2s1f3")
+tile_set = ExtResource("19_5jypf")
 format = 2
 layer_0/tile_data = PackedInt32Array(65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 9, 0, 0, -65527, 0, 0, -131063, 0, 0, -196599, 0, 0, -262135, 3, 0, -262136, 3, 0, -262137, 3, 0, -262138, 3, 0, -262139, 3, 0, -262140, 3, 0, -262141, 0, 0, -196605, 0, 0, -131069, 0, 0, -65533, 0, 0, 3, 0, 0, -327677, 0, 0, -393213, 0, 0, -458749, 0, 0, -524285, 0, 0, -327678, 0, 0, -327679, 0, 0, -327680, 0, 0, -262134, 3, 0, -262133, 0, 0, -327669, 0, 0, -393205, 0, 0, -458741, 0, 0, -524277, 0, 0, 65546, 0, 0, 65547, 0, 0, -262144, 3, 0, -262143, 3, 0, -262142, 3, 0, -196606, 3, 0, -131070, 3, 0, -65534, 3, 0, 2, 3, 0, 1, 3, 0, 0, 3, 0, -65536, 3, 0, -131072, 3, 0, -196608, 3, 0, -196607, 3, 0, -131071, 3, 0, -65535, 3, 0, -196604, 0, 0, -131068, 3, 0, -65532, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, -65528, 3, 0, -131064, 3, 0, -196600, 0, 0, -196601, 0, 0, -196602, 0, 0, -196603, 0, 0, -131067, 3, 0, -131066, 3, 0, -65530, 3, 0, -65529, 3, 0, -131065, 3, 0, -65531, 3, 0, -524288, 3, 0, -524287, 3, 0, -524286, 3, 0, -458750, 3, 0, -393214, 3, 0, -393215, 3, 0, -393216, 3, 0, -458752, 3, 0, -458751, 3, 0, -524284, 3, 0, -458748, 0, 0, -393212, 3, 0, -327676, 3, 0, -327675, 3, 0, -327674, 3, 0, -327673, 3, 0, -327672, 3, 0, -327671, 3, 0, -327670, 3, 0, -393206, 3, 0, -458742, 0, 0, -524278, 3, 0, -524279, 3, 0, -524280, 3, 0, -524281, 3, 0, -458746, 0, 0, -458747, 0, 0, -524283, 3, 0, -524282, 3, 0, -393210, 3, 0, -393211, 3, 0, -393209, 3, 0, -458745, 0, 0, -458744, 0, 0, -393208, 3, 0, -458743, 0, 0, -393207, 3, 0, -196598, 0, 0, -196597, 0, 0, -131061, 3, 0, -65525, 3, 0, 11, 3, 0, -65526, 3, 0, 10, 3, 0, 131072, 3, 0, 131073, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131081, 3, 0, 131082, 3, 0, 131083, 3, 0, -524276, 3, 0, -458740, 3, 0, -393204, 3, 0, -327668, 3, 0, -262132, 3, 0, -196596, 0, 0, -131060, 3, 0, -65524, 3, 0, 12, 3, 0, 65548, 0, 0, 131084, 3, 0, -131062, 3, 0)
 

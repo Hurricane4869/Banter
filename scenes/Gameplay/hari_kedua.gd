@@ -111,7 +111,7 @@ func _on_restart_button_pressed():
 
 func _on_next_level_button_pressed():
 	get_tree().paused = false
-	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_kedua.tscn", {"test": "test"})
+	Functions.load_screen_to_scene("res://scenes/Gameplay/hari_ketiga.tscn", {"test": "test"})
 
 func _on_quest_timer_timeout():
 	get_tree().paused = true

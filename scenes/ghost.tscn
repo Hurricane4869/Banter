@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dqo8s25nrbreh" path="res://assets/enemy/ghost up f2.png" id="12_ob84i"]
 [ext_resource type="Texture2D" uid="uid://bk0m2e0tbniae" path="res://assets/enemy/ghost up f3.png" id="13_1eger"]
 [ext_resource type="AudioStream" uid="uid://bit1nd8tbcwvh" path="res://Audio/SFX/ghost_flashbangs (mp3cut (mp3cut.net).mp3" id="14_tr6n6"]
-[ext_resource type="AudioStream" uid="uid://cbfxftroa7yb8" path="res://Audio/Music/ghost_come.mp3" id="15_38gdn"]
+[ext_resource type="AudioStream" uid="uid://dniucpjyxsl50" path="res://Audio/Music/ghost_come2.mp3" id="15_mm7rx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_21d1h"]
 animations = [{
@@ -128,10 +128,12 @@ color = Color(0, 0, 0, 1)
 
 [node name="Ghost_hit_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_tr6n6")
+bus = &"SFX"
 
 [node name="Ghost_chase_sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("15_38gdn")
-volume_db = 10.0
+stream = ExtResource("15_mm7rx")
+stream_paused = true
+bus = &"SFX"
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

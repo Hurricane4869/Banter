@@ -1,50 +1,53 @@
-[gd_scene load_steps=37 format=3 uid="uid://dtge71egtiyrf"]
+[gd_scene load_steps=40 format=3 uid="uid://8t18utuyh88q"]
 
-[ext_resource type="Script" path="res://scripts/hari_pertama.gd" id="1_c6wp0"]
-[ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_2lkgq"]
-[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_ocu16"]
-[ext_resource type="PackedScene" uid="uid://2jmkstysi5ps" path="res://scenes/main menu/main_menu.tscn" id="4_ew5vc"]
-[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_vqevv"]
-[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_5633u"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_33qdb"]
-[ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_mwmvf"]
-[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="9_bxtwa"]
-[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="10_7anfu"]
-[ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="10_43dar"]
-[ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="11_d3887"]
-[ext_resource type="PackedScene" uid="uid://c6am1kusod3kl" path="res://scenes/Gameplay/world_tile_map.tscn" id="11_re4js"]
-[ext_resource type="TileSet" uid="uid://c2wn1no8xhpbw" path="res://assets/environment/world_tileset.tres" id="11_yyol6"]
-[ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="12_3325k"]
-[ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="12_g3ona"]
-[ext_resource type="PackedScene" uid="uid://qkbsmm0dhgmf" path="res://scenes/Player/character_ali.tscn" id="13_3fikr"]
-[ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="13_gpgxo"]
-[ext_resource type="Texture2D" uid="uid://cm570wcmxrpme" path="res://assets/Art/ui rating/Salinan NEXT LEVEL.png" id="13_qu4gn"]
-[ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="14_bue6b"]
-[ext_resource type="Texture2D" uid="uid://cq861qg6s2hfh" path="res://assets/Art/BINTANG 0.png" id="14_emodb"]
-[ext_resource type="Texture2D" uid="uid://dqeqy8cqtwqpt" path="res://assets/Art/BINTANG 1.png" id="15_xndxm"]
-[ext_resource type="Texture2D" uid="uid://b35jd1qlrnkmg" path="res://assets/Art/BINTANG 2.png" id="16_6470y"]
-[ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="17_w8rdu"]
-[ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="22_t6dv5"]
-[ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="24_25mdx"]
-[ext_resource type="AudioStream" uid="uid://d1iqq310poelp" path="res://Audio/SFX/malam_hari_backsound.mp3" id="27_aem0c"]
+[ext_resource type="Script" path="res://scenes/Gameplay/hari_kelima.gd" id="1_wy2un"]
+[ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_kjwho"]
+[ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_smu86"]
+[ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_xw2eu"]
+[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_h5sta"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_8eh86"]
+[ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="7_slres"]
+[ext_resource type="Texture2D" uid="uid://bjbh054dy1s8j" path="res://assets/Art/PANEL KOSONGAN.png" id="8_gsffs"]
+[ext_resource type="Texture2D" uid="uid://jtipyajfnedb" path="res://assets/Art/PLAY BUTTON.png" id="9_70n5l"]
+[ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="10_wskaf"]
+[ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="11_2t508"]
+[ext_resource type="Texture2D" uid="uid://ijf04mx6lhi6" path="res://assets/Art/ui rating/Salinan RESTART LEVEL.png" id="12_4kocq"]
+[ext_resource type="Texture2D" uid="uid://cm570wcmxrpme" path="res://assets/Art/ui rating/Salinan NEXT LEVEL.png" id="13_8512h"]
+[ext_resource type="Texture2D" uid="uid://cq861qg6s2hfh" path="res://assets/Art/BINTANG 0.png" id="14_evrqd"]
+[ext_resource type="Texture2D" uid="uid://dqeqy8cqtwqpt" path="res://assets/Art/BINTANG 1.png" id="15_e8yu6"]
+[ext_resource type="Texture2D" uid="uid://b35jd1qlrnkmg" path="res://assets/Art/BINTANG 2.png" id="16_sxdvt"]
+[ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="17_0pwxi"]
+[ext_resource type="PackedScene" uid="uid://c6am1kusod3kl" path="res://scenes/Gameplay/world_tile_map.tscn" id="18_m16o5"]
+[ext_resource type="TileSet" uid="uid://c2wn1no8xhpbw" path="res://assets/environment/world_tileset.tres" id="19_8734f"]
+[ext_resource type="PackedScene" uid="uid://c7nar4uo3cmbt" path="res://scenes/dummy/object/InteractionArea.tscn" id="20_6hps7"]
+[ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="21_uds10"]
+[ext_resource type="PackedScene" uid="uid://c1hhkgowgbsf8" path="res://scenes/dummy/object/batang_kayu.tscn" id="22_hhc0m"]
+[ext_resource type="PackedScene" uid="uid://bl81mxr4l1ubh" path="res://scenes/ghost.tscn" id="23_a1tvj"]
+[ext_resource type="PackedScene" uid="uid://qkbsmm0dhgmf" path="res://scenes/Player/character_ali.tscn" id="24_crhut"]
+[ext_resource type="PackedScene" uid="uid://dcbfmnlw6itcb" path="res://scenes/dummy/object/lumpur_1_lvl_5.tscn" id="24_uafwi"]
+[ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="25_ldyhm"]
+[ext_resource type="PackedScene" uid="uid://x2v65ykejq0l" path="res://scenes/dummy/object/lumpur_2_lvl_5.tscn" id="25_ngjbe"]
+[ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="26_gy5wm"]
+[ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="27_27bdh"]
+[ext_resource type="AudioStream" uid="uid://d1iqq310poelp" path="res://Audio/SFX/malam_hari_backsound.mp3" id="30_c4kc0"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w472"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqo5m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vucx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kiaur"]
 bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 40
 corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k8n4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gf3i7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fff3b"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3aw2d"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy4ti"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic12m"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_r2eu0"]
@@ -83,24 +86,18 @@ _data = {
 "Start_Quest": SubResource("Animation_ltt5s")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0opji"]
-size = Vector2(160, 169)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80eo0"]
+size = Vector2(186, 156)
 
-[node name="HariPertama" type="Node2D"]
-script = ExtResource("1_c6wp0")
-BAD_TIME = 30
-NORMAL_TIME = 50
-GOOD_TIME = 80
+[node name="HariKelima" type="Node2D"]
+script = ExtResource("1_wy2un")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="QuestTimer" parent="UI" instance=ExtResource("2_2lkgq")]
+[node name="QuestTimer" parent="UI" instance=ExtResource("2_kjwho")]
 minute = 2
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("3_ocu16")]
-offset_left = 6.0
-offset_right = 6.0
-main_menu_scene = ExtResource("4_ew5vc")
+[node name="PauseMenu" parent="UI" instance=ExtResource("3_smu86")]
 metadata/_edit_use_anchors_ = true
 
 [node name="Pause" type="Button" parent="UI"]
@@ -110,13 +107,13 @@ offset_top = 30.0
 offset_right = 2033.0
 offset_bottom = 240.0
 scale = Vector2(0.402468, 0.4)
-theme = ExtResource("4_vqevv")
-theme_override_styles/normal = SubResource("StyleBoxFlat_0w472")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4vucx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_1k8n4")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_fff3b")
-theme_override_styles/focus = SubResource("StyleBoxFlat_xy4ti")
-icon = ExtResource("5_5633u")
+theme = ExtResource("4_xw2eu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mqo5m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kiaur")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gf3i7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3aw2d")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ic12m")
+icon = ExtResource("5_h5sta")
 
 [node name="Pause_Text" type="Label" parent="UI/Pause"]
 visibility_layer = 7
@@ -129,7 +126,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_fonts/font = ExtResource("6_8eh86")
 theme_override_font_sizes/font_size = 60
 text = "Pause
 (Esc)"
@@ -150,7 +147,7 @@ offset_bottom = 3352.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("8_mwmvf")
+texture = ExtResource("7_slres")
 metadata/_edit_use_anchors_ = true
 
 [node name="Level1" type="TextureRect" parent="UI/PlayQuest"]
@@ -159,7 +156,8 @@ offset_left = 145.0
 offset_top = 310.0
 offset_right = 1459.0
 offset_bottom = 2226.0
-texture = ExtResource("9_bxtwa")
+texture = ExtResource("8_gsffs")
+metadata/_edit_use_anchors_ = true
 
 [node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
 libraries = {
@@ -180,8 +178,9 @@ offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.5, 2.5)
-theme = ExtResource("4_vqevv")
-icon = ExtResource("10_7anfu")
+theme = ExtResource("4_xw2eu")
+icon = ExtResource("9_70n5l")
+metadata/_edit_use_anchors_ = true
 
 [node name="Play_Text" type="Label" parent="UI/PlayQuest/PlayButton"]
 visibility_layer = 7
@@ -194,11 +193,12 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_fonts/font = ExtResource("6_8eh86")
 theme_override_font_sizes/font_size = 40
 text = "Mulai"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="RatingSystem" type="Control" parent="UI"]
 process_mode = 3
@@ -216,7 +216,7 @@ offset_top = 175.0
 offset_right = 1899.0
 offset_bottom = 1742.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_43dar")
+texture = ExtResource("10_wskaf")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/RatingSystem/rating_menu"]
 layout_mode = 1
@@ -233,18 +233,18 @@ alignment = 1
 
 [node name="Chooselevel_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_vqevv")
-icon = ExtResource("11_d3887")
+theme = ExtResource("4_xw2eu")
+icon = ExtResource("11_2t508")
 
 [node name="Restart_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_vqevv")
-icon = ExtResource("12_g3ona")
+theme = ExtResource("4_xw2eu")
+icon = ExtResource("12_4kocq")
 
 [node name="NextLevel_Button" type="Button" parent="UI/RatingSystem/rating_menu/HBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_vqevv")
-icon = ExtResource("13_qu4gn")
+theme = ExtResource("4_xw2eu")
+icon = ExtResource("13_8512h")
 
 [node name="Label" type="Label" parent="UI/RatingSystem/rating_menu"]
 layout_mode = 1
@@ -262,7 +262,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_fonts/font = ExtResource("6_8eh86")
 theme_override_font_sizes/font_size = 100
 text = "KAMU BERHASIL!"
 
@@ -285,7 +285,7 @@ theme_override_constants/separation = 50
 
 [node name="star0_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star0"]
 layout_mode = 2
-texture = ExtResource("14_emodb")
+texture = ExtResource("14_evrqd")
 
 [node name="Star0_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star0"]
 visibility_layer = 7
@@ -294,7 +294,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_fonts/font = ExtResource("6_8eh86")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan kecewa..."
 horizontal_alignment = 1
@@ -319,7 +319,7 @@ theme_override_constants/separation = 50
 
 [node name="star1_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star1"]
 layout_mode = 2
-texture = ExtResource("15_xndxm")
+texture = ExtResource("15_e8yu6")
 
 [node name="Star1_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star1"]
 visibility_layer = 7
@@ -328,7 +328,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_fonts/font = ExtResource("6_8eh86")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan ikhlas..."
 horizontal_alignment = 1
@@ -353,7 +353,7 @@ theme_override_constants/separation = 50
 
 [node name="star2_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star2"]
 layout_mode = 2
-texture = ExtResource("16_6470y")
+texture = ExtResource("16_sxdvt")
 
 [node name="Star2_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star2"]
 visibility_layer = 7
@@ -362,7 +362,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_fonts/font = ExtResource("6_8eh86")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan puas!"
 horizontal_alignment = 1
@@ -387,7 +387,7 @@ theme_override_constants/separation = 50
 
 [node name="star3_icon" type="TextureRect" parent="UI/RatingSystem/rating_menu/Star3"]
 layout_mode = 2
-texture = ExtResource("17_w8rdu")
+texture = ExtResource("17_0pwxi")
 
 [node name="Star3_Label" type="Label" parent="UI/RatingSystem/rating_menu/Star3"]
 visibility_layer = 7
@@ -396,7 +396,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_33qdb")
+theme_override_fonts/font = ExtResource("6_8eh86")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan bahagia!"
 horizontal_alignment = 1
@@ -404,39 +404,71 @@ vertical_alignment = 1
 
 [node name="Environment" type="Node" parent="."]
 
-[node name="WorldTileMap" parent="Environment" instance=ExtResource("11_re4js")]
+[node name="WorldTileMap" parent="Environment" instance=ExtResource("18_m16o5")]
 
 [node name="WorldLimit" type="TileMap" parent="Environment"]
 visible = false
-tile_set = ExtResource("11_yyol6")
+tile_set = ExtResource("19_8734f")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1310688, 0, 0, -1245152, 0, 0, -1179616, 0, 0, -1114080, 0, 0, -1048544, 0, 0, -1048545, 0, 0, -1048546, 0, 0, -1048547, 0, 0, -1048548, 0, 0, -1048549, 0, 0, -1048550, 0, 0, -1048551, 0, 0, -1048552, 0, 0, -1048553, 0, 0, -1048554, 0, 0, -1048555, 0, 0, -1114091, 0, 0, -1179627, 0, 0, -1245163, 0, 0, -1310699, 0, 0, -1310698, 0, 0, -1310697, 0, 0, -1310696, 0, 0, -1310695, 0, 0, -1310694, 0, 0, -1310691, 0, 0, -1310690, 0, 0, -1310689, 0, 0, -1245160, 0, 0, -1245162, 0, 0, -1179626, 0, 0, -1114090, 0, 0, -1114089, 0, 0, -1179625, 0, 0, -1245161, 0, 0, -1179624, 0, 0, -1114088, 0, 0, -1114087, 0, 0, -1179623, 0, 0, -1245159, 0, 0, -1245158, 0, 0, -1179622, 0, 0, -1114086, 0, 0, -1114085, 0, 0, -1179621, 0, 0, -1245157, 0, 0, -1245156, 0, 0, -1179620, 0, 0, -1114084, 0, 0, -1179619, 0, 0, -1245155, 0, 0, -1114082, 0, 0, -1179618, 0, 0, -1245154, 0, 0, -1245153, 0, 0, -1179617, 0, 0, -1114081, 0, 0, -1114083, 0, 0, -1310687, 0, 0, -1245151, 0, 0, -1179615, 0, 0, -1114079, 0, 0, -1048543, 0, 0, -983007, 0, 0, -983008, 0, 0, -983009, 0, 0, -983010, 0, 0, -983011, 0, 0, -983012, 0, 0, -983013, 3, 0, -983014, 0, 0, -983015, 0, 0, -983016, 0, 0, -983017, 0, 0, -983018, 3, 0, -983019, 0, 0, -983020, 0, 0, -983021, 0, 0, -983022, 0, 0, -983023, 0, 0, -983024, 0, 0, -983025, 0, 0, -983026, 0, 0, -1310706, 0, 0, -1245170, 0, 0, -1179634, 0, 0, -1179633, 0, 0, -1245169, 0, 0, -1310705, 0, 0, -1310704, 0, 0, -1310703, 0, 0, -1310702, 0, 0, -1310701, 0, 0, -1310700, 0, 0, -1245168, 0, 0, -1179632, 0, 0, -1179631, 0, 0, -1179630, 0, 0, -1179629, 0, 0, -1179628, 0, 0, -1245166, 0, 0, -1245167, 0, 0, -1245165, 0, 0, -1245164, 0, 0, -1114094, 0, 0, -1114095, 0, 0, -1048557, 0, 0, -1048556, 0, 0, -1048558, 0, 0, -1048559, 0, 0, -1048560, 0, 0, -917490, 0, 0, -917489, 0, 0, -1048562, 0, 0, -917488, 0, 0, -917487, 0, 0, -917486, 0, 0, -917485, 0, 0, -917484, 0, 0, -917483, 0, 0, -917482, 0, 0, -917481, 0, 0, -917480, 0, 0, -917479, 0, 0, -917478, 0, 0, -917477, 0, 0, -917476, 0, 0, -917475, 0, 0, -917474, 0, 0, -917473, 0, 0, -917471, 0, 0, -917472, 0, 0, -1310692, 0, 0, -1310693, 0, 0, -1376228, 0, 0, -1376227, 0, 0, -1376226, 0, 0, -1376225, 0, 0, -1376224, 0, 0, -1376223, 0, 0, -1376229, 0, 0, -1376230, 0, 0, -1376231, 0, 0, -1376232, 0, 0, -1376233, 0, 0, -1376234, 0, 0, -1376235, 0, 0, -1376236, 0, 0, -1376237, 0, 0, -1376238, 0, 0, -1376239, 0, 0, -1376240, 0, 0, -1376241, 0, 0, -1376242, 0, 0, -1114098, 0, 0, -1048561, 0, 0, -1376243, 0, 0, -1310707, 0, 0, -1245171, 0, 0, -1179635, 0, 0, -1114099, 0, 0, -1048563, 0, 0, -983027, 0, 0)
+layer_0/tile_data = PackedInt32Array(-1376228, 0, 0, -1376227, 0, 0, -1376226, 0, 0, -1376225, 0, 0, -1376224, 0, 0, -1376223, 0, 0, -1376229, 0, 0, -1376230, 0, 0, -1376231, 0, 0, -1376232, 0, 0, -1376233, 0, 0, -1376234, 0, 0, -1376235, 0, 0, -1376236, 0, 0, -1376237, 0, 0, -1376238, 0, 0, -1376239, 0, 0, -1376240, 0, 0, -1376241, 0, 0, -1376242, 0, 0, -1376243, 0, 0, -1376256, 0, 0, -1310720, 0, 0, -1245184, 0, 0, -1179648, 0, 0, -1114112, 0, 0, -1048576, 0, 0, -983040, 0, 0, -917504, 0, 0, -851968, 0, 0, -786432, 0, 0, -720896, 0, 0, -655360, 0, 0, -589824, 0, 0, -524288, 0, 0, -458752, 0, 0, -393216, 0, 0, -327680, 0, 0, -262144, 0, 0, -196608, 0, 0, -131072, 0, 0, -65536, 0, 0, 0, 0, 0, -1376255, 0, 0, 1, 0, 0, -1376254, 0, 0, 2, 0, 0, -1376253, 0, 0, 3, 0, 0, -1376252, 0, 0, 4, 0, 0, -1376251, 0, 0, 5, 0, 0, -1376250, 0, 0, 6, 0, 0, -1376249, 0, 0, 7, 0, 0, -1376248, 0, 0, 8, 0, 0, -1376247, 0, 0, 9, 0, 0, -1376246, 0, 0, 10, 0, 0, -1376245, 0, 0, 11, 0, 0, -1376244, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, 27, 0, 0, 28, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, 32, 0, 0, 33, 0, 0, -1376222, 0, 0, -1310686, 0, 0, -1245150, 0, 0, -1179614, 0, 0, -1114078, 0, 0, -1048542, 0, 0, -983006, 0, 0, -917470, 0, 0, -851934, 0, 0, -786398, 0, 0, -720862, 0, 0, -655326, 0, 0, -589790, 0, 0, -524254, 0, 0, -458718, 0, 0, -393182, 0, 0, -327646, 0, 0, -262110, 0, 0, -196574, 0, 0, -131038, 0, 0, -65502, 0, 0, 34, 0, 0)
 
-[node name="WorldCollider" type="TileMap" parent="Environment"]
-visible = false
-tile_set = ExtResource("11_yyol6")
-format = 2
-layer_0/tile_data = PackedInt32Array(-851954, 3, 0, -851953, 3, 0, -851952, 3, 0, -851951, 3, 0, -851950, 3, 0, -851949, 3, 0, -851948, 3, 0, -851947, 3, 0, -851946, 3, 0, -851945, 3, 0, -851944, 3, 0, -851943, 3, 0, -1179636, 3, 0, -1114100, 3, 0)
-
-[node name="AntarPaket" parent="Environment" instance=ExtResource("12_3325k")]
+[node name="AntarPaket" parent="Environment" instance=ExtResource("20_6hps7")]
 visibility_layer = 4
-position = Vector2(1905, -2333)
+position = Vector2(1456, -272)
 action_name = "antar paket"
 
-[node name="Tanda" parent="Environment/AntarPaket" instance=ExtResource("22_t6dv5")]
+[node name="Tanda" parent="Environment/AntarPaket" instance=ExtResource("21_uds10")]
 z_index = 2
-position = Vector2(0, -17)
+position = Vector2(-1, -8)
 scale = Vector2(0.25, 0.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/AntarPaket"]
-position = Vector2(-1, 112.5)
-shape = SubResource("RectangleShape2D_0opji")
+position = Vector2(-80, -64)
+shape = SubResource("RectangleShape2D_80eo0")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Environment"]
 position = Vector2(-56, -8)
 color = Color(0.359216, 0.00115514, 0.864972, 1)
 
-[node name="Character_Ali" parent="." groups=["Player"] instance=ExtResource("13_3fikr")]
+[node name="BatangKayu" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(2072, -2216)
+rotation = 1.5708
+
+[node name="BatangKayu2" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(2102.1, -2131.13)
+rotation = 1.5708
+
+[node name="BatangKayu3" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(3155.87, -1383.9)
+
+[node name="BatangKayu4" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(3233.87, -1353.9)
+
+[node name="BatangKayu5" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(1240.1, -2032.13)
+
+[node name="BatangKayu6" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(1318.1, -2002.13)
+
+[node name="BatangKayu7" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(1240.1, -865.125)
+
+[node name="BatangKayu8" parent="Environment" instance=ExtResource("22_hhc0m")]
+position = Vector2(1318.1, -835.125)
+
+[node name="Ghost" parent="Environment" instance=ExtResource("23_a1tvj")]
+position = Vector2(1083, -1557)
+
+[node name="Ghost2" parent="Environment" instance=ExtResource("23_a1tvj")]
+position = Vector2(2424, -1194)
+
+[node name="Lumpur1lvl5" parent="Environment" instance=ExtResource("24_uafwi")]
+position = Vector2(3208, -1743)
+
+[node name="Lumpur2lvl5" parent="Environment" instance=ExtResource("25_ngjbe")]
+position = Vector2(820, -1032)
+
+[node name="Character_Ali" parent="." groups=["Player"] instance=ExtResource("24_crhut")]
 position = Vector2(4200, -2216)
 scale = Vector2(1.2, 1.2)
 ACCEL = 800
@@ -447,20 +479,20 @@ starting_direction = Vector2(-1, 0)
 [node name="Sound" type="Node" parent="."]
 
 [node name="open_handphone_sound" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("13_gpgxo")
+stream = ExtResource("25_ldyhm")
 bus = &"SFX"
 
 [node name="day_1_bgm" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("14_bue6b")
+stream = ExtResource("26_gy5wm")
 volume_db = -5.0
 bus = &"Music"
 
 [node name="Finish_quest_sound" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("24_25mdx")
+stream = ExtResource("27_27bdh")
 bus = &"SFX"
 
 [node name="malam_hari_backsound" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource("27_aem0c")
+stream = ExtResource("30_c4kc0")
 volume_db = 5.0
 bus = &"Music"
 

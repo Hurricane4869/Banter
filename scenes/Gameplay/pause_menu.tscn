@@ -368,6 +368,7 @@ theme = ExtResource("3_u7xel")
 icon = ExtResource("18_a68j0")
 
 [node name="Sound_Panel" type="TextureRect" parent="Handphone"]
+visible = false
 layout_mode = 0
 offset_left = 148.125
 offset_top = 306.0
@@ -623,7 +624,6 @@ theme = ExtResource("3_u7xel")
 icon = ExtResource("3_bnieb")
 
 [node name="Task_Panel" type="TextureRect" parent="Handphone"]
-visible = false
 layout_mode = 0
 offset_left = 145.0
 offset_top = 306.0
@@ -665,11 +665,12 @@ libraries = {
 "": SubResource("AnimationLibrary_ympw5")
 }
 
-[node name="button_hp_audio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("22_5bwi5")
-
 [node name="open_handphone" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_32clx")
+bus = &"SFX"
+
+[node name="button_hp_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_5bwi5")
 bus = &"SFX"
 
 [connection signal="mouse_entered" from="Handphone/PausePanel/Resume" to="." method="_on_resume_mouse_entered"]

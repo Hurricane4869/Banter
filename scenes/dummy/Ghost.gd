@@ -38,7 +38,7 @@ func _on_detection_area_body_exited(body):
 	player_chase = false
 
 func _on_stun_area_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("player"):
 		ghost_chase_sound.stop()
 		ghost_hit_sound.play()
 		black_screen.visible = true

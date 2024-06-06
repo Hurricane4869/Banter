@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxm4ntv65o7cf"]
+
+[ext_resource type="Script" path="res://scenes/dummy/object/lumpur.gd" id="1_aykcs"]
+[ext_resource type="Texture2D" uid="uid://bx07jx3t4n3h8" path="res://assets/environment/lumpur level 4 (v1).png" id="1_wwsne"]
+[ext_resource type="AudioStream" uid="uid://dgv1njanro3p4" path="res://Audio/SFX/lumpur_sfx.mp3" id="3_qxqkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tv5yb"]
+size = Vector2(208, 184)
+
+[node name="Lumpur1lvl4" type="Area2D" groups=["lumpur"]]
+collision_mask = 2
+linear_damp_space_override = 3
+linear_damp = 100.0
+script = ExtResource("1_aykcs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_wwsne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_tv5yb")
+
+[node name="Lumpur" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qxqkg")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://qkbsmm0dhgmf"]
+[gd_scene load_steps=37 format=3 uid="uid://qkbsmm0dhgmf"]
 
 [ext_resource type="Script" path="res://scripts/character_movement.gd" id="1_gkjqa"]
 [ext_resource type="SpriteFrames" uid="uid://dijh2p50mtae0" path="res://assets/player/animation_ali.tres" id="2_gk1s7"]
 [ext_resource type="Texture2D" uid="uid://c0xhs4d54woab" path="res://assets/dummy/Light.png" id="3_disyn"]
+[ext_resource type="AudioStream" uid="uid://c8icb7d3sii4l" path="res://Audio/SFX/idle motor.mp3" id="4_bxu6l"]
+[ext_resource type="AudioStream" uid="uid://durrduv84mtif" path="res://Audio/SFX/starts_ride.mp3" id="5_vvrm7"]
 
 [sub_resource type="Animation" id="Animation_gj8gv"]
 length = 0.001
@@ -374,10 +376,10 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.8, 0.9)
 metadata/_snap_enabled = true
 
-[node name="Character_Ali" type="CharacterBody2D"]
+[node name="Character_Ali" type="CharacterBody2D" groups=["player"]]
 light_mask = 2
 visibility_layer = 2
-z_index = 5
+z_index = 2
 collision_layer = 2
 script = ExtResource("1_gkjqa")
 
@@ -464,3 +466,12 @@ rotation_smoothing_enabled = true
 rotation_smoothing_speed = 2.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="IdleMotor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_bxu6l")
+volume_db = 5.0
+bus = &"SFX"
+
+[node name="DrivingMotor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_vvrm7")
+volume_db = 5.0

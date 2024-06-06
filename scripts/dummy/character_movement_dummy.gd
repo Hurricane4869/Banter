@@ -12,7 +12,6 @@ extends CharacterBody2D
 @onready var light_down = $Lighting/LightBeam_Down
 @onready var collision = $CollisionShape2D
 
-		
 func player():
 	pass
 
