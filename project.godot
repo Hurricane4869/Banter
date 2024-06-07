@@ -14,7 +14,7 @@ config/name="Banter"
 config/tags=PackedStringArray("proyek_wpg")
 run/main_scene="res://scenes/main menu/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon/cover itch.io banter.png"
 
 [autoload]
 
@@ -35,6 +35,12 @@ window/canvas_textures/default_texture_filter=1
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[importer_defaults]
+
+animation_library={
+"animation/fps": 60.0
+}
 
 [input]
 

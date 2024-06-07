@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bl81mxr4l1ubh"]
+[gd_scene load_steps=21 format=3 uid="uid://bl81mxr4l1ubh"]
 
 [ext_resource type="Script" path="res://scenes/dummy/Ghost.gd" id="1_g7qbv"]
 [ext_resource type="Texture2D" uid="uid://cdv88ubepdmi8" path="res://assets/enemy/ghost down f1.png" id="2_hoe8u"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bt386lght0mbv" path="res://assets/enemy/ghost up f1.png" id="11_sc484"]
 [ext_resource type="Texture2D" uid="uid://dqo8s25nrbreh" path="res://assets/enemy/ghost up f2.png" id="12_ob84i"]
 [ext_resource type="Texture2D" uid="uid://bk0m2e0tbniae" path="res://assets/enemy/ghost up f3.png" id="13_1eger"]
+[ext_resource type="Texture2D" uid="uid://dhxovwpk4qe5v" path="res://assets/player/Other/Ali Pingsan.png" id="14_88xf1"]
 [ext_resource type="AudioStream" uid="uid://bit1nd8tbcwvh" path="res://Audio/SFX/ghost_flashbangs (mp3cut (mp3cut.net).mp3" id="14_tr6n6"]
 [ext_resource type="AudioStream" uid="uid://dniucpjyxsl50" path="res://Audio/Music/ghost_come2.mp3" id="15_mm7rx"]
 
@@ -119,12 +120,19 @@ shape = SubResource("RectangleShape2D_tdivf")
 
 [node name="Black_Screen" type="ColorRect" parent="."]
 visible = false
+z_index = 15
 offset_left = -2135.0
 offset_top = -1873.0
 offset_right = -2095.0
 offset_bottom = -1833.0
 scale = Vector2(105.56, 105.56)
 color = Color(0, 0, 0, 1)
+
+[node name="AliPingsan" type="Sprite2D" parent="."]
+visible = false
+z_index = 15
+scale = Vector2(0.126, 0.126)
+texture = ExtResource("14_88xf1")
 
 [node name="Ghost_hit_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_tr6n6")

@@ -452,7 +452,7 @@ position = Vector2(3208, -1743)
 [node name="Lumpur2lvl5" parent="Environment" instance=ExtResource("25_ngjbe")]
 position = Vector2(820, -1032)
 
-[node name="Character_Ali" parent="." groups=["Player"] instance=ExtResource("24_crhut")]
+[node name="Character_Ali" parent="." instance=ExtResource("24_crhut")]
 position = Vector2(4200, -2216)
 scale = Vector2(1.2, 1.2)
 ACCEL = 800

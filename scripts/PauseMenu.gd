@@ -58,11 +58,14 @@ func pause():
 	await open_handphone.finished
 	update_tasks()
 
-func testEsc():
+func _input(event):
 	if Input.is_action_just_pressed("esc") and !get_tree().paused:
 		pause()
 	elif Input.is_action_just_pressed("esc") and get_tree().paused:
 		_on_resume_pressed()
+		
+#func testEsc():
+
 
 func _on_resume_pressed():
 	resume()
@@ -77,9 +80,8 @@ func _on_quit_pressed():
 	await get_tree().create_timer(0.75).timeout      
 	Functions.load_screen_to_scene("res://scenes/main menu/main_menu.tscn", {"test": "test"})
 
-
-func _process(delta):
-	testEsc()
+#func _process(delta):
+	#testEsc()
 
 func _on_restart_mouse_entered():
 	restart_text.visible = true

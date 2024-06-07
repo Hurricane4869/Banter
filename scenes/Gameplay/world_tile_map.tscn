@@ -350,12 +350,10 @@ position = Vector2(1806, -594)
 scale = Vector2(0.3, 0.3)
 
 [node name="Pagar" parent="Rumah/RumahMerahBawah3" instance=ExtResource("3_hk66x")]
-z_index = 1
 position = Vector2(-420, 566.667)
 scale = Vector2(1, 1)
 
 [node name="Pagar2" parent="Rumah/RumahMerahBawah3" instance=ExtResource("3_hk66x")]
-z_index = 1
 position = Vector2(886.667, 566.667)
 scale = Vector2(1, 1)
 
@@ -1217,14 +1215,12 @@ position = Vector2(-312, 1176)
 [node name="Pohon10" parent="Decoration/AroundRumahMerahCyanBawah" instance=ExtResource("6_v2cqm")]
 light_mask = 1
 visibility_layer = 1
-z_index = 3
 position = Vector2(2600, -1904)
 scale = Vector2(0.36422, 0.36422)
 
 [node name="Pohon4" parent="Decoration/AroundRumahMerahCyanBawah" instance=ExtResource("6_v2cqm")]
 light_mask = 1
 visibility_layer = 1
-z_index = 3
 position = Vector2(2520, -1791)
 scale = Vector2(0.34211, 0.34211)
 
@@ -1244,7 +1240,6 @@ scale = Vector2(0.472961, 0.472961)
 [node name="Pohon3" parent="Decoration/AroundRumahMerahCyanBawah" instance=ExtResource("6_v2cqm")]
 light_mask = 1
 visibility_layer = 1
-z_index = 3
 position = Vector2(2592, -1701)
 scale = Vector2(0.30211, 0.30211)
 
@@ -1394,8 +1389,8 @@ script = ExtResource("13_xi3xt")
 
 [node name="Tanda" parent="Addresses/JalanMasuk1" instance=ExtResource("14_sqhi0")]
 z_index = 1
-position = Vector2(-38, -47)
-scale = Vector2(0.25, 0.25)
+position = Vector2(-38, -54)
+scale = Vector2(0.3, 0.3)
 
 [node name="Label" type="Label" parent="Addresses/JalanMasuk1/Tanda"]
 visible = false
@@ -1412,8 +1407,10 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Masuk No. 1"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Masuk 
+No. 1
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1446,8 +1443,9 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Masuk No. 2"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Masuk 
+No. 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1480,8 +1478,9 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Buntu No. 1"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Buntu 
+No. 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1514,8 +1513,9 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Buntu No. 2"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Buntu 
+No. 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1548,8 +1548,9 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Buntu No. 2"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Buntu 
+No. 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1568,21 +1569,23 @@ position = Vector2(-38, -47)
 scale = Vector2(0.25, 0.25)
 
 [node name="Label" type="Label" parent="Addresses/JalanSempit1/Tanda"]
+visible = false
 layout_direction = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -281.5
-offset_right = -26.0
-offset_bottom = -252.5
+offset_left = -292.5
+offset_top = -332.5
+offset_right = -7.5
+offset_bottom = -201.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Sempit No. 1"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Sempit 
+No. 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1608,15 +1611,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -281.5
-offset_right = -26.0
-offset_bottom = -252.5
+offset_left = -292.5
+offset_top = -332.5
+offset_right = -7.5
+offset_bottom = -201.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Sempit No. 2"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Sempit 
+No. 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1642,15 +1646,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -281.5
-offset_right = -26.0
-offset_bottom = -252.5
+offset_left = -293.5
+offset_top = -321.5
+offset_right = -6.5
+offset_bottom = -204.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Tikungan No. 1"
+theme_override_font_sizes/font_size = 40
+text = "Jalan Tikungan 
+No. 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1676,15 +1681,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -281.5
-offset_right = -26.0
-offset_bottom = -252.5
+offset_left = -293.5
+offset_top = -321.5
+offset_right = -6.5
+offset_bottom = -204.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Tikungan No. 2"
+theme_override_font_sizes/font_size = 40
+text = "Jalan Tikungan 
+No. 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1710,15 +1716,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -281.5
-offset_right = -26.0
-offset_bottom = -252.5
+offset_left = -294.0
+offset_top = -321.5
+offset_right = -7.0
+offset_bottom = -204.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Tikungan No. 3w"
+theme_override_font_sizes/font_size = 40
+text = "Jalan Tikungan 
+No. 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1726,17 +1733,17 @@ vertical_alignment = 1
 position = Vector2(-121, 8)
 shape = SubResource("RectangleShape2D_lrutg")
 
-[node name="JalanTikungan4" type="Area2D" parent="Addresses/JalanTikungan3"]
-position = Vector2(-328, -1)
+[node name="JalanTikungan4" type="Area2D" parent="Addresses"]
+position = Vector2(1153, -1712)
 collision_mask = 2
 script = ExtResource("13_xi3xt")
 
-[node name="Tanda" parent="Addresses/JalanTikungan3/JalanTikungan4" instance=ExtResource("14_sqhi0")]
+[node name="Tanda" parent="Addresses/JalanTikungan4" instance=ExtResource("14_sqhi0")]
 z_index = 1
 position = Vector2(-38, -47)
 scale = Vector2(0.25, 0.25)
 
-[node name="Label" type="Label" parent="Addresses/JalanTikungan3/JalanTikungan4/Tanda"]
+[node name="Label" type="Label" parent="Addresses/JalanTikungan4/Tanda"]
 visible = false
 layout_direction = 1
 anchors_preset = 8
@@ -1744,19 +1751,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -281.5
-offset_right = -26.0
-offset_bottom = -252.5
+offset_left = -293.5
+offset_top = -321.5
+offset_right = -6.5
+offset_bottom = -204.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Tikungan No. 4"
+theme_override_font_sizes/font_size = 40
+text = "Jalan Tikungan
+No. 4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanTikungan3/JalanTikungan4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Addresses/JalanTikungan4"]
 position = Vector2(47, 8)
 shape = SubResource("RectangleShape2D_lrutg")
 
@@ -1786,8 +1794,9 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Saleh No. 1"
+theme_override_font_sizes/font_size = 40
+text = "Jalan Saleh 
+No. 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1802,7 +1811,6 @@ collision_mask = 2
 script = ExtResource("13_xi3xt")
 
 [node name="Tanda" parent="Addresses/JalanSaleh2" instance=ExtResource("14_sqhi0")]
-z_index = 1
 position = Vector2(-38, -47)
 scale = Vector2(0.25, 0.25)
 
@@ -1821,8 +1829,9 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Saleh No. 2"
+theme_override_font_sizes/font_size = 40
+text = "Jalan Saleh 
+No. 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1837,7 +1846,6 @@ collision_mask = 2
 script = ExtResource("13_xi3xt")
 
 [node name="Tanda" parent="Addresses/JalanSaleh3" instance=ExtResource("14_sqhi0")]
-z_index = 1
 position = Vector2(-38, -47)
 scale = Vector2(0.25, 0.25)
 
@@ -1849,15 +1857,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -282.0
-offset_top = -281.5
-offset_right = -26.0
-offset_bottom = -252.5
+offset_left = -278.0
+offset_top = -331.0
+offset_right = -22.0
+offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Saleh No. 3"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Saleh 
+No. 3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1891,8 +1900,9 @@ offset_bottom = -252.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("15_sshf3")
-theme_override_font_sizes/font_size = 25
-text = "Jalan Saleh No. 4"
+theme_override_font_sizes/font_size = 45
+text = "Jalan Saleh 
+No. 4"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1920,8 +1930,8 @@ shape = SubResource("RectangleShape2D_lrutg")
 [connection signal="body_exited" from="Addresses/JalanTikungan2" to="Addresses/JalanTikungan2" method="_on_body_exited"]
 [connection signal="body_entered" from="Addresses/JalanTikungan3" to="Addresses/JalanTikungan3" method="_on_body_entered"]
 [connection signal="body_exited" from="Addresses/JalanTikungan3" to="Addresses/JalanTikungan3" method="_on_body_exited"]
-[connection signal="body_entered" from="Addresses/JalanTikungan3/JalanTikungan4" to="Addresses/JalanTikungan3/JalanTikungan4" method="_on_body_entered"]
-[connection signal="body_exited" from="Addresses/JalanTikungan3/JalanTikungan4" to="Addresses/JalanTikungan3/JalanTikungan4" method="_on_body_exited"]
+[connection signal="body_entered" from="Addresses/JalanTikungan4" to="Addresses/JalanTikungan4" method="_on_body_entered"]
+[connection signal="body_exited" from="Addresses/JalanTikungan4" to="Addresses/JalanTikungan4" method="_on_body_exited"]
 [connection signal="body_entered" from="Addresses/JalanSaleh1" to="Addresses/JalanSaleh1" method="_on_body_entered"]
 [connection signal="body_exited" from="Addresses/JalanSaleh1" to="Addresses/JalanSaleh1" method="_on_body_exited"]
 [connection signal="body_entered" from="Addresses/JalanSaleh2" to="Addresses/JalanSaleh2" method="_on_body_entered"]

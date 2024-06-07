@@ -9,7 +9,6 @@ extends Node2D
 @export var GOOD_TIME: int
 
 #UI
-@onready var play_button = $UI/PlayDummy
 @onready var pause_button = $UI/Pause
 @onready var pause_text = $UI/Pause/Pause_Text
 @onready var pause_menu = $UI/PauseMenu
@@ -35,13 +34,8 @@ var status_paket: bool = false
 var time_left: int
 
 func _ready():
-	pause_text.visible = false
-	timer.start()
-	handphone.play("Quest_Appear");
-	open_handphone_sound.play()
-	await open_handphone_sound.finished
-	get_tree().paused = true
-	pause_menu.current_level = 1
+	character_ali.set_physics_process(false)
+
 	
 func _process(_delta):
 	if get_tree().paused == false:
@@ -89,6 +83,7 @@ func _on_pause_pressed():
 func _on_play_button_pressed():
 	handphone.play_backwards("Start_Quest")
 	get_tree().paused = false
+	character_ali.set_physics_process(true)
 	open_handphone_sound.play()
 	await open_handphone_sound.finished
 	bgm_lvl_1.play()
@@ -111,3 +106,15 @@ func _on_quest_timer_timeout():
 	star_0.visible = true
 	black_overlay.visible = true
 	rating_system.visible = true
+
+func _unhandled_key_input(event):
+	if event.is_action_pressed("skip"):
+		$UI/Tutorial.hide()
+		pause_text.visible = false
+		timer.start()
+		handphone.play("Quest_Appear");
+		open_handphone_sound.play()
+		await open_handphone_sound.finished
+		get_tree().paused = true
+		pause_menu.current_level = 1
+		

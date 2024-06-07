@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var ACCEL:  = 0
-@export var FRICTION = 0
-@export var MAX_SPEED = 0
+@export var ACCEL: int = 0
+@export var FRICTION: int = 0
+@export var MAX_SPEED: int = 0
 @export var starting_direction: Vector2
 
 enum {IDLE, DRIVE}
@@ -27,7 +27,8 @@ var animTree_state_keys = [
 @onready var light_h = $Lighting/LightBeam_Horizontal
 @onready var light_up = $Lighting/LightBeam_Up
 @onready var light_down = $Lighting/LightBeam_Down
-@onready var collision = $CollisionShape2D
+@onready var collision_base = $CollisionShape2D
+@onready var collision_area2d = $Area2D/CollisionShape2D
 @onready var camera = $Camera2D
 @onready var idle_motor = $IdleMotor
 @onready var driving_motor = $DrivingMotor
@@ -96,29 +97,43 @@ func animate() -> void:
 func update_light_collision(position: Vector2) -> void:
 	match position:
 		Vector2.RIGHT:
-			collision.rotation_degrees = 0
-			collision.position = Vector2(6.5, 28.5)
+			collision_base.rotation_degrees = 0
+			collision_base.position = Vector2(6.5, 28.5)
+			collision_area2d.rotation_degrees = 0
+			collision_area2d.position = Vector2(6.5, 28.5)
 			light_down.hide()
 			light_up.hide()
 			light_h.show()
 			light_h.scale.x = abs(light_h.scale.x) * -1
 		Vector2.LEFT:
-			collision.rotation_degrees = 0
-			collision.position = Vector2(-6.5, 28.5)
+			collision_base.rotation_degrees = 0
+			collision_base.position = Vector2(-6.5, 28.5)
+			collision_area2d.rotation_degrees = 0
+			collision_area2d.position = Vector2(-6.5, 28.5)
 			light_down.hide()
 			light_up.hide()
 			light_h.show()
 			light_h.scale.x = abs(light_h.scale.x) * 1
 		Vector2.UP:
-			collision.rotation_degrees = 90
-			collision.position = Vector2(-3, 12)
+			collision_base.rotation_degrees = 90
+			collision_base.position = Vector2(-3, 12)
+			collision_area2d.rotation_degrees = 90
+			collision_area2d.position = Vector2(-3, 12)
 			light_h.hide()
 			light_down.hide()
 			light_up.show()
 		Vector2.DOWN:
-			collision.rotation_degrees = 90
-			collision.position = Vector2(0, 20)
+			collision_base.rotation_degrees = 90
+			collision_base.position = Vector2(0, 20)
+			collision_area2d.rotation_degrees = 90
+			collision_area2d.position = Vector2(0, 20)
 			light_up.hide()
 			light_h.hide()
 			light_down.show()
 
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("lumpur"):
+		MAX_SPEED = 100
+
+func _on_area_2d_area_exited(area):
+		MAX_SPEED = 200

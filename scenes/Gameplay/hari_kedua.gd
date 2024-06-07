@@ -9,7 +9,6 @@ extends Node2D
 @export var GOOD_TIME: int
 
 #UI
-@onready var play_button = $UI/PlayDummy
 @onready var pause_button = $UI/Pause
 @onready var pause_text = $UI/Pause/Pause_Text
 @onready var pause_menu = $UI/PauseMenu

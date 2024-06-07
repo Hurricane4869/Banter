@@ -475,3 +475,14 @@ bus = &"SFX"
 [node name="DrivingMotor" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_vvrm7")
 volume_db = 5.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 2
+position = Vector2(-6.5, 28.5)
+scale = Vector2(1.00375, 0.714715)
+shape = SubResource("RectangleShape2D_553ny")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
