@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwyj3pxv0lp34"
-path="res://.godot/imported/DETAIL MISI lvl 3.png-3f317f1a94edb044754334bd9aaad658.ctex"
+uid="uid://drxn5prph88o2"
+path="res://.godot/imported/DETAIL MISI lvl 3 tanpa back.png-268def322f2395085983922b6912e87e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/DETAIL MISI lvl 3.png"
-dest_files=["res://.godot/imported/DETAIL MISI lvl 3.png-3f317f1a94edb044754334bd9aaad658.ctex"]
+source_file="res://assets/Art/DETAIL MISI lvl 3 tanpa back.png"
+dest_files=["res://.godot/imported/DETAIL MISI lvl 3 tanpa back.png-268def322f2395085983922b6912e87e.ctex"]
 
 [params]
 

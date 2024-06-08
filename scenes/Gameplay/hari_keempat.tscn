@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_merai"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_8j4cw"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="7_70c2r"]
-[ext_resource type="Texture2D" uid="uid://bp12i3v2rkt3w" path="res://assets/Art/DETAIL MISI lvl 4.png" id="8_wnwsq"]
+[ext_resource type="Texture2D" uid="uid://t1ampf64pnnv" path="res://assets/Art/DETAIL MISI lvl 4 tanpa back.png" id="8_p2wio"]
 [ext_resource type="Texture2D" uid="uid://cvxx8kkwb0ha6" path="res://assets/Art/tombol mulai.png" id="9_y16gl"]
 [ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="10_5r2f2"]
 [ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="11_xg381"]
@@ -154,13 +154,13 @@ scale = Vector2(0.32, 0.32)
 texture = ExtResource("7_70c2r")
 metadata/_edit_use_anchors_ = true
 
-[node name="Level1" type="TextureRect" parent="UI/PlayQuest"]
+[node name="Level4" type="TextureRect" parent="UI/PlayQuest"]
 layout_mode = 0
 offset_left = 145.0
 offset_top = 310.0
 offset_right = 1459.0
 offset_bottom = 2226.0
-texture = ExtResource("8_wnwsq")
+texture = ExtResource("8_p2wio")
 metadata/_edit_use_anchors_ = true
 
 [node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
