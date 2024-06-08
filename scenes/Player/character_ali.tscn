@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/character_movement.gd" id="1_gkjqa"]
 [ext_resource type="SpriteFrames" uid="uid://dijh2p50mtae0" path="res://assets/player/animation_ali.tres" id="2_gk1s7"]
 [ext_resource type="Texture2D" uid="uid://c0xhs4d54woab" path="res://assets/dummy/Light.png" id="3_disyn"]
-[ext_resource type="AudioStream" uid="uid://c8icb7d3sii4l" path="res://Audio/SFX/idle motor.mp3" id="4_bxu6l"]
-[ext_resource type="AudioStream" uid="uid://durrduv84mtif" path="res://Audio/SFX/starts_ride.mp3" id="5_vvrm7"]
+[ext_resource type="AudioStream" uid="uid://by3mtt45rp7tm" path="res://Audio/SFX/idle motor (mp3cut.net).mp3" id="4_n4mkg"]
+[ext_resource type="AudioStream" uid="uid://dl11oc6m4j81j" path="res://Audio/SFX/starts_ride (mp3cut.net).mp3" id="5_04hpj"]
 
 [sub_resource type="Animation" id="Animation_gj8gv"]
 length = 0.001
@@ -468,12 +468,12 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="IdleMotor" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_bxu6l")
+stream = ExtResource("4_n4mkg")
 volume_db = 5.0
 bus = &"SFX"
 
 [node name="DrivingMotor" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_vvrm7")
+stream = ExtResource("5_04hpj")
 volume_db = 5.0
 
 [node name="Area2D" type="Area2D" parent="."]

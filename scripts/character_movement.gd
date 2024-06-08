@@ -36,7 +36,6 @@ var animTree_state_keys = [
 func _ready():
 	set_camera_limit()
 	state = IDLE
-	idle_motor.play()
 	blend_position = starting_direction
 	animate()
 	update_light_collision(blend_position)
@@ -51,7 +50,21 @@ func _physics_process(delta):
 	elif blend_position.y > 0: 
 		update_light_collision(Vector2.DOWN) 
 	elif  blend_position.y < 0:
-		update_light_collision(Vector2.UP) 
+		update_light_collision(Vector2.UP)
+	update_audio(true)
+
+func update_audio(is_playing: bool) -> void:
+	if state == IDLE:
+		if is_playing and !idle_motor.is_playing():
+			idle_motor.play()
+		elif !is_playing:
+			idle_motor.stop()
+	elif state == DRIVE:
+		if is_playing and !driving_motor.is_playing():
+			driving_motor.play()
+		elif !is_playing:
+			driving_motor.stop()
+
 
 func set_camera_limit():
 	var tilemap_rect = get_parent().get_node("Environment/WorldLimit").get_used_rect()
@@ -68,13 +81,9 @@ func move(delta):
 	# Mengecek kondisi input untuk menentukan 
 	if direction == Vector2.ZERO:
 		state = IDLE
-		#driving_motor.set_stream_paused(true)
-		#idle_motor.set_stream_paused(false)
 		apply_friction(FRICTION * delta)
 	else: 
 		state = DRIVE
-		#idle_motor.set_stream_paused(true)
-		#driving_motor.set_stream_paused(false)
 		apply_movement(direction * ACCEL * delta)
 		blend_position = direction
 	move_and_slide()

@@ -20,6 +20,8 @@ extends Node2D
 @onready var star_1 = $UI/RatingSystem/rating_menu/Star1
 @onready var star_2 = $UI/RatingSystem/rating_menu/Star2
 @onready var star_3 = $UI/RatingSystem/rating_menu/Star3
+@onready var label_berhasil = $UI/RatingSystem/rating_menu/label_berhasil
+@onready var label_gagal = $UI/RatingSystem/rating_menu/label_gagal
 
 #Sound
 @onready var open_handphone_sound = $Sound/open_handphone_sound
@@ -62,10 +64,13 @@ func _antar_paket():
 func _process_rating(time_left):
 	if time_left >= GOOD_TIME:  # More than 2 minutes
 		_show_rating(3)
+		label_berhasil.visible = true
 	elif time_left >= NORMAL_TIME and time_left < GOOD_TIME:  # More than 1 minute
 		_show_rating(2)
+		label_berhasil.visible = true	
 	elif time_left > BAD_TIME and time_left < NORMAL_TIME:  # More than 0 seconds
 		_show_rating(1)
+		label_berhasil.visible = true
 	elif time_left <= BAD_TIME:  # 0 seconds or less
 		get_tree().paused = true
 		_show_rating(0)
@@ -107,6 +112,7 @@ func _on_next_level_button_pressed():
 
 func _on_quest_timer_timeout():
 	get_tree().paused = true
+	label_gagal.visible = true
 	star_0.visible = true
 	black_overlay.visible = true
 	rating_system.visible = true

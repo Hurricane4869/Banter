@@ -99,7 +99,7 @@ GOOD_TIME = 150
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="QuestTimer" parent="UI" instance=ExtResource("2_k1ty4")]
-second = 5
+minute = 3
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("3_5xu0q")]
 metadata/_edit_use_anchors_ = true

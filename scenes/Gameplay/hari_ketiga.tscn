@@ -226,7 +226,8 @@ layout_mode = 2
 theme = ExtResource("4_7poft")
 icon = ExtResource("13_18huc")
 
-[node name="Label" type="Label" parent="UI/RatingSystem/rating_menu"]
+[node name="label_berhasil" type="Label" parent="UI/RatingSystem/rating_menu"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -245,6 +246,28 @@ theme_override_constants/outline_size = 30
 theme_override_fonts/font = ExtResource("6_3n0m0")
 theme_override_font_sizes/font_size = 100
 text = "KAMU BERHASIL!"
+
+[node name="label_gagal" type="Label" parent="UI/RatingSystem/rating_menu"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -424.5
+offset_top = -655.5
+offset_right = 456.5
+offset_bottom = -514.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("6_3n0m0")
+theme_override_font_sizes/font_size = 100
+text = "KAMU GAGAL!"
+horizontal_alignment = 1
 
 [node name="Star0" type="VBoxContainer" parent="UI/RatingSystem/rating_menu"]
 visible = false
