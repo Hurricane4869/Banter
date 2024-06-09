@@ -49,22 +49,23 @@ func _physics_process(delta):
 		update_light_collision(Vector2.LEFT) 
 	elif blend_position.y > 0: 
 		update_light_collision(Vector2.DOWN) 
-	elif  blend_position.y < 0:
+	elif blend_position.y < 0:
 		update_light_collision(Vector2.UP)
 	update_audio(true)
 
 func update_audio(is_playing: bool) -> void:
 	if state == IDLE:
-		if is_playing and !idle_motor.is_playing():
-			idle_motor.play()
-		elif !is_playing:
-			idle_motor.stop()
+		if is_playing:
+			if !idle_motor.is_playing():
+				idle_motor.play()
+			if driving_motor.is_playing():
+				driving_motor.stop()
 	elif state == DRIVE:
-		if is_playing and !driving_motor.is_playing():
-			driving_motor.play()
-		elif !is_playing:
-			driving_motor.stop()
-
+		if is_playing:
+			if !driving_motor.is_playing():
+				driving_motor.play()
+			if idle_motor.is_playing():
+				idle_motor.stop()
 
 func set_camera_limit():
 	var tilemap_rect = get_parent().get_node("Environment/WorldLimit").get_used_rect()
