@@ -636,6 +636,7 @@ offset_bottom = 2244.0
 texture = ExtResource("11_to2fa")
 
 [node name="Misi_Judul" type="Label" parent="Handphone/Task_Panel"]
+visible = false
 layout_mode = 0
 offset_left = 550.0
 offset_top = 130.0

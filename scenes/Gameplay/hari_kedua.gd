@@ -9,8 +9,6 @@ extends Node2D
 @export var GOOD_TIME: int
 
 #UI
-@onready var pause_button = $UI/Pause
-@onready var pause_text = $UI/Pause/Pause_Text
 @onready var pause_menu = $UI/PauseMenu
 @onready var black_overlay = get_node("UI/PauseMenu/ColorRect")
 @onready var rating_system = $UI/RatingSystem
@@ -36,7 +34,7 @@ var status_paket: bool = false
 var time_left: int
 
 func _ready():
-	pause_text.visible = false
+	GameStarted.game_started = false
 	timer.start()
 	handphone.play("Quest_Appear");
 	open_handphone_sound.play()
@@ -60,6 +58,7 @@ func _antar_paket():
 	black_overlay.visible = true
 	rating_system.visible = true
 	finish_quest_sound.play()
+	GameStarted.game_started = false
 
 func _process_rating(time_left):
 	if time_left >= GOOD_TIME:  # More than 2 minutes
@@ -80,14 +79,6 @@ func _show_rating(rating):
 	star_2.visible = rating == 2
 	star_3.visible = rating == 3
 
-func _on_pause_pressed():
-	pause_menu.pause()
-
-#func _on_pause_mouse_entered():
-	#pause_text.visible = true
-#
-#func _on_pause_mouse_exited():
-	#pause_text.visible = false
 
 func _on_play_button_pressed():
 	handphone.play_backwards("Start_Quest")
@@ -97,6 +88,7 @@ func _on_play_button_pressed():
 	bgm_lvl_1.play()
 	malam_hari_backsound.play()
 	pause_menu.current_level = 2
+	GameStarted.game_started = true
 
 func _on_chooselevel_button_pressed():
 	get_tree().paused = false
@@ -116,3 +108,11 @@ func _on_quest_timer_timeout():
 	star_0.visible = true
 	black_overlay.visible = true
 	rating_system.visible = true
+	GameStarted.game_started = false
+	
+func _input(event):
+	if GameStarted.game_started == true:
+		if event.is_action_pressed("quest"):
+			handphone.play("Start_Quest")
+		elif event.is_action_released("quest"):
+			handphone.play_backwards("Start_Quest")

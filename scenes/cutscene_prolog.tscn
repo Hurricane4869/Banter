@@ -83,7 +83,7 @@ offset_right = 8.0
 offset_bottom = 8.0
 theme_override_fonts/font = ExtResource("3_8slb4")
 theme_override_font_sizes/font_size = 20
-text = "Space to Skip"
+text = "Press Any Button to Skip"
 
 [connection signal="finished" from="." to="." method="_on_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,11 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://dtge71egtiyrf"]
+[gd_scene load_steps=33 format=3 uid="uid://dtge71egtiyrf"]
 
 [ext_resource type="Script" path="res://scripts/hari_pertama.gd" id="1_c6wp0"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_2lkgq"]
 [ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_ocu16"]
 [ext_resource type="PackedScene" uid="uid://2jmkstysi5ps" path="res://scenes/main menu/main_menu.tscn" id="4_ew5vc"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_vqevv"]
-[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="5_5633u"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_33qdb"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="8_mwmvf"]
 [ext_resource type="Texture2D" uid="uid://2wtxqmvkty4p" path="res://assets/Art/DETAIL MISI lvl 1 tanpa back.png" id="9_rwv41"]
@@ -26,43 +25,10 @@
 [ext_resource type="Texture2D" uid="uid://dgxpocsl0eoi0" path="res://assets/Art/BINTANG 3.png" id="17_w8rdu"]
 [ext_resource type="Texture2D" uid="uid://dvn3ji723esct" path="res://assets/Art/PANEL TUTORIAL.png" id="19_0i2oi"]
 [ext_resource type="Texture2D" uid="uid://xjxm4vv4n3ae" path="res://assets/Art/DEKATI SIGN.png" id="20_x7png"]
+[ext_resource type="Texture2D" uid="uid://civj5kweaq86r" path="res://assets/Art/TUTORIAL QUEST.png" id="21_4g6kw"]
 [ext_resource type="PackedScene" uid="uid://7abu64wc30ni" path="res://scenes/dummy/object/tanda.tscn" id="22_t6dv5"]
 [ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="24_25mdx"]
 [ext_resource type="AudioStream" uid="uid://d1iqq310poelp" path="res://Audio/SFX/malam_hari_backsound.mp3" id="27_aem0c"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w472"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4vucx"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1k8n4"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fff3b"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy4ti"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="Animation" id="Animation_r2eu0"]
-resource_name = "Quest_Appear"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(693, 1100), Vector2(693, 50), Vector2(693, 85)]
-}
 
 [sub_resource type="Animation" id="Animation_ltt5s"]
 resource_name = "Start_Quest"
@@ -81,7 +47,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7i0bb"]
 _data = {
-"Quest_Appear": SubResource("Animation_r2eu0"),
 "Start_Quest": SubResource("Animation_ltt5s")
 }
 
@@ -104,39 +69,6 @@ offset_left = 6.0
 offset_right = 6.0
 main_menu_scene = ExtResource("4_ew5vc")
 metadata/_edit_use_anchors_ = true
-
-[node name="Pause" type="Button" parent="UI"]
-visible = false
-offset_left = 1800.0
-offset_top = 30.0
-offset_right = 2033.0
-offset_bottom = 240.0
-scale = Vector2(0.402468, 0.4)
-theme = ExtResource("4_vqevv")
-theme_override_styles/normal = SubResource("StyleBoxFlat_0w472")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4vucx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_1k8n4")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_fff3b")
-theme_override_styles/focus = SubResource("StyleBoxFlat_xy4ti")
-icon = ExtResource("5_5633u")
-
-[node name="Pause_Text" type="Label" parent="UI/Pause"]
-visibility_layer = 7
-layout_mode = 0
-offset_left = 21.8747
-offset_top = 218.75
-offset_right = 204.875
-offset_bottom = 289.75
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_33qdb")
-theme_override_font_sizes/font_size = 60
-text = "Pause
-(Esc)"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="PlayQuest" type="TextureRect" parent="UI"]
 process_mode = 3
@@ -411,49 +343,62 @@ vertical_alignment = 1
 
 [node name="Tutorial" type="Control" parent="UI"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -572.0
-offset_top = -300.0
-offset_right = -532.0
-offset_bottom = -260.0
+anchor_right = 1.00396
+anchor_bottom = 1.01481
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 1927.4
+offset_bottom = 1064.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/Tutorial"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="UI/Tutorial/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("19_0i2oi")
-
-[node name="TextureRect2" type="TextureRect" parent="UI/Tutorial/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("20_x7png")
-
 [node name="Label" type="Label" parent="UI/Tutorial"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -5.4
-anchor_right = -4.75
-offset_left = 1896.0
-offset_top = 1104.0
-offset_right = 2488.0
-offset_bottom = 1175.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+anchor_left = 0.975363
+anchor_top = 0.954124
+anchor_right = 0.975363
+anchor_bottom = 0.954124
+offset_left = -777.0
+offset_top = -71.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_33qdb")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 50
 text = "Klik Manapun untuk Melanjutkan"
-vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="FIrstTutorial" type="HBoxContainer" parent="UI/Tutorial"]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 480.0
+offset_right = 3092.0
+offset_bottom = 1687.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UI/Tutorial/FIrstTutorial"]
+layout_mode = 2
+texture = ExtResource("19_0i2oi")
+
+[node name="TextureRect2" type="TextureRect" parent="UI/Tutorial/FIrstTutorial"]
+layout_mode = 2
+texture = ExtResource("20_x7png")
+
+[node name="SecondTutorial" type="HBoxContainer" parent="UI/Tutorial"]
+visible = false
+layout_mode = 0
+offset_left = 776.0
+offset_top = 274.0
+offset_right = 3530.0
+offset_bottom = 2190.0
+scale = Vector2(0.84, 0.84)
+
+[node name="TextureRect" type="TextureRect" parent="UI/Tutorial/SecondTutorial"]
+layout_mode = 2
+texture = ExtResource("21_4g6kw")
 
 [node name="Environment" type="Node" parent="."]
 
@@ -519,7 +464,6 @@ volume_db = 5.0
 bus = &"Music"
 
 [connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
-[connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Chooselevel_Button" to="." method="_on_chooselevel_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]

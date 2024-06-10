@@ -1,10 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://eyiwjsgums67"]
+[gd_scene load_steps=31 format=3 uid="uid://eyiwjsgums67"]
 
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="1_bp2k5"]
 [ext_resource type="Script" path="res://scenes/Gameplay/hari_kedua.gd" id="1_ly5wy"]
 [ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="2_gkp4c"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="3_qlgpk"]
-[ext_resource type="Texture2D" uid="uid://njgloyrvb8jf" path="res://assets/Art/PAUSE.png" id="4_f8qvl"]
 [ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="5_bs6q0"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="6_bcpyj"]
 [ext_resource type="Texture2D" uid="uid://d0l1ki8ns80k6" path="res://assets/Art/DETAIL MISI lvl 2 tanpa back.png" id="8_pt07m"]
@@ -27,25 +26,6 @@
 [ext_resource type="AudioStream" uid="uid://bu3rjf54b5lms" path="res://Audio/Music/bgm gameplay.mp3" id="22_22mvr"]
 [ext_resource type="AudioStream" uid="uid://dwa23kwl2m0y6" path="res://Audio/SFX/finish_quest.mp3" id="23_31st1"]
 [ext_resource type="AudioStream" uid="uid://d1iqq310poelp" path="res://Audio/SFX/malam_hari_backsound.mp3" id="27_ub4js"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_puc7n"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_paqlr"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 40
-corner_radius_top_right = 40
-corner_radius_bottom_right = 40
-corner_radius_bottom_left = 40
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sl0e"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0n0s"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nukcj"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_r2eu0"]
 resource_name = "Quest_Appear"
@@ -98,39 +78,6 @@ GOOD_TIME = 120
 minute = 3
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("2_gkp4c")]
-
-[node name="Pause" type="Button" parent="UI"]
-visible = false
-offset_left = 1800.0
-offset_top = 30.0
-offset_right = 2033.0
-offset_bottom = 240.0
-scale = Vector2(0.402468, 0.4)
-theme = ExtResource("3_qlgpk")
-theme_override_styles/normal = SubResource("StyleBoxFlat_puc7n")
-theme_override_styles/hover = SubResource("StyleBoxFlat_paqlr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3sl0e")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_p0n0s")
-theme_override_styles/focus = SubResource("StyleBoxFlat_nukcj")
-icon = ExtResource("4_f8qvl")
-
-[node name="Pause_Text" type="Label" parent="UI/Pause"]
-visibility_layer = 7
-layout_mode = 0
-offset_left = 21.8747
-offset_top = 218.75
-offset_right = 204.875
-offset_bottom = 289.75
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 20
-theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("5_bs6q0")
-theme_override_font_sizes/font_size = 60
-text = "Pause
-(Esc)"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="PlayQuest" type="TextureRect" parent="UI"]
 process_mode = 3
@@ -471,7 +418,6 @@ volume_db = 5.0
 bus = &"Music"
 
 [connection signal="timeout" from="UI/QuestTimer" to="." method="_on_quest_timer_timeout"]
-[connection signal="pressed" from="UI/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="UI/PlayQuest/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Chooselevel_Button" to="." method="_on_chooselevel_button_pressed"]
 [connection signal="pressed" from="UI/RatingSystem/rating_menu/HBoxContainer/Restart_Button" to="." method="_on_restart_button_pressed"]

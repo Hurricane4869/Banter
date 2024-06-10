@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://ct4dek63v5j5j"]
+
+[ext_resource type="Script" path="res://scenes/credits-scene/credits.gd" id="1_3jpn6"]
+[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_7kuw8"]
+[ext_resource type="Texture2D" uid="uid://b78vk3wh2j1ax" path="res://scenes/credits-scene/credits-banner.png" id="2_xugyl"]
+[ext_resource type="PackedScene" uid="uid://2jmkstysi5ps" path="res://scenes/main menu/main_menu.tscn" id="3_esfho"]
+[ext_resource type="AudioStream" uid="uid://bt4tjv7efvu7y" path="res://Audio/Music/piano-150142.mp3" id="5_x05rr"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jpn6")
+creditsFile = "res://scenes/credits-scene/CREDITS-Banter"
+speed = 60
+titleImage = ExtResource("2_xugyl")
+titlesColor = Color(0.704231, 0.29098, 0.39723, 1)
+namesColor = Color(0.94902, 0.890196, 0.580392, 1)
+customFont = ExtResource("2_7kuw8")
+musicPlaylist = Array[AudioStream]([ExtResource("5_x05rr")])
+speedUpControl = "up"
+slowDownControl = "down"
+skipControl = "skip"
+nextScene = ExtResource("3_esfho")
+destroyOnEnd = true
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+
+[node name="backgroundVideo" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+expand = true
+
+[node name="musicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_x05rr")
+
+[node name="scrollingContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_right = -184.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+
+[node name="titleImg" type="TextureRect" parent="scrollingContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+stretch_mode = 5
+
+[connection signal="finished" from="backgroundVideo" to="." method="_on_backgroundVideo_finished"]
+[connection signal="finished" from="musicPlayer" to="." method="_on_musicPlayer_finished"]
