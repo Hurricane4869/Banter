@@ -1,12 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://dpw0htghrlgc6"]
+[gd_scene load_steps=30 format=3 uid="uid://dpw0htghrlgc6"]
 
 [ext_resource type="Script" path="res://scenes/Gameplay/hari_ketiga.gd" id="1_28xcp"]
 [ext_resource type="PackedScene" uid="uid://dnphv7esbmo4w" path="res://scenes/dummy/QuestTimer.tscn" id="2_gte1d"]
 [ext_resource type="PackedScene" uid="uid://eyjjp6rydhdv" path="res://scenes/Gameplay/pause_menu.tscn" id="3_uob2n"]
 [ext_resource type="Theme" uid="uid://bv8b7fiak2xr" path="res://assets/Art/themes/default_theme.tres" id="4_7poft"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_3n0m0"]
+[ext_resource type="Texture2D" uid="uid://des3k5cqdkywp" path="res://assets/Art/misi lvl 3.png" id="5_nesjm"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="7_o0da7"]
-[ext_resource type="Texture2D" uid="uid://drxn5prph88o2" path="res://assets/Art/DETAIL MISI lvl 3 tanpa back.png" id="8_83p02"]
 [ext_resource type="Texture2D" uid="uid://cvxx8kkwb0ha6" path="res://assets/Art/tombol mulai.png" id="9_8ex77"]
 [ext_resource type="Texture2D" uid="uid://dkxmpy5a5dhql" path="res://assets/Art/ui rating/PANEL LEVEL SELESAI (KOTAK DOANK).png" id="10_aep05"]
 [ext_resource type="Texture2D" uid="uid://cjrwa65y26elc" path="res://assets/Art/ui rating/Salinan LEVEL SELECTION.png" id="11_737sr"]
@@ -103,7 +102,7 @@ offset_left = 145.0
 offset_top = 310.0
 offset_right = 1459.0
 offset_bottom = 2226.0
-texture = ExtResource("8_83p02")
+texture = ExtResource("5_nesjm")
 metadata/_edit_use_anchors_ = true
 
 [node name="Handphone" type="AnimationPlayer" parent="UI/PlayQuest"]
@@ -118,10 +117,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -231.0
-offset_top = -999.25
-offset_right = 231.0
-offset_bottom = -781.25
+offset_left = -253.0
+offset_top = -972.0
+offset_right = 206.0
+offset_bottom = -762.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("4_7poft")
@@ -190,7 +189,6 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("6_3n0m0")
 theme_override_font_sizes/font_size = 100
 text = "KAMU BERHASIL!"
 
@@ -211,7 +209,6 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("6_3n0m0")
 theme_override_font_sizes/font_size = 100
 text = "KAMU GAGAL!"
 horizontal_alignment = 1
@@ -244,7 +241,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_3n0m0")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan kecewa..."
 horizontal_alignment = 1
@@ -278,7 +274,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_3n0m0")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan ikhlas..."
 horizontal_alignment = 1
@@ -312,7 +307,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_3n0m0")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan puas!"
 horizontal_alignment = 1
@@ -346,7 +340,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_3n0m0")
 theme_override_font_sizes/font_size = 50
 text = "Pelanggan bahagia!"
 horizontal_alignment = 1

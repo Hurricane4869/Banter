@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://xxpq87cr6sir"]
+[gd_scene load_steps=6 format=3 uid="uid://xxpq87cr6sir"]
 
 [ext_resource type="Script" path="res://scripts/LoadingScreen.gd" id="1_wspbt"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_pn2ia"]
 
 [sub_resource type="Gradient" id="Gradient_21og4"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -63,8 +62,7 @@ offset_right = 63.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_pn2ia")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 100
 text = "BENTAR YA BOS..."
 
 [node name="AnimationPlayerLoading" type="AnimationPlayer" parent="Control/Loading Label"]

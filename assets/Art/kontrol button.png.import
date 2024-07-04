@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy8pfmoojxs4y"
-path="res://.godot/imported/LEVEL 9.png-e3fb19c959942cbeeb7c1be69bec504e.ctex"
+uid="uid://c8imqm48t31i1"
+path="res://.godot/imported/kontrol button.png-288219129df8f8c3b707946b301a5135.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/LEVEL 9.png"
-dest_files=["res://.godot/imported/LEVEL 9.png-e3fb19c959942cbeeb7c1be69bec504e.ctex"]
+source_file="res://assets/Art/kontrol button.png"
+dest_files=["res://.godot/imported/kontrol button.png-288219129df8f8c3b707946b301a5135.ctex"]
 
 [params]
 

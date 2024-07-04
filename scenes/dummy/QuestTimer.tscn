@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnphv7esbmo4w"]
+[gd_scene load_steps=4 format=3 uid="uid://dnphv7esbmo4w"]
 
 [ext_resource type="Script" path="res://scenes/dummy/QuestTimer.gd" id="1_frd7a"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_5xclg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0d0y"]
 bg_color = Color(0.85098, 0.290196, 0.337255, 1)
@@ -17,7 +16,7 @@ corner_radius_bottom_left = 25
 expand_margin_left = 50.0
 expand_margin_top = 15.0
 expand_margin_right = 50.0
-expand_margin_bottom = 15.0
+expand_margin_bottom = 20.0
 
 [sub_resource type="Theme" id="Theme_if6um"]
 Label/styles/normal = SubResource("StyleBoxFlat_m0d0y")
@@ -29,13 +28,12 @@ script = ExtResource("1_frd7a")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -85.0
+offset_left = -99.0
 offset_top = 25.0
-offset_right = 71.0
-offset_bottom = 106.0
+offset_right = 89.0
+offset_bottom = 80.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme = SubResource("Theme_if6um")
-theme_override_fonts/font = ExtResource("2_5xclg")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 60
 text = "00:00"

@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfgw8mf8kcnvk"]
+[gd_scene load_steps=6 format=3 uid="uid://cfgw8mf8kcnvk"]
 
 [ext_resource type="Script" path="res://TestScene.gd" id="1_fo7r2"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="2_tigti"]
 [ext_resource type="Texture2D" uid="uid://ciylpsqn4uy8h" path="res://assets/Art/visual art.png" id="3_vimnw"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4g76"]
@@ -43,10 +42,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_tigti")
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 90
 theme_override_styles/normal = SubResource("StyleBoxTexture_s4g76")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wwmn3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cogs5")

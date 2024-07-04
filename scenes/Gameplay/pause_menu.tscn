@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://eyjjp6rydhdv"]
+[gd_scene load_steps=38 format=3 uid="uid://eyjjp6rydhdv"]
 
 [ext_resource type="Script" path="res://scripts/PauseMenu.gd" id="1_dqnjy"]
 [ext_resource type="Texture2D" uid="uid://cqopeg5daa0mj" path="res://assets/Art/UI HP.png" id="2_vu3m5"]
@@ -8,26 +8,25 @@
 [ext_resource type="Texture2D" uid="uid://3pjmjw3afbk6" path="res://assets/Art/RESTART.png" id="4_g50ec"]
 [ext_resource type="Texture2D" uid="uid://rdiv853dnruo" path="res://assets/Art/HOME.png" id="5_qm08d"]
 [ext_resource type="Texture2D" uid="uid://u2h6hixy7qap" path="res://assets/Art/QUEST.png" id="6_4kfeq"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="6_4tuu8"]
 [ext_resource type="Texture2D" uid="uid://c5y8voumngya4" path="res://assets/Art/PENGATURAN (HP).png" id="7_4feq0"]
 [ext_resource type="AudioStream" uid="uid://cxw5ufhejewj3" path="res://Audio/SFX/phone lock or unlock (mp3cut.net).mp3" id="10_32clx"]
 [ext_resource type="Texture2D" uid="uid://b6fkqqic1gkra" path="res://assets/Art/SETTINGS POLOSAN.png" id="11_to2fa"]
 [ext_resource type="Texture2D" uid="uid://dxp743clp3u6" path="res://assets/Art/POLOSAN SETTING.png" id="12_kmauy"]
 [ext_resource type="Texture2D" uid="uid://du0omdtiflx8n" path="res://assets/Art/ICON SOUND.png" id="13_msi7h"]
 [ext_resource type="Texture2D" uid="uid://dikmlux00maag" path="res://assets/Art/ICON VIDEO.png" id="14_wyh11"]
+[ext_resource type="Texture2D" uid="uid://d08m51sqk70av" path="res://assets/Art/SUARA button.png" id="15_7akmy"]
 [ext_resource type="Texture2D" uid="uid://ojp4l1ubkajc" path="res://assets/Art/ICON KONTROL.png" id="15_838gt"]
-[ext_resource type="Texture2D" uid="uid://cwhhdlkb7hmf5" path="res://assets/Art/SUARA.png" id="16_3ni6c"]
-[ext_resource type="Texture2D" uid="uid://brw4chr80l1wj" path="res://assets/Art/VIDEO.png" id="17_qvn6a"]
-[ext_resource type="Texture2D" uid="uid://cgcsrh2purj7d" path="res://assets/Art/KONTROL.png" id="18_a68j0"]
+[ext_resource type="Texture2D" uid="uid://c62n3ns6g7jr1" path="res://assets/Art/VIDEO button.png" id="16_q6ei6"]
+[ext_resource type="Texture2D" uid="uid://c8imqm48t31i1" path="res://assets/Art/kontrol button.png" id="17_idsrv"]
 [ext_resource type="Texture2D" uid="uid://bu5oct1jlua3t" path="res://assets/Art/SLIDER MERAH.png" id="19_a4t3w"]
 [ext_resource type="Texture2D" uid="uid://m3431e72uwhq" path="res://assets/Art/centang polosan.png" id="20_4742u"]
-[ext_resource type="Texture2D" uid="uid://rydokstp0e0p" path="res://assets/Art/TOMBOL KONTROL SETTINGS (1).png" id="20_jnul1"]
+[ext_resource type="Texture2D" uid="uid://dylojf40qkc3a" path="res://assets/Art/CONTROL SETTINGS.png" id="20_l2q2c"]
+[ext_resource type="Texture2D" uid="uid://m6hmfguqs0hf" path="res://assets/Art/misi lvl 1.png" id="21_k6sht"]
 [ext_resource type="AudioStream" uid="uid://bg2ud4rikydwk" path="res://Audio/SFX/sound_hp.mp3" id="22_5bwi5"]
-[ext_resource type="Texture2D" uid="uid://2wtxqmvkty4p" path="res://assets/Art/DETAIL MISI lvl 1 tanpa back.png" id="22_s7jjv"]
-[ext_resource type="Texture2D" uid="uid://d0l1ki8ns80k6" path="res://assets/Art/DETAIL MISI lvl 2 tanpa back.png" id="23_0kriw"]
-[ext_resource type="Texture2D" uid="uid://drxn5prph88o2" path="res://assets/Art/DETAIL MISI lvl 3 tanpa back.png" id="24_p0e1a"]
-[ext_resource type="Texture2D" uid="uid://t1ampf64pnnv" path="res://assets/Art/DETAIL MISI lvl 4 tanpa back.png" id="25_s8cqj"]
-[ext_resource type="Texture2D" uid="uid://b8wuhrkxnb7au" path="res://assets/Art/DETAIL MISI lvl 5 tanpa back.png" id="26_wml8y"]
+[ext_resource type="Texture2D" uid="uid://b1cewrft1sxj8" path="res://assets/Art/misi lvl 2.png" id="22_dqvdw"]
+[ext_resource type="Texture2D" uid="uid://des3k5cqdkywp" path="res://assets/Art/misi lvl 3.png" id="23_2xxyo"]
+[ext_resource type="Texture2D" uid="uid://x864gjjbrpym" path="res://assets/Art/misi lvl 4.png" id="24_3crgk"]
+[ext_resource type="Texture2D" uid="uid://cdvsmpupd0uq1" path="res://assets/Art/misi lvl 5.png" id="25_iyxww"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_df7xw"]
 
@@ -176,7 +175,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 50
 text = "Kembali"
 horizontal_alignment = 1
@@ -209,7 +207,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 50
 text = "Ulangi"
 horizontal_alignment = 1
@@ -230,7 +227,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 50
 text = "Misi
 "
@@ -256,7 +252,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 50
 text = "Pengaturan
 "
@@ -278,7 +273,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_constants/shadow_outline_size = 0
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 50
 text = "Keluar"
 horizontal_alignment = 1
@@ -295,11 +289,10 @@ texture = ExtResource("11_to2fa")
 
 [node name="Pengaturan_Judul" type="Label" parent="Handphone/Settings_Panel"]
 layout_mode = 0
-offset_left = 350.0
-offset_top = 130.0
-offset_right = 924.0
-offset_bottom = 243.0
-theme_override_fonts/font = ExtResource("6_4tuu8")
+offset_left = 375.0
+offset_top = 160.0
+offset_right = 953.0
+offset_bottom = 228.0
 theme_override_font_sizes/font_size = 80
 text = "PENGATURAN"
 
@@ -359,17 +352,17 @@ theme_override_constants/separation = 125
 [node name="Suara_Button" type="Button" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button"]
 layout_mode = 2
 theme = ExtResource("3_u7xel")
-icon = ExtResource("16_3ni6c")
+icon = ExtResource("15_7akmy")
 
 [node name="Video_Button" type="Button" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button"]
 layout_mode = 2
 theme = ExtResource("3_u7xel")
-icon = ExtResource("17_qvn6a")
+icon = ExtResource("16_q6ei6")
 
 [node name="Kontrol_Button" type="Button" parent="Handphone/Settings_Panel/Settings_Menu/HBoxContainer/Settings_Button"]
 layout_mode = 2
 theme = ExtResource("3_u7xel")
-icon = ExtResource("18_a68j0")
+icon = ExtResource("17_idsrv")
 
 [node name="Sound_Panel" type="TextureRect" parent="Handphone"]
 visible = false
@@ -382,11 +375,10 @@ texture = ExtResource("11_to2fa")
 
 [node name="Sound_Judul" type="Label" parent="Handphone/Sound_Panel"]
 layout_mode = 0
-offset_left = 490.0
-offset_top = 130.0
-offset_right = 773.0
-offset_bottom = 243.0
-theme_override_fonts/font = ExtResource("6_4tuu8")
+offset_left = 500.0
+offset_top = 160.0
+offset_right = 787.0
+offset_bottom = 237.0
 theme_override_font_sizes/font_size = 80
 text = "SUARA"
 
@@ -429,7 +421,6 @@ theme_override_constants/v_separation = 0
 [node name="MasterLabel" type="Label" parent="Handphone/Sound_Panel/Sound_Settings/Master"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 75
 text = "MASTER :"
 horizontal_alignment = 1
@@ -454,7 +445,6 @@ theme_override_constants/v_separation = 0
 [node name="MusicLabel" type="Label" parent="Handphone/Sound_Panel/Sound_Settings/Musik"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 75
 text = "MUSIK :"
 horizontal_alignment = 1
@@ -479,7 +469,6 @@ theme_override_constants/v_separation = 0
 [node name="SFXLabel" type="Label" parent="Handphone/Sound_Panel/Sound_Settings/SFX"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 75
 text = "SFX :"
 horizontal_alignment = 1
@@ -508,11 +497,10 @@ texture = ExtResource("11_to2fa")
 
 [node name="Video_Judul" type="Label" parent="Handphone/Video_Panel"]
 layout_mode = 0
-offset_left = 500.0
-offset_top = 130.0
-offset_right = 770.0
-offset_bottom = 243.0
-theme_override_fonts/font = ExtResource("6_4tuu8")
+offset_left = 510.0
+offset_top = 160.0
+offset_right = 780.0
+offset_bottom = 230.0
 theme_override_font_sizes/font_size = 80
 text = "VIDEO
 "
@@ -560,7 +548,6 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 75
 text = "FULLSCREEN
 "
@@ -581,41 +568,7 @@ offset_left = 145.0
 offset_top = 306.0
 offset_right = 1459.0
 offset_bottom = 2244.0
-texture = ExtResource("11_to2fa")
-
-[node name="Kontrol_Judul" type="Label" parent="Handphone/Kontrol_Panel"]
-layout_mode = 0
-offset_left = 455.0
-offset_top = 130.0
-offset_right = 848.0
-offset_bottom = 243.0
-theme_override_fonts/font = ExtResource("6_4tuu8")
-theme_override_font_sizes/font_size = 80
-text = "KONTROL
-"
-
-[node name="Kontrol_Menu" type="TextureRect" parent="Handphone/Kontrol_Panel"]
-layout_mode = 0
-offset_left = 78.1253
-offset_top = 487.5
-offset_right = 1232.13
-offset_bottom = 1694.5
-texture = ExtResource("12_kmauy")
-
-[node name="Kontrol_Value" type="TextureRect" parent="Handphone/Kontrol_Panel/Kontrol_Menu"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -513.5
-offset_top = -470.5
-offset_right = 513.5
-offset_bottom = 470.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("20_jnul1")
+texture = ExtResource("20_l2q2c")
 
 [node name="Back_From_Kontrol" type="Button" parent="Handphone/Kontrol_Panel"]
 layout_mode = 0
@@ -628,6 +581,7 @@ theme = ExtResource("3_u7xel")
 icon = ExtResource("3_bnieb")
 
 [node name="Task_Panel" type="TextureRect" parent="Handphone"]
+visible = false
 layout_mode = 0
 offset_left = 145.0
 offset_top = 306.0
@@ -642,7 +596,6 @@ offset_left = 550.0
 offset_top = 130.0
 offset_right = 719.0
 offset_bottom = 243.0
-theme_override_fonts/font = ExtResource("6_4tuu8")
 theme_override_font_sizes/font_size = 80
 text = "MISI
 "
@@ -661,7 +614,7 @@ offset_right = 657.0
 offset_bottom = 958.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("22_s7jjv")
+texture = ExtResource("21_k6sht")
 
 [node name="Task_Level_2" type="TextureRect" parent="Handphone/Task_Panel"]
 visible = false
@@ -677,7 +630,7 @@ offset_right = 657.0
 offset_bottom = 958.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("23_0kriw")
+texture = ExtResource("22_dqvdw")
 
 [node name="Task_Level_3" type="TextureRect" parent="Handphone/Task_Panel"]
 visible = false
@@ -693,7 +646,7 @@ offset_right = 657.0
 offset_bottom = 958.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("24_p0e1a")
+texture = ExtResource("23_2xxyo")
 
 [node name="Task_Level_4" type="TextureRect" parent="Handphone/Task_Panel"]
 visible = false
@@ -709,7 +662,7 @@ offset_right = 657.0
 offset_bottom = 958.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("25_s8cqj")
+texture = ExtResource("24_3crgk")
 
 [node name="Task_Level_5" type="TextureRect" parent="Handphone/Task_Panel"]
 visible = false
@@ -725,7 +678,7 @@ offset_right = 657.0
 offset_bottom = 958.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("26_wml8y")
+texture = ExtResource("25_iyxww")
 
 [node name="Back_From_Misi" type="Button" parent="Handphone/Task_Panel"]
 layout_mode = 0

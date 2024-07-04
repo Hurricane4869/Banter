@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c27lwxutnp5kt"]
+[gd_scene load_steps=6 format=3 uid="uid://c27lwxutnp5kt"]
 
 [ext_resource type="VideoStream" path="res://assets/video/cutscene_rev4.ogv" id="1_5qhcc"]
 [ext_resource type="Script" path="res://scenes/cutscene_prolog.gd" id="2_1h8nd"]
-[ext_resource type="FontFile" uid="uid://ormovon3kbjx" path="res://assets/Fonts/comicz.ttf" id="3_8slb4"]
 
 [sub_resource type="Animation" id="Animation_65n5v"]
 resource_name = "fade_in"
@@ -81,9 +80,8 @@ libraries = {
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-theme_override_fonts/font = ExtResource("3_8slb4")
-theme_override_font_sizes/font_size = 20
-text = "Press Any Button to Skip"
+theme_override_font_sizes/font_size = 25
+text = "Klik tombol apapun untuk melanjutkan"
 
 [connection signal="finished" from="." to="." method="_on_finished"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

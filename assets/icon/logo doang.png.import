@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy8pfmoojxs4y"
-path="res://.godot/imported/LEVEL 9.png-e3fb19c959942cbeeb7c1be69bec504e.ctex"
+uid="uid://b10844jdc4dg"
+path="res://.godot/imported/logo doang.png-a5f20fe9fefa1a295fca349e6d022e5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Art/LEVEL 9.png"
-dest_files=["res://.godot/imported/LEVEL 9.png-e3fb19c959942cbeeb7c1be69bec504e.ctex"]
+source_file="res://assets/icon/logo doang.png"
+dest_files=["res://.godot/imported/logo doang.png-a5f20fe9fefa1a295fca349e6d022e5d.ctex"]
 
 [params]
 
