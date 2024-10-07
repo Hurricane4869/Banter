@@ -15,6 +15,7 @@ dest_files=["res://.godot/imported/comicz.ttf-3d9da6a071b6edd7ea81bb1c97033da1.f
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
+disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48

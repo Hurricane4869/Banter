@@ -3,16 +3,16 @@
 [ext_resource type="Script" path="res://TestScene.gd" id="1_fo7r2"]
 [ext_resource type="Texture2D" uid="uid://ciylpsqn4uy8h" path="res://assets/Art/visual art.png" id="3_vimnw"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4g76"]
-texture = ExtResource("3_vimnw")
-texture_margin_top = 750.0
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwmn3"]
 texture = ExtResource("3_vimnw")
 texture_margin_top = 750.0
 modulate_color = Color(0.695503, 0.695503, 0.695503, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cogs5"]
+texture = ExtResource("3_vimnw")
+texture_margin_top = 750.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4g76"]
 texture = ExtResource("3_vimnw")
 texture_margin_top = 750.0
 
@@ -46,9 +46,9 @@ offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 90
-theme_override_styles/normal = SubResource("StyleBoxTexture_s4g76")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wwmn3")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cogs5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s4g76")
 text = "Klik Untuk Memulai"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
